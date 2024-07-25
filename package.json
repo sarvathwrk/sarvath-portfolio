@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "homepage": "https://hamishw.com",
   "description": "Portfolio site for Mohamed Sarvath Khan",
-  "repository": "https://github.com/HamishMW/portfolio.git",
+  "repository": "https://github.com/sarvathwrk/sarvath-portfolio.git,
   "author": "Mohamed Sarvath Khan <hello@hamishw.com>",
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
