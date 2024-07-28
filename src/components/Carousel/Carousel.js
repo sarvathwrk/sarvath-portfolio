@@ -30,7 +30,7 @@ function determineIndex(imageIndex, index, images, direction) {
   return finalIndex;
 }
 
-export const Carousel = ({ width, height, images, placeholder, autoslide = false, ...rest }) => {
+export const Carousel = ({ width, height, images, placeholder, ...rest }) => {
   const [dragging, setDragging] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
@@ -53,8 +53,9 @@ export const Carousel = ({ width, height, images, placeholder, autoslide = false
   const placeholderRef = useRef();
   const initSwipeX = useRef();
 
-  const currentImageAlt = `Slide ${imageIndex + 1} of ${images.length}. ${images[imageIndex].alt
-    }`;
+  const currentImageAlt = `Slide ${imageIndex + 1} of ${images.length}. ${
+    images[imageIndex].alt
+  }`;
 
   useEffect(() => {
     if (dragging) {

@@ -1,20 +1,12 @@
-
-
-
 import GalleryLarge1 from 'assets/sarvath/GalleryLarge1.png';
 
 import GalleryLargePlaceholder from 'assets/volkihar-background-placeholder.jpg';
-
-
 
 import GalleryLarge2 from 'assets/sarvath/GalleryLarge2.jpg';
 import GalleryLarge2placeholder from 'assets/volkihar-enderal-placeholder.jpg';
 
 import GallerySlider1 from 'assets/sarvath/GallerySlider1.png';
 import GallerySlider2 from 'assets/sarvath/GallerySlider2.png';
-
-
-
 
 import volkiharEnderalLogoLarge from 'assets/volkihar-enderal-logo-large.png';
 import volkiharEnderalLogoPlaceholder from 'assets/volkihar-enderal-logo-placeholder.png';
@@ -40,39 +32,32 @@ import dynamic from 'next/dynamic';
 import { Fragment, useEffect, useRef, useState } from 'react';
 import { media } from 'utils/style';
 
-
-
 // import PDF from 'react-pdf-js-infinite';
 
 const Carousel = dynamic(() => import('components/Carousel').then(mod => mod.Carousel));
 
 const title = 'Mohamed Sarvath Khan';
-const description =
-  `A dynamic and skilled Full Stack Web Developer with a two-year journey in the world of web development. Navigating through the ever-evolving landscape of technology, I've had the privilege of working on a variety of projects that have honed my skills and enriched my experience.
+const description = `A dynamic and skilled Full Stack Web Developer with a two-year journey in the world of web development. Navigating through the ever-evolving landscape of technology, I've had the privilege of working on a variety of projects that have honed my skills and enriched my experience.
 
 `;
 const roles = ['Full Stack Developer', 'React JS', 'Next JS', 'Node JS', 'Express JS'];
-
-
 
 export function VolkiharKnight() {
   // 'ndfHFb-c4YZDc-cYSp0e ndfHFb-c4YZDc-oKVyEf'
   const [currentImage, setCurrentImage] = useState(1);
 
-  console.log("useEffect");
+  console.log('useEffect');
 
   const revealContainer = useRef(null);
-  const jobsData = []
-
+  const jobsData = [];
 
   useEffect(() => {
     const changeImage = () => {
-      setCurrentImage((prevImage) => (prevImage % 8) + 1);
+      setCurrentImage(prevImage => (prevImage % 8) + 1);
     };
     const intervalId = setInterval(changeImage, 4000);
     return () => clearInterval(intervalId);
   }, []);
-
 
   return (
     <Fragment>
@@ -91,7 +76,6 @@ export function VolkiharKnight() {
           `,
         }}
       />
-
 
       <ProjectContainer>
         <ProjectBackground
@@ -118,12 +102,13 @@ export function VolkiharKnight() {
         </ProjectSection> */}
 
         <ProjectSection>
-          <div style={{ width: "50vw", height: "85vh", background: "white" }} >
+          <div style={{ width: '50vw', height: '85vh', background: 'white' }}>
             <iframe
-              className='Resumeclass'
-              id='Resume'
+              className="Resumeclass"
+              id="Resume"
               src="http://localhost:3001/SarvathResume.pdf#toolbar=0&zoom=115"
-              style={{ width: "100%", height: "100%", background: "white", }} />
+              style={{ width: '100%', height: '100%', background: 'white' }}
+            />
           </div>
         </ProjectSection>
 
@@ -131,7 +116,6 @@ export function VolkiharKnight() {
           <ProjectSectionContent>
             <Carousel
               placeholder={volkiharSlidePlaceholder}
-              autoslide={true}
               images={[
                 {
                   srcSet: [GallerySlider1, GallerySlider1],
@@ -155,14 +139,7 @@ export function VolkiharKnight() {
           </ProjectSectionContent>
         </ProjectSection>
 
-        <ProjectSection>
-
-
-
-
-
-
-        </ProjectSection>
+        <ProjectSection></ProjectSection>
 
         <ProjectSection
           backgroundElement={
@@ -184,32 +161,29 @@ export function VolkiharKnight() {
                 style={{ maxWidth: 220, width: '100%', marginBottom: 30 }}
               /> */}
               <div class="image-container">
-                <img src={`/SarvathLogo${currentImage}.png`}
+                <img
+                  src={`/SarvathLogo${currentImage}.png`}
                   placeholder={volkiharEnderalLogoPlaceholder}
-                  className='logoiconGallery'
+                  className="logoiconGallery"
                   alt="The Enderal game logo"
                   sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 100vw, 220px`}
                 />
               </div>
               <ProjectSectionHeading>Let's Connect</ProjectSectionHeading>
               <ProjectSectionText>
-                In my two years as a Full Stack Web Developer, I've successfully delivered impactful projects, from designing responsive and intuitive user interfaces to architecting robust back-end systems.
+                In my two years as a Full Stack Web Developer, I've successfully delivered
+                impactful projects, from designing responsive and intuitive user
+                interfaces to architecting robust back-end systems.
               </ProjectSectionText>
               <ProjectSectionText>
-                I welcome opportunities for collaboration, discussion, and networking. If you're interested in exploring potential projects or just want to connect, feel free to reach out through Click Below Link to Reach Me.
+                I welcome opportunities for collaboration, discussion, and networking. If
+                you're interested in exploring potential projects or just want to connect,
+                feel free to reach out through Click Below Link to Reach Me.
               </ProjectSectionText>
-              <Button
-                secondary
-                iconHoverShift
-                icon="chevronRight"
-                href="/contact"
-              >
+              <Button secondary iconHoverShift icon="chevronRight" href="/contact">
                 Reach me
               </Button>
-
             </ProjectTextRow>
-
-
           </ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>
