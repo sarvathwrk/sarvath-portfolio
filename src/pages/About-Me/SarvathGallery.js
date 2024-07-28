@@ -8,9 +8,7 @@ import GalleryLarge2placeholder from 'assets/volkihar-enderal-placeholder.jpg';
 import GallerySlider1 from 'assets/sarvath/GallerySlider1.png';
 import GallerySlider2 from 'assets/sarvath/GallerySlider2.png';
 
-import volkiharEnderalLogoLarge from 'assets/volkihar-enderal-logo-large.png';
 import volkiharEnderalLogoPlaceholder from 'assets/volkihar-enderal-logo-placeholder.png';
-import volkiharEnderalLogo from 'assets/volkihar-enderal-logo.png';
 import volkiharSlide3Large from 'assets/volkihar-slide-3-large.jpg';
 import volkiharSlide3 from 'assets/volkihar-slide-3.jpg';
 import volkiharSlidePlaceholder from 'assets/volkihar-slide-placeholder.jpg';
@@ -29,7 +27,7 @@ import {
   ProjectTextRow,
 } from 'layouts/Project';
 import dynamic from 'next/dynamic';
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { media } from 'utils/style';
 
 // import PDF from 'react-pdf-js-infinite';
@@ -47,9 +45,6 @@ export function VolkiharKnight() {
   const [currentImage, setCurrentImage] = useState(1);
 
   console.log('useEffect');
-
-  const revealContainer = useRef(null);
-  const jobsData = [];
 
   useEffect(() => {
     const changeImage = () => {

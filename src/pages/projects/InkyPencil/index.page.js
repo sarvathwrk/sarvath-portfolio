@@ -1,4 +1,3 @@
-
 // ==== Lap Size == 1 ==== //
 import InkyPencilproject1large from 'assets/sarvath/InkyPencil/InkyPencilproject1large.png';
 import InkyPencilprojectlap1olaceholder from 'assets/slice-app-placeholder.jpg';
@@ -11,8 +10,8 @@ import InkyPencilproject2ap1olaceholder from 'assets/slice-app-placeholder.jpg';
 import InkyPencilproject3large2 from 'assets/sarvath/InkyPencil/InkyPencilproject3large1.png';
 import InkyPencilproject3large1 from 'assets/sarvath/InkyPencil/InkyPencilproject3large2.png';
 
-import InkyPencilprojetphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
 import InkyPencilprojetphone3placeholder2 from 'assets/slice-sidebar-annotations-placeholder.png';
+import InkyPencilprojetphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
 
 // ==== Lap Size == 4 ==== //
 import InkyPencilproject4large from 'assets/sarvath/InkyPencil/InkyPencilproject4large.png';

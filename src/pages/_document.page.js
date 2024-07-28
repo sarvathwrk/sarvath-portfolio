@@ -23,7 +23,6 @@ export default function Document() {
         {/* <link rel="shortcut icon" href="/SarvathLogo2.png" type="image/png" />
         <link rel="shortcut icon" href="/SarvathLogo2.svg" type="image/svg+xml" /> */}
 
-
         {/* Sarvath Logo 3 */}
 
         {/* <link rel="shortcut icon" href="/SarvathLogo3.png" type="image/png" />
@@ -39,26 +38,31 @@ export default function Document() {
         {/* <link rel="shortcut icon" href="/SarvathLogo5.png" type="image/png" />
         <link rel="shortcut icon" href="/SarvathLogo5.svg" type="image/svg+xml" /> */}
 
-
         {/* Sarvath Logo 6 */}
 
         {/* <link rel="shortcut icon" href="/SarvathLogo6.png" type="image/png" />
         <link rel="shortcut icon" href="/SarvathLogo6.svg" type="image/svg+xml" /> */}
-
 
         {/* Sarvath Logo 7 */}
         {/* 
         <link rel="shortcut icon" href="/SarvathLogo7.png" type="image/png" />
         <link rel="shortcut icon" href="/SarvathLogo7.svg" type="image/svg+xml" /> */}
 
-
-
         {/* Sarvath Logo 8 */}
 
-        <link rel="shortcut icon" id='favicon1' href="/SarvathLogo1.png" type="image/png" />
-        <link rel="shortcut icon" id='favicon2' href="/SarvathLogo1.svg" type="image/svg+xml" />
+        <link
+          rel="shortcut icon"
+          id="favicon1"
+          href="/SarvathLogo1.png"
+          type="image/png"
+        />
+        <link
+          rel="shortcut icon"
+          id="favicon2"
+          href="/SarvathLogo1.svg"
+          type="image/svg+xml"
+        />
         {/* <link rel="icon" href="/SarvathLogo8.png" type="image/png" /> */}
-
 
         <link rel="apple-touch-icon" href="/icon-256.png" />
         <link type="text/plain" rel="author" href="/humans.txt" />
@@ -77,7 +81,7 @@ export default function Document() {
             `,
           }}
         />
-        <script src="http://localhost:3001/SarvathResume.pdf"></script>
+        {/* <script src="http://localhost:3001/SarvathResume.pdf"></script> */}
 
         <Main />
         <NextScript />

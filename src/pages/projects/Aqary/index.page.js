@@ -1,4 +1,3 @@
-
 // ==== Lap Size == 1 ==== //
 import aqaryprojectlap1large from 'assets/sarvath/aqary/aqaryproject1large.png';
 import aqaryprojectlap1small from 'assets/sarvath/aqary/aqaryproject1large.png';

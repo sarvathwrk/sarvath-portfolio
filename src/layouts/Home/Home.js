@@ -1,65 +1,48 @@
-
-import sliceTextureLarge from 'assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
-import sliceTexture from 'assets/slice-app.jpg';
-
-
 // ==== Project 1 ==== //
 import aqaryTextureLarge from 'assets/sarvath/AqaryLaptopLarge.png';
-import aqaryTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import aqaryTexture from 'assets/sarvath/AqaryLaptopSmall.png';
+import aqaryTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 // ==== Project 1 ==== END ==== //
-
-
-
-
 
 // ==== Project 2 ==== //
 import foodtekcolaplarge from 'assets/sarvath/foodtekcolaptoplarge.png';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import foodtekcolapsmall from 'assets/sarvath/foodtekcolapsmall.png';
 
-import foodtekcohonesmall from 'assets/sarvath/foodtekcophonesmall.png';
 import foodtekcohonelarge from 'assets/sarvath/foodtekcophonelarge.png';
+import foodtekcohonesmall from 'assets/sarvath/foodtekcophonesmall.png';
 
 // ==== Project 2 ==== END ==== //
-
-
-
 
 // ==== Project 3 TeaWork Dashboard==== //
-import teaworkdashboardLarge from 'assets/sarvath/teaworkdashboardLarge.png';
+import {
+  default as teaworkdashboard,
+  default as teaworkdashboardLarge,
+} from 'assets/sarvath/teaworkdashboardLarge.png';
 import teaworkdashboardPlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import teaworkdashboard from 'assets/sarvath/teaworkdashboardLarge.png';
 // ==== Project 3 ==== END ==== //
 
-
-
-
 // ==== Project 4  teawork Website ==== //
-import teaworklarge from 'assets/sarvath/teaworklarge.png';
+import {
+  default as teaworklarge,
+  default as teaworksmall,
+} from 'assets/sarvath/teaworklarge.png';
 import teaworkPlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import teaworksmall from 'assets/sarvath/teaworklarge.png';
 
-import teaworkphonesmall from 'assets/sarvath/teaworkphonelarge.png';
-import teaworkphonelarge from 'assets/sarvath/teaworkphonelarge.png';
+import {
+  default as teaworkphonelarge,
+  default as teaworkphonesmall,
+} from 'assets/sarvath/teaworkphonelarge.png';
 
 // ==== Project 2 ==== END ==== //
-
-
-
-
-
-
-
 
 // ==== Project 2 ==== //
 
-import gamestackTexture2lapLarge from 'assets/sarvath/steerautolap.png';
 import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2lap from 'assets/sarvath/steerautolap.png';
-import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
 import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
+import {
+  default as gamestackTexture2lap,
+  default as gamestackTexture2lapLarge,
+} from 'assets/sarvath/steerautolap.png';
 import gamestackTexture from 'assets/sarvath/steerautophone2.png';
 
 import gamestackTexture2Large from 'assets/sarvath/steerautophone2.png';
@@ -67,11 +50,10 @@ import gamestackTexture2Large from 'assets/sarvath/steerautophone2.png';
 
 //  ==== project 5 vidhya ==== //
 
-import vidhyaonlinephone1 from 'assets/sarvath/vidhyaphonelarge.png';
 import vidhyaonlinephone2 from 'assets/sarvath/vidhyaphone2.png';
+import vidhyaonlinephone1 from 'assets/sarvath/vidhyaphonelarge.png';
 
 import vidhyaonlinecover from 'assets/gamestack-login-placeholder.jpg';
-
 
 // ==== END ==== //
 
@@ -82,18 +64,17 @@ import difuzalapcover from 'assets/slice-app-placeholder.jpg';
 
 // ==== END ==== //
 
-
-
 //  ==== project 6 Difuza ==== //
-import inkypencilphonelarge from 'assets/sarvath/inkypencilphonelarge.png';
-import inkypencilphonecover from 'assets/slice-app-placeholder.jpg';
 import inkypencillaplarge from 'assets/sarvath/inkypencillaptoplarge.png';
-import inkypencillapcover from 'assets/slice-app-placeholder.jpg';
+import inkypencilphonelarge from 'assets/sarvath/inkypencilphonelarge.png';
+import {
+  default as inkypencillapcover,
+  default as inkypencilphonecover,
+} from 'assets/slice-app-placeholder.jpg';
 
 // ==== END ==== //
 
 // ==== project 7 wololo ==== //
-
 
 import Wolololaplarge from 'assets/sarvath/Wolololaplarge.png';
 import WololoCover from 'assets/spr-lesson-builder-dark-placeholder.jpg';
@@ -102,13 +83,10 @@ import WololoCover from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 
 // ==== project 7 wololo ==== //
 
-
 import futurebanklarge from 'assets/sarvath/futurebanklarge.png';
 import futurebankCover from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 
 // ==== END ==== //
-
-
 
 import { Footer } from 'components/Footer';
 import { Meta } from 'components/Meta';
@@ -118,7 +96,15 @@ import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
-const disciplines = ['Next JS', 'React JS', 'Node JS', 'Express JS', 'Mongo DB', 'MySQL', 'Firebase'];
+const disciplines = [
+  'Next JS',
+  'React JS',
+  'Node JS',
+  'Express JS',
+  'Mongo DB',
+  'MySQL',
+  'Firebase',
+];
 
 export const Home = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -135,14 +121,23 @@ export const Home = () => {
   const projectnine = useRef();
   const projectten = useRef();
 
-
-
-
-
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, projectFive, projectSix, projectseven, projecteight, projectnine, projectten, details];
+    const sections = [
+      intro,
+      projectOne,
+      projectTwo,
+      projectThree,
+      projectFour,
+      projectFive,
+      projectSix,
+      projectseven,
+      projecteight,
+      projectnine,
+      projectten,
+      details,
+    ];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -371,7 +366,6 @@ export const Home = () => {
           ],
         }}
       />
-
 
       <ProjectSummary
         id="project-9"

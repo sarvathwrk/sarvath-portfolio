@@ -1,8 +1,7 @@
 import { Button } from 'components/Button';
 import { useAppContext } from 'hooks';
-import React, { Suspense, useEffect, useId, useState } from 'react';
+import React, { useEffect, useId, useState } from 'react';
 import styles from './ThemeToggle.module.css';
-
 
 const DigitalClock = () => {
   const [time, setTime] = useState(new Date());
@@ -16,7 +15,7 @@ const DigitalClock = () => {
   }, []);
 
   const hours24 = time.getHours().toString().padStart(2, '0');
-  const hours12 = ((hours) => {
+  const hours12 = (hours => {
     const parsedHours = parseInt(hours, 10);
     return (parsedHours % 12 || 12).toString().padStart(2, '0');
   })(hours24);
@@ -26,11 +25,11 @@ const DigitalClock = () => {
   const ampm = time.getHours() >= 12 ? 'PM' : 'AM';
 
   return (
-    <p style={{ fontSize: "13px", width: "84px" }}>{`${hours12}:${minutes}:${seconds} ${ampm}`}</p>
+    <p
+      style={{ fontSize: '13px', width: '84px' }}
+    >{`${hours12}:${minutes}:${seconds} ${ampm}`}</p>
   );
 };
-
-
 
 export const ThemeToggle = ({ isMobile, ...rest }) => {
   const { dispatch } = useAppContext();
@@ -42,24 +41,28 @@ export const ThemeToggle = ({ isMobile, ...rest }) => {
     dispatch({ type: 'toggleTheme' });
   };
 
-
   useEffect(() => {
     setIsMounted(true);
   }, []);
-
 
   return (
     <>
       <Button
         iconOnly
-        style={{ width: "122px" }}
+        style={{ width: '122px' }}
         className={styles.toggle}
         data-mobile={isMobile}
         aria-label="Toggle theme"
         onClick={handleClick}
         {...rest}
       >
-        <svg aria-hidden className={styles.svg} width="38" height="38" viewBox="0 0 38 38">
+        <svg
+          aria-hidden
+          className={styles.svg}
+          width="38"
+          height="38"
+          viewBox="0 0 38 38"
+        >
           <defs>
             <mask id={maskId}>
               <circle className={styles.circle} data-mask={true} cx="19" cy="19" r="13" />
@@ -85,7 +88,6 @@ export const ThemeToggle = ({ isMobile, ...rest }) => {
         )}
       </Button>
 
-
       {/* <h1> {`${hours}:${minutes}:${seconds}`}</h1> */}
 
       {/* <h1> {formattedTime}</h1>
@@ -93,10 +95,6 @@ export const ThemeToggle = ({ isMobile, ...rest }) => {
       
       
       */}
-
-
-
-
     </>
   );
 };

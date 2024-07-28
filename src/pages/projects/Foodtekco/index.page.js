@@ -11,8 +11,8 @@ import foodtekcoproject2ap1olaceholder from 'assets/slice-app-placeholder.jpg';
 import foodtekcoproject3large1 from 'assets/sarvath/foodtekco/foodtekcoproject3large1.png';
 import foodtekcoproject3large2 from 'assets/sarvath/foodtekco/foodtekcoproject3large2.png';
 
-import foodtekcoprojetphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
 import foodtekcoprojetphone3placeholder2 from 'assets/slice-sidebar-annotations-placeholder.png';
+import foodtekcoprojetphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
 
 // ==== Lap Size == 4 ==== //
 import foodtekcoproject4large from 'assets/sarvath/foodtekco/foodtekcoproject4large.png';

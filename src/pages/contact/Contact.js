@@ -11,35 +11,16 @@ import { Text } from 'components/Text';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
 import { useFormInput } from 'hooks';
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Contact.module.css';
 
-import {
-  ProjectBackground,
-  ProjectBackgroundContact,
-  ProjectContainer,
-  ProjectHeader,
-  ProjectSection,
-  ProjectSectionContent,
-  ProjectSectionHeading,
-  ProjectSectionText,
-  ProjectTextRow,
-} from 'layouts/Project';
-import { Image } from 'components/Image';
-
+import { ProjectBackgroundContact, ProjectContainer } from 'layouts/Project';
 
 import GalleryLarge3 from 'assets/sarvath/GalleryLarge3.jpg';
 import GalleryLarge3placeholder from 'assets/volkihar-enderal-placeholder.jpg';
 
-
-
-
 import { Fragment } from 'react';
-
-import volkiharEnderalLogoLarge from 'assets/volkihar-enderal-logo-large.png';
-import volkiharEnderalLogoPlaceholder from 'assets/volkihar-enderal-logo-placeholder.png';
-import volkiharEnderalLogo from 'assets/volkihar-enderal-logo.png';
 
 export const Contact = () => {
   const errorRef = useRef();
@@ -229,7 +210,6 @@ export const Contact = () => {
           <Footer className={styles.footer} />
         </Section>
       </ProjectContainer>
-
     </Fragment>
   );
 };

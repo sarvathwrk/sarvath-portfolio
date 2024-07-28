@@ -10,8 +10,8 @@ import steerautoproject2ap1olaceholder from 'assets/slice-app-placeholder.jpg';
 import steerautoproject3large2 from 'assets/sarvath/steerauto/steerautoproject3large1.png';
 import steerautoproject3large1 from 'assets/sarvath/steerauto/steerautoproject3large2.png';
 
-import steerautoprojectphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
 import steerautoprojectphone3placeholder2 from 'assets/slice-sidebar-annotations-placeholder.png';
+import steerautoprojectphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
 
 // ==== Lap Size == 4 ==== //
 import steerautoproject4large from 'assets/sarvath/steerauto/steerautoproject4large.png';

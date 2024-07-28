@@ -100,7 +100,6 @@ export const Uses = () => {
                     <Link href="https://www.framer.com/motion/">Framer Motion</Link>, it’s
                     a great way to add spring animations to React and three.js.
                   </ListItem>
-
                 </List>
               </ProjectSectionText>
             </ProjectTextRow>
