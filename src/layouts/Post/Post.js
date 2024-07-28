@@ -9,8 +9,8 @@ import { Text } from 'components/Text';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
 import { useParallax, useScrollToHash } from 'hooks';
-import RouterLink from 'next/link';
-import { useRef, useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
 import { clamp } from 'utils/clamp';
 import { formatDate } from 'utils/date';
 import { cssProps, msToNum, numToMs } from 'utils/style';
@@ -20,7 +20,7 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
   const scrollToHash = useScrollToHash();
   const imageRef = useRef();
   const [dateTime, setDateTime] = useState(null);
-  
+
   useEffect(() => {
     setDateTime(formatDate(date));
   }, [date, dateTime]);
@@ -86,15 +86,15 @@ export const Post = ({ children, title, date, abstract, banner, timecode, ogImag
               ))}
             </Heading>
             <div className={styles.details}>
-              <RouterLink href="#postContent">
-                <a
+              <Link href="#postContent">
+                <span
                   className={styles.arrow}
                   aria-label="Scroll to post content"
                   onClick={handleScrollIndicatorClick}
                 >
                   <ArrowDown aria-hidden />
-                </a>
-              </RouterLink>
+                </span>
+              </Link>
               <div className={styles.timecode}>{timecode}</div>
             </div>
           </div>

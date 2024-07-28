@@ -155,7 +155,7 @@ export function VolkiharKnight() {
                 sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 100vw, 220px`}
                 style={{ maxWidth: 220, width: '100%', marginBottom: 30 }}
               /> */}
-              <div class="image-container">
+              <div className="image-container">
                 <img
                   src={`/SarvathLogo${currentImage}.png`}
                   placeholder={volkiharEnderalLogoPlaceholder}

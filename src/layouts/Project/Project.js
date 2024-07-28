@@ -29,7 +29,7 @@ export function ProjectHeader({
       >
         <div className={styles.details}>
           <Heading className={styles.title} level={2} as="h1">
-            <DecoderText text={`${title}`} delay={1000} style={{ fontSize: "50px" }} />
+            <DecoderText text={`${title}`} delay={1000} style={{ fontSize: '50px' }} />
           </Heading>
           <Text className={styles.description} size="xl" as="p">
             {description}

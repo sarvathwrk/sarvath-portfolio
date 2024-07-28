@@ -64,7 +64,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
               <h1 className={styles.name} data-visible={visible} id={titleId}>
                 <DecoderText text="Mohamed Sarvath Khan" delay={1000} />
               </h1>
-              <Heading level={0} as="h7" className={styles.title}>
+              <Heading level={0} as="h6" className={styles.title}>
                 {/* <VisuallyHidden className={styles.label}>
                   {`Full Stack Developer + ${introLabel}`}
                 </VisuallyHidden> */}
@@ -109,17 +109,17 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
               </Heading>
             </header>
             <RouterLink href="/#project-1">
-              <a
+              <span
                 className={styles.scrollIndicator}
                 data-status={status}
                 data-hidden={scrollIndicatorHidden}
                 onClick={handleScrollClick}
               >
                 <VisuallyHidden>Scroll to projects</VisuallyHidden>
-              </a>
+              </span>
             </RouterLink>
             <RouterLink href="/#project-1">
-              <a
+              <span
                 className={styles.mobileScrollIndicator}
                 data-status={status}
                 data-hidden={scrollIndicatorHidden}
@@ -127,7 +127,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
               >
                 <VisuallyHidden>Scroll to projects</VisuallyHidden>
                 <ArrowDown aria-hidden />
-              </a>
+              </span>
             </RouterLink>
           </Fragment>
         )}

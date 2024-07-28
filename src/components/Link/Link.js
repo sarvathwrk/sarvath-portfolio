@@ -30,7 +30,7 @@ export const LinkContent = forwardRef(
     const targetValue = target || (isExternal ? '_blank' : undefined);
 
     return (
-      <a
+      <Link
         className={classes(styles.link, className)}
         data-secondary={secondary}
         rel={relValue}
@@ -40,7 +40,7 @@ export const LinkContent = forwardRef(
         {...rest}
       >
         {children}
-      </a>
+      </Link>
     );
   }
 );

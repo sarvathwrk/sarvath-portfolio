@@ -21,8 +21,8 @@ export const AppContext = createContext({});
 
 const repoPrompt = `
 __  __  __
-\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215
-\n\nTaking a peek huh? Check out the source code: https://github.com/HamishMW/portfolio
+\\ \\ \\ \\ \\ \\ \u2215\n \\ \\ \\ \u2215\\ \\ \n  \\ \u2215  \\ \u2215
+\n\nTaking a peek huh? Check out the source code: https://github.com/sarvathwrk/sarvath-portfolio
 `;
 
 const App = ({ Component, pageProps }) => {
@@ -63,7 +63,9 @@ const App = ({ Component, pageProps }) => {
             <ParticlesComp />
 
             <main className={styles.app} tabIndex={-1} id="MainContent">
-              <AnimatePresence exitBeforeEnter>
+              <AnimatePresence mode="wait">
+                {' '}
+                {/* Update to use 'wait' */}
                 <m.div
                   key={route}
                   className={styles.page}
@@ -86,13 +88,6 @@ const App = ({ Component, pageProps }) => {
         </LazyMotion>
       </ThemeProvider>
     </AppContext.Provider>
-
-    // <div className="w-full h-screen bg-banner-bg bg-no-repeat bg-center bg-cover relative overflow-hidden">
-
-    //   <div className="w-full h-screen absolute top-0 left-0" style={{ width: "100vw", height: "100vh", background: "black" }}>
-    //     <ParticlesComp />
-    //   </div>
-    // </div>
   );
 };
 

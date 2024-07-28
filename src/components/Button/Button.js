@@ -7,17 +7,21 @@ import { classes } from 'utils/style';
 import styles from './Button.module.css';
 
 function isExternalLink(href) {
-  return href?.includes('://');
+  return href?.startsWith('http');
 }
 
 export const Button = forwardRef(({ href, ...rest }, ref) => {
-  if (isExternalLink(href) || !href) {
+  const isExternal = href && isExternalLink(href);
+
+  if (isExternal || !href) {
+    // Render a simple button or link for external URLs
     return <ButtonContent href={href} ref={ref} {...rest} />;
   }
 
+  // Render RouterLink for internal URLs
   return (
     <RouterLink passHref href={href} scroll={false}>
-      <ButtonContent href={href} ref={ref} {...rest} />
+      <ButtonContent ref={ref} {...rest} />
     </RouterLink>
   );
 });
@@ -26,7 +30,7 @@ const ButtonContent = forwardRef(
   (
     {
       className,
-      as,
+      as: Component = 'button',
       secondary,
       loading,
       loadingText = 'loading',
@@ -43,25 +47,24 @@ const ButtonContent = forwardRef(
     },
     ref
   ) => {
-    const isExternal = isExternalLink(href);
-    const defaultComponent = href ? 'a' : 'button';
-    const Component = as || defaultComponent;
+    const isExternal = href && isExternalLink(href);
+    const Tag = Component;
 
     return (
-      <Component
+      <Tag
         className={classes(styles.button, className)}
-        data-loading={loading}
-        data-icon-only={iconOnly}
-        data-secondary={secondary}
-        data-icon={icon}
-        href={href}
-        rel={rel || isExternal ? 'noopener noreferrer' : undefined}
-        target={target || isExternal ? '_blank' : undefined}
-        disabled={disabled}
+        data-loading={loading ? true : undefined}
+        data-icon-only={iconOnly ? true : undefined}
+        data-secondary={secondary ? true : undefined}
+        data-icon={icon || undefined}
+        href={Tag === 'a' ? href : undefined} // Apply href only if Tag is 'a'
+        rel={isExternal ? 'noopener noreferrer' : rel || undefined}
+        target={isExternal ? '_blank' : target || undefined}
+        disabled={Tag === 'button' ? disabled : undefined} // Apply disabled only if Tag is 'button'
         ref={ref}
         {...rest}
       >
-        {!!icon && (
+        {icon && (
           <Icon
             className={styles.icon}
             data-start={!iconOnly}
@@ -69,8 +72,8 @@ const ButtonContent = forwardRef(
             icon={icon}
           />
         )}
-        {!!children && <span className={styles.text}>{children}</span>}
-        {!!iconEnd && (
+        {children && <span className={styles.text}>{children}</span>}
+        {iconEnd && (
           <Icon
             className={styles.icon}
             data-end={!iconOnly}
@@ -88,7 +91,7 @@ const ButtonContent = forwardRef(
             />
           )}
         </Transition>
-      </Component>
+      </Tag>
     );
   }
 );

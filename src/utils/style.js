@@ -72,5 +72,5 @@ export function cssProps(props, style = {}) {
  * Concatenate classNames together
  */
 export function classes(...classes) {
-  return classes.filter(Boolean).join(' ');
+  if (classes) return classes?.filter(Boolean).join(' ');
 }

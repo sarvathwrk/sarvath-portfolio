@@ -19,7 +19,7 @@ import {
   MeshDepthMaterial,
   OrthographicCamera,
   PerspectiveCamera,
-  PlaneBufferGeometry,
+  PlaneGeometry, // Updated name
   Scene,
   ShaderMaterial,
   Vector3,
@@ -141,9 +141,7 @@ export const Model = ({
     renderTargetBlur.current.texture.generateMipmaps = false;
 
     // Make a plane and make it face up
-    const planeGeometry = new PlaneBufferGeometry(planeWidth, planeHeight).rotateX(
-      Math.PI / 2
-    );
+    const planeGeometry = new PlaneGeometry(planeWidth, planeHeight).rotateX(Math.PI / 2);
 
     const planeMaterial = new MeshBasicMaterial({
       map: renderTarget.current.texture,
@@ -267,7 +265,7 @@ export const Model = ({
     blurShadow(blurAmount);
 
     // A second pass to reduce the artifacts
-    // (0.4 is the minimum blur amout so that the artifacts are gone)
+    // (0.4 is the minimum blur amount so that the artifacts are gone)
     blurShadow(blurAmount * 0.4);
 
     // Reset and render the normal scene

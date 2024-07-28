@@ -8,6 +8,7 @@ import { Text } from 'components/Text';
 import { Transition } from 'components/Transition';
 import { Fragment } from 'react';
 import styles from './404.module.css';
+import Link from 'next/link';
 
 export function Page404() {
   return (
@@ -67,7 +68,7 @@ export function Page404() {
               >
                 <source src={notFoundVideo} type="video/mp4" />
               </video>
-              <a
+              <Link
                 className={styles.credit}
                 data-visible={visible}
                 href="https://www.imdb.com/title/tt0113568/"
@@ -75,7 +76,7 @@ export function Page404() {
                 rel="noopener noreferrer"
               >
                 Animation from Ghost in the Shell (1995)
-              </a>
+              </Link>
             </div>
           </Fragment>
         )}

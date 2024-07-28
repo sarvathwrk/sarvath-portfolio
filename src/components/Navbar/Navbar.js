@@ -125,7 +125,9 @@ export const Navbar = () => {
 
   // Store the current hash to scroll to
   const handleNavItemClick = event => {
-    const hash = event.currentTarget.href.split('#')[1];
+    const href = event.currentTarget?.href || ''; // Safely access href
+    const hash = href.split('#')[1] || ''; // Ensure hash is defined
+
     setTarget(null);
 
     if (hash && route === '/') {
@@ -142,28 +144,28 @@ export const Navbar = () => {
   return (
     <header className={styles.navbar} ref={headerRef}>
       <RouterLink href={route === '/' ? '/#intro' : '/'} scroll={false}>
-        <a
+        <span
           data-navbar-item
           className={styles.logo}
           aria-label="Mohamed Sarvath Khan, Designer"
           onClick={handleMobileNavClick}
         >
           <Monogram highlight />
-        </a>
+        </span>
       </RouterLink>
       <NavToggle onClick={() => dispatch({ type: 'toggleMenu' })} menuOpen={menuOpen} />
       <nav className={styles.nav}>
         <div className={styles.navList}>
           {navLinks.map(({ label, pathname }) => (
             <RouterLink href={pathname} scroll={false} key={label}>
-              <a
+              <span
                 data-navbar-item
                 className={styles.navLink}
                 aria-current={getCurrent(pathname)}
                 onClick={handleNavItemClick}
               >
                 {label}
-              </a>
+              </span>
             </RouterLink>
           ))}
         </div>
@@ -174,7 +176,7 @@ export const Navbar = () => {
           <nav className={styles.mobileNav} data-visible={visible}>
             {navLinks.map(({ label, pathname }, index) => (
               <RouterLink href={pathname} scroll={false} key={label}>
-                <a
+                <span
                   className={styles.mobileNavLink}
                   data-visible={visible}
                   aria-current={getCurrent(pathname)}
@@ -186,7 +188,7 @@ export const Navbar = () => {
                   })}
                 >
                   {label}
-                </a>
+                </span>
               </RouterLink>
             ))}
             <NavbarIcons />

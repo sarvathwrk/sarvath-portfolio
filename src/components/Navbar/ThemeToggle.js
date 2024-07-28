@@ -26,7 +26,7 @@ const DigitalClock = () => {
 
   return (
     <p
-      style={{ fontSize: '13px', width: '84px' }}
+      style={{ fontSize: '13px', width: '90px' }}
     >{`${hours12}:${minutes}:${seconds} ${ampm}`}</p>
   );
 };

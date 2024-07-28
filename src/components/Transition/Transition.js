@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 /**
  * A Framer Motion AnimatePresence implementation of `react-transition-group`
- * to be used for vanilla css transitions
+ * for handling vanilla CSS transitions.
  */
 export const Transition = ({
   children,
@@ -13,7 +13,7 @@ export const Transition = ({
   onExit,
   onExited,
   in: show,
-  unmount,
+  unmount = false,
 }) => {
   const enterTimeout = useRef();
   const exitTimeout = useRef();
@@ -78,8 +78,8 @@ const TransitionContent = ({
       setStatus('entered');
       onEntered?.();
     }, actualTimeout);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [onEnter, onEntered, timeout, status, show]);
+    // Only dependencies that need to trigger this effect
+  }, [hasEntered, show, splitTimeout, timeout, onEnter, onEntered, enterTimeout, exitTimeout]);
 
   useEffect(() => {
     if (isPresent && show) return;
@@ -97,8 +97,8 @@ const TransitionContent = ({
       safeToRemove?.();
       onExited?.();
     }, actualTimeout);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isPresent, onExit, safeToRemove, timeout, onExited, show]);
+    // Only dependencies that need to trigger this effect
+  }, [isPresent, show, splitTimeout, timeout, onExit, safeToRemove, onExited, enterTimeout, exitTimeout]);
 
   return children(hasEntered && show ? isPresent : false, status);
 };

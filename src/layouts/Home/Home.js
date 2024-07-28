@@ -98,6 +98,7 @@ import styles from './Home.module.css';
 
 const disciplines = [
   'Next JS',
+  'Typescript',
   'React JS',
   'Node JS',
   'Express JS',

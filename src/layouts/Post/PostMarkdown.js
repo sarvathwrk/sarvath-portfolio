@@ -9,9 +9,9 @@ import styles from './PostMarkdown.module.css';
 
 const PostHeadingLink = ({ id }) => {
   return (
-    <a className={styles.headingLink} href={`#${id}`} aria-label="Link to heading">
+    <Link className={styles.headingLink} href={`#${id}`} aria-label="Link to heading">
       <Icon icon="link" />
-    </a>
+    </Link>
   );
 };
 
