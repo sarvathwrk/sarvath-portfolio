@@ -9,7 +9,7 @@ export const navLinks = [
   },
   {
     label: 'About',
-    pathname: '/About-Me',
+    pathname: '/about',
   },
   {
     label: 'Contact',

@@ -28,8 +28,8 @@ const ProfileText = ({ visible, titleId }) => (
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/About-Me">About Me</Link>. I’m always down for hearing about new
-      projects, so feel free to drop me a line.
+      <Link href="/about">About Me</Link>. I’m always down for hearing about new projects,
+      so feel free to drop me a line.
     </Text>
   </Fragment>
 );
