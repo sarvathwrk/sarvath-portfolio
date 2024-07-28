@@ -1,9 +1,7 @@
-import usesBackgroundPlaceholder from 'assets/uses-background-placeholder.jpg';
-import usesBackground from 'assets/uses-background.mp4';
+import { Fragment } from 'react';
 import { Footer } from 'components/Footer';
-import { Link } from 'components/Link';
-import { List, ListItem } from 'components/List';
 import { Meta } from 'components/Meta';
+import { List, ListItem } from 'components/List';
 import { Table, TableBody, TableCell, TableHeadCell, TableRow } from 'components/Table';
 import {
   ProjectBackground,
@@ -15,8 +13,10 @@ import {
   ProjectSectionText,
   ProjectTextRow,
 } from 'layouts/Project';
-import { Fragment } from 'react';
+import usesBackgroundPlaceholder from 'assets/uses-background-placeholder.jpg';
+import usesBackground from 'assets/uses-background.mp4';
 import styles from './Uses.module.css';
+import Link from 'next/link';
 
 export const Uses = () => {
   return (
@@ -26,15 +26,20 @@ export const Uses = () => {
         description="A list of hardware and software I use to do my thing"
       />
       <ProjectContainer className={styles.uses}>
+        {/* ProjectBackground Component */}
         <ProjectBackground
           src={{ src: usesBackground }}
           placeholder={usesBackgroundPlaceholder}
           opacity={0.7}
         />
+
+        {/* ProjectHeader Component */}
         <ProjectHeader
           title="Uses"
           description="A somewhat comprehensive list of tools, apps, hardware, and more that I use on a daily basis to design and code things. And yeah, that is a Johnny Mnemonic GIF in the background."
         />
+
+        {/* Design Section */}
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow width="m">
@@ -64,6 +69,8 @@ export const Uses = () => {
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
+
+        {/* Development Section */}
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow width="m">
@@ -81,7 +88,7 @@ export const Uses = () => {
                   </ListItem>
                   <ListItem>
                     <Link href="https://reactjs.org/">React</Link> is my front end
-                    Javascript library of choice. The component-centric mental model is
+                    JavaScript library of choice. The component-centric mental model is
                     the first thing that truly made sense to me as a designer.
                   </ListItem>
                   <ListItem>
@@ -90,13 +97,13 @@ export const Uses = () => {
                     learning curve but you can do some really powerful stuff with it.
                   </ListItem>
                   <ListItem>
-                    For CSS I’ve used a myriad pre-processors and css-in-js solutions like
-                    styled-components, but these days I’m using vanilla CSS with{' '}
+                    For CSS I’ve used a myriad of pre-processors and css-in-js solutions
+                    like styled-components, but these days I’m using vanilla CSS with{' '}
                     <Link href="https://postcss.org/">PostCSS</Link> to get upcoming CSS
                     features today.
                   </ListItem>
                   <ListItem>
-                    For Javascript animations I use{' '}
+                    For JavaScript animations I use{' '}
                     <Link href="https://www.framer.com/motion/">Framer Motion</Link>, it’s
                     a great way to add spring animations to React and three.js.
                   </ListItem>
@@ -105,6 +112,8 @@ export const Uses = () => {
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
+
+        {/* Hardware Section */}
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow stretch width="m">
@@ -121,7 +130,7 @@ export const Uses = () => {
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Memory</TableHeadCell>
-                    <TableCell>GSkill 32GB DDR4 3600mhz CAS 18</TableCell>
+                    <TableCell>GSkill 32GB DDR4 3600MHz CAS 18</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Motherboard</TableHeadCell>
@@ -129,7 +138,7 @@ export const Uses = () => {
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Monitor</TableHeadCell>
-                    <TableCell>1440p IPS 144hz LG 27GL850</TableCell>
+                    <TableCell>1440p IPS 144Hz LG 27GL850</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Keyboard</TableHeadCell>
@@ -141,11 +150,11 @@ export const Uses = () => {
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Laptop</TableHeadCell>
-                    <TableCell>Macbook Pro 14″ (2022 M1 Max)</TableCell>
+                    <TableCell>MacBook Pro 14″ (2022 M1 Max)</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Headphones</TableHeadCell>
-                    <TableCell>Audio Technica ATH-M50x/Apple Airpods</TableCell>
+                    <TableCell>Audio-Technica ATH-M50x / Apple AirPods</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Microphone</TableHeadCell>
