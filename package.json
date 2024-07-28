@@ -6,31 +6,25 @@
   "repository": "https://github.com/sarvathwrk/sarvath-portfolio.git",
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
-    "@storybook/addon-a11y": "^6.5.10",
-    "@storybook/addon-actions": "^6.5.10",
-    "@storybook/addon-controls": "^6.5.10",
-    "@storybook/addon-toolbars": "^6.5.10",
-    "@storybook/builder-webpack5": "^6.5.10",
-    "@storybook/manager-webpack5": "^6.5.10",
-    "@storybook/react": "^6.5.10",
     "@svgr/webpack": "^6.3.1",
     "esbuild": "^0.15.2",
     "eslint": "^8.21.0",
     "eslint-config-next": "^12.2.5",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "fs-extra": "^10.1.0",
     "globby": "^13.1.2",
     "postcss": "^8.4.16",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^7.7.2",
-    "prettier": "^2.7.1",
+    "prettier": "^2.8.8",
     "puppeteer": "^16.1.0",
     "react-tsparticles": "^2.9.0",
     "reading-time": "^1.5.0",
     "rehype-img-size": "^1.0.1",
     "rehype-preset-minify": "^6.0.0",
     "rehype-slug": "^5.0.1",
-    "storybook": "^6.5.10",
-    "storybook-addon-next": "^1.6.7",
     "stylelint": "^14.9.1",
     "stylelint-config-css-modules": "^4.1.0",
     "stylelint-config-prettier": "^9.0.3",
@@ -49,12 +43,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export -o build/",
-    "build:storybook": "build-storybook -o build-storybook && node scripts/draco-storybook",
     "start": "next start",
     "test": "echo 'write some tests'",
-    "storybook": "start-storybook -p 9009 -h localhost",
-     "export": "next build && next export"
-
+    "export": "next build && next export"
   },
   "browserslist": {
     "production": [
@@ -72,5 +63,14 @@
   "engines": {
     "npm": ">=8.6.0",
     "node": ">=18.0.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "**/*.{json,css,scss,md,webmanifest}": [
+      "prettier -w"
+    ]
   }
 }
