@@ -9,10 +9,8 @@ export const Footer = ({ className }) => (
       <span className={styles.date}>
         {`© ${new Date().getFullYear()} Mohamed Sarvath Khan.`}
       </span>
-      {/* Filter out non-DOM props like `secondary` */}
       <Link href="/humans.txt" target="_self">
-        {/* Ensure Link component handles secondary internally */}
-        <span className={styles.link}>Crafted by yours truly</span>
+        <span className={styles.link}>Created by @Me</span>
       </Link>
     </Text>
   </footer>
