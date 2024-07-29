@@ -12,6 +12,7 @@ import { NavToggle } from './NavToggle';
 import styles from './Navbar.module.css';
 import { ThemeToggle } from './ThemeToggle';
 import { navLinks, socialLinks } from './navData';
+import Link from 'next/link';
 
 export const Navbar = () => {
   const [current, setCurrent] = useState();
@@ -143,16 +144,21 @@ export const Navbar = () => {
 
   return (
     <header className={styles.navbar} ref={headerRef}>
-      <RouterLink href={route === '/' ? '/#intro' : '/'} scroll={false}>
+      {/* <RouterLink aria-label="Home" href={route === '/' ? '/#intro' : '/'} scroll={false}>
         <span
           data-navbar-item
           className={styles.logo}
           aria-label="Mohamed Sarvath Khan, Designer"
           onClick={handleMobileNavClick}
-        >
-          <Monogram highlight />
-        </span>
-      </RouterLink>
+        > */}
+      <Monogram
+        highlight
+        onClick={handleMobileNavClick}
+        logostyle={styles.logo}
+        route={route}
+      />
+      {/* </span>
+      </RouterLink> */}
       <NavToggle onClick={() => dispatch({ type: 'toggleMenu' })} menuOpen={menuOpen} />
       <nav className={styles.nav}>
         <div className={styles.navList}>
@@ -204,7 +210,7 @@ export const Navbar = () => {
 const NavbarIcons = ({ desktop }) => (
   <div className={styles.navIcons}>
     {socialLinks.map(({ label, url, icon }) => (
-      <a
+      <Link
         key={label}
         data-navbar-item={desktop || undefined}
         className={styles.navIconLink}
@@ -214,7 +220,7 @@ const NavbarIcons = ({ desktop }) => (
         rel="noopener noreferrer"
       >
         <Icon className={styles.navIcon} icon={icon} />
-      </a>
+      </Link>
     ))}
   </div>
 );

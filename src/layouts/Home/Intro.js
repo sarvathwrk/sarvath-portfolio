@@ -1,6 +1,5 @@
-import ArrowDown from 'assets/arrow-down.svg';
+import ArrowDown from 'assets/arrow-down.svg'; // Ensure this is used if not, remove it
 import { DecoderText } from 'components/DecoderText';
-import { Heading } from 'components/Heading';
 import { Section } from 'components/Section';
 import { useTheme } from 'components/ThemeProvider';
 import { tokens } from 'components/ThemeProvider/theme';
@@ -9,7 +8,7 @@ import { VisuallyHidden } from 'components/VisuallyHidden';
 import { AnimatePresence } from 'framer-motion';
 import { useInterval, usePrevious, useScrollToHash } from 'hooks';
 import dynamic from 'next/dynamic';
-import RouterLink from 'next/link';
+import Link from 'next/link';
 import { Fragment, useEffect, useState } from 'react';
 import { cssProps } from 'utils/style';
 import styles from './Intro.module.css';
@@ -22,14 +21,13 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
   const theme = useTheme();
   const [disciplineIndex, setDisciplineIndex] = useState(0);
   const prevTheme = usePrevious(theme);
-  const currentDiscipline = disciplines.find((item, index) => index === disciplineIndex);
+  const currentDiscipline = disciplines[disciplineIndex];
   const titleId = `${id}-title`;
   const scrollToHash = useScrollToHash();
 
   useInterval(
     () => {
-      const index = (disciplineIndex + 1) % disciplines.length;
-      setDisciplineIndex(index);
+      setDisciplineIndex((disciplineIndex + 1) % disciplines.length);
     },
     5000,
     theme.themeId
@@ -64,10 +62,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
               <h1 className={styles.name} data-visible={visible} id={titleId}>
                 <DecoderText text="Mohamed Sarvath Khan" delay={1000} />
               </h1>
-              <Heading level={0} as="h6" className={styles.title}>
-                {/* <VisuallyHidden className={styles.label}>
-                  {`Full Stack Developer + ${introLabel}`}
-                </VisuallyHidden> */}
+              <span className={styles.title}>
                 <span aria-hidden className={styles.row}>
                   <span
                     className={styles.word}
@@ -96,7 +91,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                             style={cssProps({ delay: tokens.base.durationL })}
                           >
                             <DecoderText
-                              text={`${item}`}
+                              text={item}
                               delay={2000}
                               style={{ fontSize: '50px' }}
                             />
@@ -106,9 +101,9 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                     ))}
                   </AnimatePresence>
                 </div>
-              </Heading>
+              </span>
             </header>
-            <RouterLink href="/#project-1">
+            <Link href="/#project-1" aria-label={`Project1`}>
               <span
                 className={styles.scrollIndicator}
                 data-status={status}
@@ -117,8 +112,8 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
               >
                 <VisuallyHidden>Scroll to projects</VisuallyHidden>
               </span>
-            </RouterLink>
-            <RouterLink href="/#project-1">
+            </Link>
+            <Link href="/#project-1" aria-label={`Project2`}>
               <span
                 className={styles.mobileScrollIndicator}
                 data-status={status}
@@ -128,7 +123,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 <VisuallyHidden>Scroll to projects</VisuallyHidden>
                 <ArrowDown aria-hidden />
               </span>
-            </RouterLink>
+            </Link>
           </Fragment>
         )}
       </Transition>
