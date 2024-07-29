@@ -6369,6 +6369,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nodemailer@npm:^6.9.14":
+  version: 6.9.14
+  resolution: "nodemailer@npm:6.9.14"
+  checksum: 10c0/2542986849bc6ec2bf12fb7b72226da0ce9c6a0946216dea020d9eedee3ac1a4eb2413f59772a3ddd4bb9188d5ce859167a030c065719473f71319e052a319dc
+  languageName: node
+  linkType: hard
+
 "normalize-package-data@npm:^2.5.0":
   version: 2.5.0
   resolution: "normalize-package-data@npm:2.5.0"
@@ -6691,6 +6698,7 @@ __metadata:
     mdx-bundler: "npm:^9.0.1"
     next: "npm:^14.2.4"
     next-sitemap: "npm:^4.2.3"
+    nodemailer: "npm:^6.9.14"
     postcss: "npm:^8.4.16"
     postcss-flexbugs-fixes: "npm:^5.0.2"
     postcss-preset-env: "npm:^7.7.2"

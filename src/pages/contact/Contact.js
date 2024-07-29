@@ -25,6 +25,8 @@ import { Fragment } from 'react';
 export const Contact = () => {
   const errorRef = useRef();
   const email = useFormInput('');
+  const phone = useFormInput('+971');
+
   const message = useFormInput('');
   const [sending, setSending] = useState(false);
   const [complete, setComplete] = useState(false);
@@ -36,38 +38,60 @@ export const Contact = () => {
     setStatusError('');
 
     if (sending) return;
-
     try {
-      setSending(true);
-
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
+      const response = await fetch('/api', {
         method: 'POST',
-        mode: 'cors',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           email: email.value,
           message: message.value,
+          phone: phone.value,
         }),
       });
 
-      const responseMessage = await response.json();
-
-      const statusError = getStatusError({
-        status: response?.status,
-        errorMessage: responseMessage?.error,
-        fallback: 'There was a problem sending your message',
-      });
-
-      if (statusError) throw new Error(statusError);
-
-      setComplete(true);
-      setSending(false);
+      if (response.ok) {
+        alert('Message sent successfully!');
+      } else {
+        alert('Something went wrong!');
+      }
     } catch (error) {
-      setSending(false);
-      setStatusError(error.message);
+      console.error('Error:', error);
+      alert('Something went wrong!');
     }
+    // try {
+    //   setSending(true);
+
+    //   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
+    //     method: 'POST',
+    //     mode: 'cors',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify({
+    //       email: email.value,
+    //       message: message.value,
+    //       phone: phone.value,
+    //     }),
+    //   });
+
+    //   const responseMessage = await response.json();
+
+    //   const statusError = getStatusError({
+    //     status: response?.status,
+    //     errorMessage: responseMessage?.error,
+    //     fallback: 'There was a problem sending your message',
+    //   });
+
+    //   if (statusError) throw new Error(statusError);
+
+    //   setComplete(true);
+    //   setSending(false);
+    // } catch (error) {
+    //   setSending(false);
+    //   setStatusError(error.message);
+    // }
   };
 
   return (
@@ -127,6 +151,16 @@ export const Contact = () => {
                   type="email"
                   maxLength={512}
                   {...email}
+                />
+                <Input
+                  required
+                  className={styles.input}
+                  data-status={status}
+                  style={getDelay(tokens.base.durationS, initDelay)}
+                  autoComplete="off"
+                  label="Contact No"
+                  maxLength={13}
+                  {...phone}
                 />
                 <Input
                   required
