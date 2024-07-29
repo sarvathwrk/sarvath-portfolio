@@ -1,38 +1,13 @@
-__  __  __
-\ \ \ \ \/
- \ \/\ \
-  \/  \/
-
-The humans.txt file explains the team, technology,
-and graphic assets behind this site humanstxt.org.
-
-_______________________________________________________________________________
-
-DESIGNER | デザイナー
+FULL STACK DEVELOPER
 
 Mohamed Sarvath Khan
-Hand crafted design & web development
+web development
 
-Design tools:
-Figma
-Photoshop
-Blender
-
-twitter.com/hamishmw
-github.com/hamishmw
+x.com/sarvath86?t=97YsX-3ciqniEiQJLi-Mbw&s=08
 
 _______________________________________________________________________________
 
-TECHNOLOGY | テクノロジー
+TECHNOLOGY
 
 React
 Next.js
-Three.js
-Framer Motion
-
-_______________________________________________________________________________
-
-FONTS | フォント
-
-Gotham
-Hiragino Kaku Gothic

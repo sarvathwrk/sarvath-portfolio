@@ -69,7 +69,7 @@ function Details() {
       <Meta title={title} prefix="Projects" description={description} />
       <ProjectContainer className={styles.slice}>
         <ProjectBackground
-          src={sliceBackground}
+          src={'sliceBackground'}
           srcSet={`${sliceBackground.src} 1280w, ${sliceBackgroundLarge.src} 2560w`}
           placeholder={sliceBackgroundPlaceholder}
           opacity={0.8}

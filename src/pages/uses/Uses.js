@@ -1,7 +1,8 @@
-import { Fragment } from 'react';
+import usesBackgroundPlaceholder from 'assets/uses-background-placeholder.jpg';
+import usesBackground from 'assets/uses-background.mp4';
 import { Footer } from 'components/Footer';
-import { Meta } from 'components/Meta';
 import { List, ListItem } from 'components/List';
+import { Meta } from 'components/Meta';
 import { Table, TableBody, TableCell, TableHeadCell, TableRow } from 'components/Table';
 import {
   ProjectBackground,
@@ -13,10 +14,8 @@ import {
   ProjectSectionText,
   ProjectTextRow,
 } from 'layouts/Project';
-import usesBackgroundPlaceholder from 'assets/uses-background-placeholder.jpg';
-import usesBackground from 'assets/uses-background.mp4';
+import { Fragment } from 'react';
 import styles from './Uses.module.css';
-import Link from 'next/link';
 
 export const Uses = () => {
   return (
@@ -38,40 +37,8 @@ export const Uses = () => {
           title="Uses"
           description="A somewhat comprehensive list of tools, apps, hardware, and more that I use on a daily basis to design and code things. And yeah, that is a Johnny Mnemonic GIF in the background."
         />
-
-        {/* Design Section */}
-        <ProjectSection padding="none" className={styles.section}>
-          <ProjectSectionContent>
-            <ProjectTextRow width="m">
-              <ProjectSectionHeading>Design</ProjectSectionHeading>
-              <ProjectSectionText as="div">
-                <List>
-                  <ListItem>
-                    <Link href="https://www.figma.com">Figma</Link> is my primary tool for
-                    UI design these days. Made the switch from Sketch in 2020 and haven’t
-                    looked back. I’ve also created{' '}
-                    <Link href="https://www.figma.com/@hamish">a few plugins</Link> that
-                    you can install.
-                  </ListItem>
-                  <ListItem>
-                    Any motion graphics I create are created in Adobe After Effects. So
-                    far I haven’t found a non-Adobe product that’s as good. If anyone has
-                    suggestions please <Link href="/contact">message me</Link>.
-                  </ListItem>
-                  <ListItem>
-                    For any 3D models I use{' '}
-                    <Link href="https://www.blender.org/">Blender</Link>. Since 2.8 it’s
-                    become way simpler to use and in a lot of ways better than expensive
-                    paid tools like 3DS Max or Maya.
-                  </ListItem>
-                </List>
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-
         {/* Development Section */}
-        <ProjectSection padding="none" className={styles.section}>
+        {/* <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow width="m">
               <ProjectSectionHeading>Development</ProjectSectionHeading>
@@ -83,85 +50,170 @@ export const Uses = () => {
                     as my text editor, with the Atom One Dark theme and Operator Mono as
                     my typeface of choice.
                   </ListItem>
-                  <ListItem>
-                    Firefox is my main browser for both development and general use.
-                  </ListItem>
-                  <ListItem>
-                    <Link href="https://reactjs.org/">React</Link> is my front end
-                    JavaScript library of choice. The component-centric mental model is
-                    the first thing that truly made sense to me as a designer.
-                  </ListItem>
-                  <ListItem>
-                    For 3D effects and image shaders I use{' '}
-                    <Link href="https://threejs.org/">three.js</Link>. It has a bit of a
-                    learning curve but you can do some really powerful stuff with it.
-                  </ListItem>
-                  <ListItem>
-                    For CSS I’ve used a myriad of pre-processors and css-in-js solutions
-                    like styled-components, but these days I’m using vanilla CSS with{' '}
-                    <Link href="https://postcss.org/">PostCSS</Link> to get upcoming CSS
-                    features today.
-                  </ListItem>
-                  <ListItem>
-                    For JavaScript animations I use{' '}
-                    <Link href="https://www.framer.com/motion/">Framer Motion</Link>, it’s
-                    a great way to add spring animations to React and three.js.
-                  </ListItem>
                 </List>
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
-        </ProjectSection>
+        </ProjectSection> */}
 
         {/* Hardware Section */}
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow stretch width="m">
-              <ProjectSectionHeading>Hardware</ProjectSectionHeading>
+              <ProjectSectionHeading>Front End Development</ProjectSectionHeading>
               <Table>
                 <TableBody>
                   <TableRow>
-                    <TableHeadCell>CPU</TableHeadCell>
-                    <TableCell>AMD Ryzen 5800x</TableCell>
+                    <TableHeadCell>Frameworks</TableHeadCell>
+                    <TableCell>Next Js, React Js, Typescript</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>GPU</TableHeadCell>
-                    <TableCell>MSI Gaming X Trio RTX 3080</TableCell>
+                    <TableHeadCell>Programming Language</TableHeadCell>
+                    <TableCell>HTML, CSS, JavaScript, PHP</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Memory</TableHeadCell>
-                    <TableCell>GSkill 32GB DDR4 3600MHz CAS 18</TableCell>
+                    <TableHeadCell>User Interfaces</TableHeadCell>
+                    <TableCell>MUI, Bootstrap & Tailwind CSS</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Motherboard</TableHeadCell>
-                    <TableCell>MSI B550 Tomahawk</TableCell>
+                    <TableHeadCell>Documentation</TableHeadCell>
+                    <TableCell>Story Book</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Monitor</TableHeadCell>
-                    <TableCell>1440p IPS 144Hz LG 27GL850</TableCell>
+                    <TableHeadCell>Modern Web Development</TableHeadCell>
+                    <TableCell>Web Pack, Gulp, ES Lint, Prettier</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Keyboard</TableHeadCell>
-                    <TableCell>Logitech MX Keys</TableCell>
+                    <TableHeadCell>State & API Management</TableHeadCell>
+                    <TableCell>React Query, RTK, Fetch Method</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Mouse</TableHeadCell>
-                    <TableCell>Logitech G403</TableCell>
+                    <TableHeadCell>Form Handling</TableHeadCell>
+                    <TableCell>React Hook Form, Formik</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Laptop</TableHeadCell>
-                    <TableCell>MacBook Pro 14″ (2022 M1 Max)</TableCell>
+                    <TableHeadCell>Schema Validation</TableHeadCell>
+                    <TableCell>Yup, Zod</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Headphones</TableHeadCell>
-                    <TableCell>Audio-Technica ATH-M50x / Apple AirPods</TableCell>
+                    <TableHeadCell>Authentication</TableHeadCell>
+                    <TableCell>NextAuth & Session Provider</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Microphone</TableHeadCell>
-                    <TableCell>Blue Yeti</TableCell>
+                    <TableHeadCell>Statistics</TableHeadCell>
+                    <TableCell>Apex & MUI Chart's, Google Looker Studio</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableHeadCell>Google Authentication</TableHeadCell>
+                    <TableCell>OAuth 2.0, Firebase & Human Authentication</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+
+        <ProjectSection padding="none" className={styles.section}>
+          <ProjectSectionContent>
+            <ProjectTextRow stretch width="m">
+              <ProjectSectionHeading>Back End Development</ProjectSectionHeading>
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableHeadCell>Frameworks</TableHeadCell>
+                    <TableCell>Express Js, Node Js</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableHeadCell>Advanced Method</TableHeadCell>
+                    <TableCell>
+                      Node Js Cluster, Load Balancing and Scaling Techniques
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableHeadCell>API's</TableHeadCell>
+                    <TableCell>RESTful, SOAP & Endpoint Creation</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableHeadCell>Cloud Management</TableHeadCell>
+                    <TableCell>AWS EC2 Instance</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableHeadCell>Authorization</TableHeadCell>
+                    <TableCell>JWT, OAuth, Bearer Tokens</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+
+        <ProjectSection padding="none" className={styles.section}>
+          <ProjectSectionContent>
+            <ProjectTextRow stretch width="m">
+              <ProjectSectionHeading>Database</ProjectSectionHeading>
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableHeadCell>Database</TableHeadCell>
+                    <TableCell>MySQL, Mongo DB, Firebase & Redis</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableHeadCell>Advanced Method</TableHeadCell>
+                    <TableCell>
+                      Design, Modeling, Scalability & High Availability
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+
+        <ProjectSection padding="none" className={styles.section}>
+          <ProjectSectionContent>
+            <ProjectTextRow width="m">
+              <ProjectSectionHeading>Advanced Development</ProjectSectionHeading>
+              <ProjectSectionText as="div">
+                <List>
+                  <ListItem>
+                    Version Control (Git): Proficient in Git version control, managing
+                    repositories, branches, commits, and facilitating collaborative
+                    software development workflows.
+                  </ListItem>
+                  <ListItem>
+                    CI/CD Integration: Experienced in CI/CD integration for automating
+                    software delivery pipelines, ensuring efficient and reliable
+                    deployment processes.
+                  </ListItem>
+                  <ListItem>
+                    TypeScript: Familiar with TypeScript generics and advanced types,
+                    leveraging them to enhance code reusability, maintainability, and type
+                    safety in software development projects.
+                  </ListItem>
+                  <ListItem>
+                    PWA: Proficient in Progressive Web Applications (PWAs), leveraging
+                    modern web technologies to deliver fast, reliable, and engaging user
+                    experiences across various devices.
+                  </ListItem>
+                  <ListItem>
+                    JEST: Proficient in Jest, a JavaScript testing framework for ensuring
+                    robust and reliable code testing.
+                  </ListItem>
+                  <ListItem>
+                    Design Patterns : Skilled in applying web development design patterns
+                    to enhance scalability, maintainability, and performance of
+                    applications.
+                  </ListItem>
+                  <ListItem>
+                    MVC Architecture: Proficient in MVC Architecture for developing
+                    scalable and structured web applications.
+                  </ListItem>
+                  <ListItem>
+                    Scalability: Expertise in Application Scalability Strategies for
+                    robust and efficient web development.
+                  </ListItem>
+                </List>
+              </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
         </ProjectSection>
