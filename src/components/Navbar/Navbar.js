@@ -181,7 +181,12 @@ export const Navbar = () => {
         {visible => (
           <nav className={styles.mobileNav} data-visible={visible}>
             {navLinks.map(({ label, pathname }, index) => (
-              <RouterLink href={pathname} scroll={false} key={label}>
+              <RouterLink
+                className={styles.mobileNavLinkA}
+                href={pathname}
+                scroll={false}
+                key={label}
+              >
                 <span
                   className={styles.mobileNavLink}
                   data-visible={visible}

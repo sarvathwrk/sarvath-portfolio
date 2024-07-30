@@ -173,8 +173,12 @@
     transform: none;
   }
 }
-
+.mobileNavLinkA {
+  display: block;
+  margin: 10px 0px 10px 0px;
+}
 .mobileNavLink {
+  display: block;
   width: 100%;
   font-size: var(--headerNavFontSize);
   text-align: center;
