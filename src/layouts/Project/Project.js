@@ -153,7 +153,28 @@ export const ProjectBackgroundContact = ({ opacity = 0.7, className, ...rest }) 
     </Transition>
   );
 };
-
+export const ProjectNextImage = ({ className, alt, srcSet, placeholder, ...rest }) => {
+  let srcSetarray = [];
+  for (let index = 0; index < srcSet.length; index++) {
+    const element = srcSet[index];
+    if (element) {
+      srcSetarray.push({ src: element });
+    }
+  }
+  let place = { src: placeholder };
+  return (
+    <div className={classes(styles.image, className)}>
+      <Image
+        reveal
+        alt={alt}
+        delay={300}
+        srcSet={srcSetarray}
+        placeholder={place}
+        {...rest}
+      />
+    </div>
+  );
+};
 export const ProjectImage = ({ className, alt, ...rest }) => (
   <div className={classes(styles.image, className)}>
     <Image reveal alt={alt} delay={300} {...rest} />
