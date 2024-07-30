@@ -210,7 +210,6 @@
   transition-timing-function: var(--bezierFastoutSlowin);
   transition-duration: var(--durationXL);
   transition-delay: var(--delay);
-  opacity: 0;
 
   @media (--mediaUseMotion) {
     transition-property: transform, opacity;
@@ -229,7 +228,6 @@
   transition-timing-function: var(--bezierFastoutSlowin);
   transition-duration: var(--durationXL);
   transition-delay: var(--delay);
-  opacity: 0;
 
   @media (--mediaUseMotion) {
     transition-property: transform, opacity;

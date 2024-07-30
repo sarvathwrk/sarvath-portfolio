@@ -17,6 +17,7 @@ export const Input = ({
   onBlur,
   autoComplete,
   required,
+  minLength = 1,
   maxLength,
   type,
   onChange,
@@ -30,9 +31,21 @@ export const Input = ({
   const errorId = `${inputId}-error`;
   const InputElement = multiline ? TextArea : 'input';
 
+  const [validationError, setValidationError] = useState('');
+  const validatePhoneNumber = phoneNumber => {
+    // Example regex for validating phone numbers
+    const phoneRegex = /^\+[1-9]\d{8,14}$/;
+
+    return phoneRegex.test(phoneNumber);
+  };
   const handleBlur = event => {
     setFocused(false);
-
+    if (type === 'tel' && value && !validatePhoneNumber(value)) {
+      setValidationError('Please enter a valid phone number.');
+      return false;
+    } else {
+      setValidationError('');
+    }
     if (onBlur) {
       onBlur(event);
     }
@@ -41,7 +54,7 @@ export const Input = ({
   return (
     <div
       className={classes(styles.container, className)}
-      data-error={!!error}
+      data-error={!!validationError || !!error}
       style={style}
       {...rest}
     >
@@ -66,6 +79,7 @@ export const Input = ({
           onChange={onChange}
           autoComplete={autoComplete}
           required={required}
+          minLength={minLength}
           maxLength={maxLength}
           type={type}
         />

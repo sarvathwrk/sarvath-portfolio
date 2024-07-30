@@ -7,7 +7,6 @@ import { Icon } from 'components/Icon';
 import { Input } from 'components/Input';
 import { Meta } from 'components/Meta';
 import { Section } from 'components/Section';
-import { Text } from 'components/Text';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
 import { useFormInput } from 'hooks';
@@ -20,14 +19,29 @@ import { ProjectBackgroundContact, ProjectContainer } from 'layouts/Project';
 import GalleryLarge3 from 'assets/sarvath/GalleryLarge3.jpg';
 import GalleryLarge3placeholder from 'assets/volkihar-enderal-placeholder.jpg';
 
+import { CustomAboutHeader } from 'pages/about/header/customHeader';
 import { Fragment } from 'react';
+const validatePhoneNumber = phoneNumber => {
+  if (!phoneNumber) {
+    return 'Phone number is required.';
+  }
+  const phoneRegex = /^\+[1-9]\d{1,14}$/;
+  if (phoneNumber.length < 8) {
+    return 'Invalid Phone Number';
+  }
+  if (!phoneRegex.test(phoneNumber)) {
+    return 'Please enter a valid phone number with country code.'; // Return error message
+  }
 
+  return false; // Return empty string if no error
+};
 export const Contact = () => {
   const errorRef = useRef();
-  const email = useFormInput('');
-  const phone = useFormInput('+971');
+  const email = useFormInput('sarvath86@gmail.com');
+  const phone = useFormInput('');
+  const name = useFormInput('JHON');
 
-  const message = useFormInput('');
+  const message = useFormInput('hii');
   const [sending, setSending] = useState(false);
   const [complete, setComplete] = useState(false);
   const [statusError, setStatusError] = useState('');
@@ -36,9 +50,17 @@ export const Contact = () => {
   const onSubmit = async event => {
     event.preventDefault();
     setStatusError('');
+    setSending(true);
 
     if (sending) return;
     try {
+      let validate = validatePhoneNumber(phone.value);
+      if (validate) {
+        alert(validate);
+        setSending(false);
+
+        return false;
+      }
       const response = await fetch('/api', {
         method: 'POST',
         headers: {
@@ -48,50 +70,21 @@ export const Contact = () => {
           email: email.value,
           message: message.value,
           phone: phone.value,
+          name: name.value,
         }),
       });
 
       if (response.ok) {
-        alert('Message sent successfully!');
+        setComplete(true);
+        setSending(false);
       } else {
         alert('Something went wrong!');
       }
     } catch (error) {
       console.error('Error:', error);
-      alert('Something went wrong!');
+    } finally {
+      setSending(false);
     }
-    // try {
-    //   setSending(true);
-
-    //   const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/message`, {
-    //     method: 'POST',
-    //     mode: 'cors',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({
-    //       email: email.value,
-    //       message: message.value,
-    //       phone: phone.value,
-    //     }),
-    //   });
-
-    //   const responseMessage = await response.json();
-
-    //   const statusError = getStatusError({
-    //     status: response?.status,
-    //     errorMessage: responseMessage?.error,
-    //     fallback: 'There was a problem sending your message',
-    //   });
-
-    //   if (statusError) throw new Error(statusError);
-
-    //   setComplete(true);
-    //   setSending(false);
-    // } catch (error) {
-    //   setSending(false);
-    //   setStatusError(error.message);
-    // }
   };
 
   return (
@@ -114,7 +107,6 @@ export const Contact = () => {
           `,
         }}
       />
-
       <ProjectContainer>
         <ProjectBackgroundContact
           srcSet={[GalleryLarge3, GalleryLarge3]}
@@ -123,7 +115,7 @@ export const Contact = () => {
         />
 
         <Section className={styles.contact}>
-          <Transition unmount in={!complete} timeout={1600}>
+          <Transition unmount in={!complete} timeout={1000}>
             {(visible, status) => (
               <form className={styles.form} method="post" onSubmit={onSubmit}>
                 <Heading
@@ -145,6 +137,16 @@ export const Contact = () => {
                   required
                   className={styles.input}
                   data-status={status}
+                  style={getDelay(tokens.base.durationS, initDelay)}
+                  autoComplete="off"
+                  label="Name"
+                  maxLength={13}
+                  {...name}
+                />
+                <Input
+                  required
+                  className={styles.input}
+                  data-status={status}
                   style={getDelay(tokens.base.durationXS, initDelay)}
                   autoComplete="email"
                   label="Your Email"
@@ -159,6 +161,7 @@ export const Contact = () => {
                   style={getDelay(tokens.base.durationS, initDelay)}
                   autoComplete="off"
                   label="Contact No"
+                  type={'tel'}
                   maxLength={13}
                   {...phone}
                 />
@@ -207,65 +210,20 @@ export const Contact = () => {
               </form>
             )}
           </Transition>
-          <Transition unmount in={complete}>
-            {(visible, status) => (
-              <div className={styles.complete} aria-live="polite">
-                <Heading
-                  level={3}
-                  as="h3"
-                  className={styles.completeTitle}
-                  data-status={status}
-                >
-                  Message Sent
-                </Heading>
-                <Text
-                  size="l"
-                  as="p"
-                  className={styles.completeText}
-                  data-status={status}
-                  style={getDelay(tokens.base.durationXS)}
-                >
-                  I’ll get back to you within a couple days, sit tight
-                </Text>
-                <Button
-                  secondary
-                  iconHoverShift
-                  className={styles.completeButton}
-                  data-status={status}
-                  style={getDelay(tokens.base.durationM)}
-                  href="/"
-                  icon="chevronRight"
-                >
-                  Back to homepage
-                </Button>
-              </div>
-            )}
-          </Transition>
+          {complete && (
+            <CustomAboutHeader
+              title={'Message Sent Successfully'}
+              description={'I’ll get back to you within a couple days'}
+              linkLabel2="Back to homepage"
+              url2={'/'}
+            />
+          )}
           <Footer className={styles.footer} />
         </Section>
       </ProjectContainer>
     </Fragment>
   );
 };
-
-function getStatusError({
-  status,
-  errorMessage,
-  fallback = 'There was a problem with your request',
-}) {
-  if (status === 200) return false;
-
-  const statuses = {
-    500: 'There was a problem with the server, try again later',
-    404: 'There was a problem connecting to the server. Make sure you are connected to the internet',
-  };
-
-  if (errorMessage) {
-    return errorMessage;
-  }
-
-  return statuses[status] || fallback;
-}
 
 function getDelay(delayMs, offset = numToMs(0), multiplier = 1) {
   const numDelay = msToNum(delayMs) * multiplier;
