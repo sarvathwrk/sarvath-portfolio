@@ -70,11 +70,7 @@ export async function sendMail(data) {
             <p>Mohamed Sarvath Khan</p>
             <p>Full Stack Developer</p>
           </div>
-          <div class="message">
-            <strong>Your Message:</strong>
-            <p>${data.message}</p>
-          </div>
-        </div>
+                </div>
       </body>
       </html>
     `;
