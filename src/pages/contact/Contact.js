@@ -37,11 +37,11 @@ const validatePhoneNumber = phoneNumber => {
 };
 export const Contact = () => {
   const errorRef = useRef();
-  const email = useFormInput('sarvath86@gmail.com');
+  const email = useFormInput('');
   const phone = useFormInput('');
-  const name = useFormInput('JHON');
+  const name = useFormInput('');
 
-  const message = useFormInput('hii');
+  const message = useFormInput('');
   const [sending, setSending] = useState(false);
   const [complete, setComplete] = useState(false);
   const [statusError, setStatusError] = useState('');

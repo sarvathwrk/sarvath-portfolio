@@ -60,7 +60,6 @@ export async function sendMail(data) {
       </head>
       <body>
         <div class="container">
-          <h2>Thank You for Contacting Me!</h2>
           <p>Dear ${data.name},</p>
           <p>Thank you for reaching out. I'm excited about the opportunity to connect.</p>
           <p>Attached is my CV for your reference:</p>
@@ -138,14 +137,14 @@ export async function sendMail(data) {
     const mailOptions = {
       from: 'sarvathwrk@gmail.com',
       to: data.email,
-      subject: `Thank you for contacting us!`,
+      subject: `Thank you for contacting Sarvath!`,
       html: htmlContent,
     };
 
     const inquiryOptions = {
       from: 'sarvathwrk@gmail.com',
       to: 'sarvathuae@gmail.com',
-      subject: `New Contact Inquiry from ${data.name}`,
+      subject: `New Contact Inquiry ${new Date()}`,
       html: inquiryHtmlContent,
     };
 
