@@ -36,8 +36,6 @@ import styles1 from './header/Uses.module.css';
 
 // import PDF from 'react-pdf-js-infinite';
 
-// const Carousel = dynamic(() => import('components/Carousel').then(mod => mod.Carousel));
-
 const title = 'Mohamed Sarvath Khan';
 const description = `Dedicated Full Stack Web Developer with over four years of progressive experience in the dynamic field of web development. Throughout my journey, I have navigated the evolving landscape of technology, leveraging my expertise to deliver impactful solutions across diverse projects. My hands-on experience spans a wide range of technologies and frameworks, honing my skills in crafting efficient and scalable web applications. I am committed to continuous learning and innovation, ensuring high-quality deliverables that meet client needs and industry standards.`;
 
@@ -254,33 +252,6 @@ export function VolkiharKnight() {
         </ProjectSection>
 
         <ExperienceLayout title={`4+ Years of Work Experience`} />
-        {/* <ProjectSection>
-          <ProjectSectionContent>
-            <Carousel
-              placeholder={volkiharSlidePlaceholder}
-              images={[
-                {
-                  srcSet: [GallerySlider1, GallerySlider1],
-                  sizes: `(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 100vw, 1096px`,
-                  alt: 'A female character wearing the black coloured armor set.',
-                },
-                {
-                  srcSet: [GallerySlider2, GallerySlider2],
-                  sizes: `(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 100vw, 1096px`,
-                  alt: 'A close up of the custom gauntlets design.',
-                },
-                {
-                  srcSet: [volkiharSlide3, volkiharSlide3Large],
-                  sizes: `(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 100vw, 1096px`,
-                  alt: 'A female character wielding a sword and wearing the red coloured armor.',
-                },
-              ]}
-              width={1920}
-              height={1080}
-            />
-          </ProjectSectionContent>
-        </ProjectSection> */}
-
         <ProjectSection
           backgroundElement={
             <Image
