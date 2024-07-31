@@ -1,18 +1,15 @@
-import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
-import profileImg from 'assets/profilesmall1.png';
-import profileImgLarge from 'assets/profilesmall2.png';
 import { Button } from 'components/Button';
 import { DecoderText } from 'components/DecoderText';
 import { Divider } from 'components/Divider';
 import { Heading } from 'components/Heading';
-import { Image } from 'components/Image';
 import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { Transition } from 'components/Transition';
+import { ProjectNextImage } from 'layouts/Project';
+import Link from 'next/link';
 import { Fragment, useState } from 'react';
 import { media } from 'utils/style';
 import styles from './Profile.module.css';
-import Link from 'next/link';
 
 const ProfileText = ({ visible, titleId }) => (
   <Fragment>
@@ -76,11 +73,14 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 </div>
               </div>
               <div className={styles.image}>
-                <Image
+                <ProjectNextImage
                   reveal
                   delay={100}
-                  placeholder={profileImgPlaceholder}
-                  srcSet={[profileImg, profileImgLarge]}
+                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  srcSet={[
+                    'https://i.imgur.com/32qoE9j.jpg',
+                    'https://i.imgur.com/XIRbVpx.jpg',
+                  ]}
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
                   alt="Me standing on PlayGround in my HomeTown"
                 />
