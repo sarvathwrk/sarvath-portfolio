@@ -82,22 +82,21 @@ export function ExperienceLayout({ title }) {
       >
         <div className={styles.details}>
           <Heading className={styles.title} level={2} as="h1">
-            <DecoderText text={`${title}`} delay={1000} style={{ fontSize: '50px' }} />
+            <DecoderText
+              text={`${title}`}
+              delay={1000}
+              style={{ fontSize: '40px', paddingBottom: '309px' }}
+            />
           </Heading>
 
           {experienceList.map((ival, i) => {
             return (
               <div key={i}>
-                <Heading
-                  key={`heading${1}`}
-                  className={styles.experienceTitle}
-                  level={2}
-                  as="h1"
-                >
+                <Heading key={`heading${1}`} className={styles.title} level={2} as="h2">
                   <DecoderText
                     text={`${ival.jobtitle} @ ${ival.companyname}`}
                     delay={1000}
-                    style={{ fontSize: '30px' }}
+                    style={{ fontSize: '26px' }}
                   />
                   <div className={styles.headcontentButton}>
                     <Button secondary className={styles.linkButton}>

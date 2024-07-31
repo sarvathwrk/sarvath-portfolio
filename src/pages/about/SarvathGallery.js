@@ -2,8 +2,6 @@ import GalleryLarge1 from 'assets/sarvath/GalleryLarge1.png';
 
 import GalleryLargePlaceholder from 'assets/volkihar-background-placeholder.jpg';
 
-import GalleryLarge2 from 'assets/sarvath/GalleryLarge2.jpg';
-import GalleryLarge2placeholder from 'assets/volkihar-enderal-placeholder.jpg';
 
 // import GallerySlider1 from 'assets/sarvath/GallerySlider1.png';
 // import GallerySlider2 from 'assets/sarvath/GallerySlider2.png';
@@ -14,7 +12,6 @@ import volkiharEnderalLogoPlaceholder from 'assets/volkihar-enderal-logo-placeho
 // import volkiharSlidePlaceholder from 'assets/volkihar-slide-placeholder.jpg';
 import { Button } from 'components/Button';
 import { Footer } from 'components/Footer';
-import { Image } from 'components/Image';
 import { List, ListItem } from 'components/List';
 import { Meta } from 'components/Meta';
 import { Table, TableBody, TableCell, TableHeadCell, TableRow } from 'components/Table';
@@ -252,16 +249,7 @@ export function VolkiharKnight() {
         </ProjectSection>
 
         <ExperienceLayout title={`4+ Years of Work Experience`} />
-        <ProjectSection
-          backgroundElement={
-            <Image
-              srcSet={[GalleryLarge2, GalleryLarge2]}
-              placeholder={GalleryLarge2placeholder}
-              alt="A promotional image from Enderal showing several characters in the game overlooking a distant city."
-              sizes={`100vw`}
-            />
-          }
-        >
+        <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow center centerMobile noMargin>
               <div className="image-container">
