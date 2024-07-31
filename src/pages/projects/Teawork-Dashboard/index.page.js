@@ -1,54 +1,13 @@
-// ==== Lap Size == 1 ==== //
-import teaworkdashboardproject1large from 'assets/sarvath/teawork-dashboard/teaworkdashboardproject1large.png';
-import teaworkdashboardlap1olaceholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 2 ==== //
-import teaworkdashboardproject2large from 'assets/sarvath/teawork-dashboard/teaworkdashboardproject2large.png';
-import teaworkdashboardproject2ap1olaceholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 3 ==== //
-import teaworkdashboardproject3large1 from 'assets/sarvath/teawork-dashboard/teaworkdashboardproject3large1.png';
-import teaworkdashboardproject3large2 from 'assets/sarvath/teawork-dashboard/teaworkdashboardproject3large2.png';
-
-import teaworkdashboardprojetphone3placeholder2 from 'assets/slice-sidebar-annotations-placeholder.png';
-import teaworkdashboardprojetphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
-
-// ==== Lap Size == 4 ==== //
-import teaworkdashboardproject4large from 'assets/sarvath/teawork-dashboard/teaworkdashboardproject4large.png';
-
-import teaworkdashboardprojectlap4placeholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 5 ==== //
-
-import teaworkdashboardproject5large from 'assets/sarvath/teawork-dashboard/teaworkdashboardproject5large.png';
-import teaworkdashboardproject3Placeholder1 from 'assets/slice-background-bar-placeholder.jpg';
-
-// ==== Lap Size == 6 ==== //
-
-import teaworkdashboardproject6large from 'assets/sarvath/teawork-dashboard/teaworkdashboardproject6large.png';
-import teaworkdashboardproject6Placeholder from 'assets/slice-irl-placeholder.jpg';
-
-// ==== Lap Size == 7 ==== //
-
-import teaworkdashboardproject7large from 'assets/sarvath/teawork-dashboard/teaworkdashboardproject7large.png';
-import teaworkdashboardproject7Placeholder from 'assets/slice-app-placeholder.jpg';
-
-// // ==== Lap Size == 6 ==== //
-// import aqaryproject5large from 'assets/sarvath/aqary/aqaryproject5large.png';
-
-// import aqaryprojectlap5placeholder from 'assets/slice-app-placeholder.jpg';
-
 import sliceBackgroundLarge from 'assets/slice-background-large.jpg';
 import sliceBackgroundPlaceholder from 'assets/slice-background-placeholder.jpg';
 import sliceBackground from 'assets/slice-background.jpg';
 import { Footer } from 'components/Footer';
-import { Image } from 'components/Image';
 import { Meta } from 'components/Meta';
 import {
   ProjectBackground,
   ProjectContainer,
   ProjectHeader,
-  ProjectImage,
+  ProjectNextImage,
   ProjectSection,
   ProjectSectionColumns,
   ProjectSectionContent,
@@ -100,9 +59,12 @@ function Details() {
                 Password and Alerts
               </ProjectSectionText>
             </ProjectTextRow>
-            <ProjectImage
-              srcSet={[teaworkdashboardproject1large, teaworkdashboardproject1large]}
-              placeholder={teaworkdashboardlap1olaceholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/GHW6iSu.png',
+                'https://i.imgur.com/GHW6iSu.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -118,9 +80,12 @@ function Details() {
                 etc.
               </ProjectSectionText>
             </ProjectTextRow>
-            <ProjectImage
-              srcSet={[teaworkdashboardproject2large, teaworkdashboardproject2large]}
-              placeholder={teaworkdashboardproject2ap1olaceholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/CNeYHyy.png',
+                'https://i.imgur.com/CNeYHyy.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -143,17 +108,23 @@ function Details() {
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
-              <Image
+              <ProjectNextImage
                 className={styles.sidebarImage}
-                srcSet={[teaworkdashboardproject3large1, teaworkdashboardproject3large1]}
-                placeholder={teaworkdashboardprojetphone3placeholder1}
+                srcSet={[
+                  'https://i.imgur.com/zlHHHD0.png',
+                  'https://i.imgur.com/zlHHHD0.png',
+                ]}
+                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
-              <Image
+              <ProjectNextImage
                 className={styles.sidebarImage}
-                srcSet={[teaworkdashboardproject3large2, teaworkdashboardproject3large2]}
-                placeholder={teaworkdashboardprojetphone3placeholder2}
+                srcSet={[
+                  'https://i.imgur.com/227RGq6.png',
+                  'https://i.imgur.com/227RGq6.png',
+                ]}
+                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -171,9 +142,12 @@ function Details() {
                 experience on various devices.
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              srcSet={[teaworkdashboardproject4large, teaworkdashboardproject4large]}
-              placeholder={teaworkdashboardprojectlap4placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/0gwTd1R.png',
+                'https://i.imgur.com/0gwTd1R.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -183,10 +157,13 @@ function Details() {
           <ProjectSectionContent className={styles.grid}>
             <div className={styles.gridImage}>
               <div className={styles.gridBackground}>
-                <Image
-                  srcSet={[teaworkdashboardproject5large, teaworkdashboardproject5large]}
-                  placeholder={teaworkdashboardproject3Placeholder1}
-                  alt=""
+                <ProjectNextImage
+                  srcSet={[
+                    'https://i.imgur.com/SLn3RgA.png',
+                    'https://i.imgur.com/SLn3RgA.png',
+                  ]}
+                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  alt="sccss"
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
                 />
@@ -229,9 +206,9 @@ function Details() {
                 practices for implementing forms.
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              src={teaworkdashboardproject6large}
-              placeholder={teaworkdashboardproject6Placeholder}
+            <ProjectNextImage
+              srcSet={['https://i.imgur.com/MoAHMRj.png']}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -248,9 +225,12 @@ function Details() {
                 resolving user queries.
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              srcSet={[teaworkdashboardproject7large, teaworkdashboardproject7large]}
-              placeholder={teaworkdashboardproject7Placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/JMhH8Vh.png',
+                'https://i.imgur.com/JMhH8Vh.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />

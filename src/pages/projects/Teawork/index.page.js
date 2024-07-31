@@ -1,54 +1,13 @@
-// ==== Lap Size == 1 ==== //
-import teaworkproject1large from 'assets/sarvath/teawork/teaworkproject1large.png';
-import teaworkprojectlap1olaceholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 2 ==== //
-import teaworkproject2large from 'assets/sarvath/teawork/teaworkproject2large.png';
-import teaworkproject2ap1olaceholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 3 ==== //
-import teaworkproject3large2 from 'assets/sarvath/teawork/teaworkproject3large1.png';
-import teaworkproject3large1 from 'assets/sarvath/teawork/teaworkproject3large2.png';
-
-import teaworkprojetphone3placeholder2 from 'assets/slice-sidebar-annotations-placeholder.png';
-import teaworkprojetphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
-
-// ==== Lap Size == 4 ==== //
-import teaworkproject4large from 'assets/sarvath/teawork/teaworkproject4large.png';
-
-import teaworkprojectlap4placeholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 5 ==== //
-
-import teaworkproject5large from 'assets/sarvath/teawork/teaworkproject5large.png';
-import teaworkproject3Placeholder1 from 'assets/slice-background-bar-placeholder.jpg';
-
-// ==== Lap Size == 6 ==== //
-
-import teaworkproject6large from 'assets/sarvath/teawork/teaworkproject6large.png';
-import teaworkproject6Placeholder from 'assets/slice-irl-placeholder.jpg';
-
-// ==== Lap Size == 7 ==== //
-
-import teaworkproject7large from 'assets/sarvath/teawork/teaworkproject7large.png';
-import teaworkproject7Placeholder from 'assets/slice-app-placeholder.jpg';
-
-// // ==== Lap Size == 6 ==== //
-// import aqaryproject5large from 'assets/sarvath/aqary/aqaryproject5large.png';
-
-// import aqaryprojectlap5placeholder from 'assets/slice-app-placeholder.jpg';
-
 import sliceBackgroundLarge from 'assets/slice-background-large.jpg';
 import sliceBackgroundPlaceholder from 'assets/slice-background-placeholder.jpg';
 import sliceBackground from 'assets/slice-background.jpg';
 import { Footer } from 'components/Footer';
-import { Image } from 'components/Image';
 import { Meta } from 'components/Meta';
 import {
   ProjectBackground,
   ProjectContainer,
   ProjectHeader,
-  ProjectImage,
+  ProjectNextImage,
   ProjectSection,
   ProjectSectionColumns,
   ProjectSectionContent,
@@ -94,9 +53,12 @@ function Details() {
                 user-friendly layout, it ensures a seamless experience on various devices.
               </ProjectSectionText>
             </ProjectTextRow>
-            <ProjectImage
-              srcSet={[teaworkproject1large, teaworkproject1large]}
-              placeholder={teaworkprojectlap1olaceholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/7GQJVKL.jpg',
+                'https://i.imgur.com/7GQJVKL.jpg',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -113,9 +75,12 @@ function Details() {
                 user-friendly, this feature provides a seamless journey across devices.
               </ProjectSectionText>
             </ProjectTextRow>
-            <ProjectImage
-              srcSet={[teaworkproject2large, teaworkproject2large]}
-              placeholder={teaworkproject2ap1olaceholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/TWae4CM.png',
+                'https://i.imgur.com/TWae4CM.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -133,17 +98,23 @@ function Details() {
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
-              <Image
+              <ProjectNextImage
                 className={styles.sidebarImage}
-                srcSet={[teaworkproject3large1, teaworkproject3large1]}
-                placeholder={teaworkprojetphone3placeholder1}
+                srcSet={[
+                  'https://i.imgur.com/RrFUI47.png',
+                  'https://i.imgur.com/RrFUI47.png',
+                ]}
+                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
-              <Image
+              <ProjectNextImage
                 className={styles.sidebarImage}
-                srcSet={[teaworkproject3large2, teaworkproject3large2]}
-                placeholder={teaworkprojetphone3placeholder2}
+                srcSet={[
+                  'https://i.imgur.com/uWzFZHn.png',
+                  'https://i.imgur.com/uWzFZHn.png',
+                ]}
+                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -163,9 +134,12 @@ function Details() {
                 details and make informed decisions.
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              srcSet={[teaworkproject4large, teaworkproject4large]}
-              placeholder={teaworkprojectlap4placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/VNjNPKk.png',
+                'https://i.imgur.com/VNjNPKk.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -175,22 +149,17 @@ function Details() {
           <ProjectSectionContent className={styles.grid}>
             <div className={styles.gridImage}>
               <div className={styles.gridBackground}>
-                <Image
-                  srcSet={[teaworkproject5large, teaworkproject5large]}
-                  placeholder={teaworkproject3Placeholder1}
+                <ProjectNextImage
+                  srcSet={[
+                    'https://i.imgur.com/UxeeuVT.png',
+                    'https://i.imgur.com/UxeeuVT.png',
+                  ]}
+                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
                 />
               </div>
-              {/* <div className={styles.gridForeground}>
-                                <Image
-                                    srcSet={[aqaryproject3large2, aqaryproject3large2]}
-                                    placeholder={aqaryproject3Placeholder2}
-                                    alt="An annotation preview popover with statistics for shape perimeter and area."
-                                    sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
-                                />
-                            </div> */}
             </div>
             <div className={styles.gridText}>
               <ProjectSectionHeading>Recipe of the Week</ProjectSectionHeading>
@@ -213,9 +182,9 @@ function Details() {
                 preferred products effortlessly.
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              src={teaworkproject6large}
-              placeholder={teaworkproject6Placeholder}
+            <ProjectNextImage
+              srcSet={['https://i.imgur.com/Zrl6AhN.png']}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -233,9 +202,12 @@ function Details() {
                 providing a seamless and convenient user experience.
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              srcSet={[teaworkproject7large, teaworkproject7large]}
-              placeholder={teaworkproject7Placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/FfVSdek.png',
+                'https://i.imgur.com/FfVSdek.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
