@@ -1,54 +1,13 @@
-// ==== Lap Size == 1 ==== //
-import Wololoproject1large from 'assets/sarvath/Wololo/Wololoproject1large.png';
-import Wololoprojectlap1olaceholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 2 ==== //
-import Wololoproject2large from 'assets/sarvath/Wololo/Wololoproject2large.png';
-import Wololoproject2ap1olaceholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 3 ==== //
-import Wololoproject3large2 from 'assets/sarvath/Wololo/Wololoproject3large1.png';
-import Wololoproject3large1 from 'assets/sarvath/Wololo/Wololoproject3large2.png';
-
-import Wololoprojetphone3placeholder2 from 'assets/slice-sidebar-annotations-placeholder.png';
-import Wololoprojetphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
-
-// ==== Lap Size == 4 ==== //
-import Wololoproject4large from 'assets/sarvath/Wololo/Wololoproject4large.png';
-
-import Wololoprojectlap4placeholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 5 ==== //
-
-import Wololoproject5large from 'assets/sarvath/Wololo/Wololoproject5large.png';
-import Wololoproject3Placeholder1 from 'assets/slice-background-bar-placeholder.jpg';
-
-// ==== Lap Size == 6 ==== //
-
-import Wololoproject6large from 'assets/sarvath/Wololo/Wololoproject6large.png';
-import Wololoproject6Placeholder from 'assets/slice-irl-placeholder.jpg';
-
-// ==== Lap Size == 7 ==== //
-
-import Wololoproject7large from 'assets/sarvath/Wololo/Wololoproject7large.png';
-import Wololoproject7Placeholder from 'assets/slice-app-placeholder.jpg';
-
-// // ==== Lap Size == 6 ==== //
-// import aqaryproject5large from 'assets/sarvath/aqary/aqaryproject5large.png';
-
-// import aqaryprojectlap5placeholder from 'assets/slice-app-placeholder.jpg';
-
 import sliceBackgroundLarge from 'assets/slice-background-large.jpg';
 import sliceBackgroundPlaceholder from 'assets/slice-background-placeholder.jpg';
 import sliceBackground from 'assets/slice-background.jpg';
 import { Footer } from 'components/Footer';
-import { Image } from 'components/Image';
 import { Meta } from 'components/Meta';
 import {
   ProjectBackground,
   ProjectContainer,
   ProjectHeader,
-  ProjectImage,
+  ProjectNextImage,
   ProjectSection,
   ProjectSectionColumns,
   ProjectSectionContent,
@@ -93,9 +52,12 @@ function Details() {
                 user-friendly layout, it ensures a seamless experience on various devices.
               </ProjectSectionText>
             </ProjectTextRow>
-            <ProjectImage
-              srcSet={[Wololoproject1large, Wololoproject1large]}
-              placeholder={Wololoprojectlap1olaceholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/FUffDfr.jpg',
+                'https://i.imgur.com/FUffDfr.jpg',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -112,9 +74,12 @@ function Details() {
                 dynamic blog posts.{' '}
               </ProjectSectionText>
             </ProjectTextRow>
-            <ProjectImage
-              srcSet={[Wololoproject2large, Wololoproject2large]}
-              placeholder={Wololoproject2ap1olaceholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/nfyFKYj.jpg',
+                'https://i.imgur.com/nfyFKYj.jpg',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -133,17 +98,23 @@ function Details() {
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
-              <Image
+              <ProjectNextImage
                 className={styles.sidebarImage}
-                srcSet={[Wololoproject3large1, Wololoproject3large1]}
-                placeholder={Wololoprojetphone3placeholder1}
+                srcSet={[
+                  'https://i.imgur.com/2DvIfmz.png',
+                  'https://i.imgur.com/2DvIfmz.png',
+                ]}
+                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
-              <Image
+              <ProjectNextImage
                 className={styles.sidebarImage}
-                srcSet={[Wololoproject3large2, Wololoproject3large2]}
-                placeholder={Wololoprojetphone3placeholder2}
+                srcSet={[
+                  'https://i.imgur.com/IdvcoUH.png',
+                  'https://i.imgur.com/IdvcoUH.png',
+                ]}
+                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -161,9 +132,12 @@ function Details() {
                 Stay informed and entertained with our thought-provoking articles.{' '}
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              srcSet={[Wololoproject4large, Wololoproject4large]}
-              placeholder={Wololoprojectlap4placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/jb1fkSu.jpg',
+                'https://i.imgur.com/jb1fkSu.jpg',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -173,22 +147,17 @@ function Details() {
           <ProjectSectionContent className={styles.grid}>
             <div className={styles.gridImage}>
               <div className={styles.gridBackground}>
-                <Image
-                  srcSet={[Wololoproject5large, Wololoproject5large]}
-                  placeholder={Wololoproject3Placeholder1}
+                <ProjectNextImage
+                  srcSet={[
+                    'https://i.imgur.com/uTZsddm.png',
+                    'https://i.imgur.com/uTZsddm.png',
+                  ]}
+                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
                 />
               </div>
-              {/* <div className={styles.gridForeground}>
-                                <Image
-                                    srcSet={[aqaryproject3large2, aqaryproject3large2]}
-                                    placeholder={aqaryproject3Placeholder2}
-                                    alt="An annotation preview popover with statistics for shape perimeter and area."
-                                    sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
-                                />
-                            </div> */}
             </div>
             <div className={styles.gridText}>
               <ProjectSectionHeading>About Us</ProjectSectionHeading>
@@ -212,9 +181,12 @@ function Details() {
                 secure responses to ensure a seamless user experience.{' '}
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              src={Wololoproject6large}
-              placeholder={Wololoproject6Placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/Nw5m1YL.png',
+                'https://i.imgur.com/Nw5m1YL.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -232,9 +204,12 @@ function Details() {
                 platform.{' '}
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              srcSet={[Wololoproject7large, Wololoproject7large]}
-              placeholder={Wololoproject7Placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/X6nV3k7.png',
+                'https://i.imgur.com/X6nV3k7.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
