@@ -10,6 +10,7 @@ import { forwardRef, useRef } from 'react';
 import { classes, cssProps, msToNum, numToMs } from 'utils/style';
 import styles from './Project.module.css';
 import { DecoderText } from 'components/DecoderText';
+import Link from 'next/link';
 
 const initDelay = 300;
 
@@ -35,15 +36,16 @@ export function ProjectHeader({
             {description}
           </Text>
           {!!url && (
-            <Button
-              secondary
-              iconHoverShift
-              className={styles.linkButton}
-              icon="chevronRight"
-              href={url}
-            >
-              {linkLabel}
-            </Button>
+            <Link href={url} target="_Blank">
+              <Button
+                secondary
+                iconHoverShift
+                className={styles.linkButton}
+                icon="chevronRight"
+              >
+                {linkLabel}
+              </Button>
+            </Link>
           )}
         </div>
         {!!roles?.length && (

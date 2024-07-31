@@ -40,7 +40,7 @@ function Details() {
         <ProjectHeader
           title={title}
           description={description}
-          url="http://20.203.31.58/dashboard/pages/authentication/portal_registration/login"
+          url="https://dashboard.aqaryint.com/"
           roles={roles}
         />
         <ProjectSection padding="top">

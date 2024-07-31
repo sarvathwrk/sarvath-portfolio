@@ -81,7 +81,7 @@ function Details() {
         <ProjectHeader
           title={title}
           description={description}
-          url="http://52.15.38.12:55224/"
+          // url="http://52.15.38.12:55224/"
           roles={roles}
         />
         <ProjectSection padding="top">

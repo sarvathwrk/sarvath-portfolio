@@ -1,55 +1,13 @@
-
-// ==== Lap Size == 1 ==== //
-import foodtekcoproject1large from 'assets/sarvath/foodtekco/foodtekcoproject1large.png';
-import foodtekcoprojectlap1olaceholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 2 ==== //
-import foodtekcoproject2large from 'assets/sarvath/foodtekco/foodtekcoproject2large.png';
-import foodtekcoproject2ap1olaceholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 3 ==== //
-import foodtekcoproject3large1 from 'assets/sarvath/foodtekco/foodtekcoproject3large1.png';
-import foodtekcoproject3large2 from 'assets/sarvath/foodtekco/foodtekcoproject3large2.png';
-
-import foodtekcoprojetphone3placeholder2 from 'assets/slice-sidebar-annotations-placeholder.png';
-import foodtekcoprojetphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
-
-// ==== Lap Size == 4 ==== //
-import foodtekcoproject4large from 'assets/sarvath/foodtekco/foodtekcoproject4large.png';
-
-import foodtekcoprojectlap4placeholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 5 ==== //
-
-import foodtekcoproject5large from 'assets/sarvath/foodtekco/foodtekcoproject5large.png';
-import foodtekcoproject3Placeholder1 from 'assets/slice-background-bar-placeholder.jpg';
-
-// ==== Lap Size == 6 ==== //
-
-import foodtekcoproject6large from 'assets/sarvath/foodtekco/foodtekcoproject6large.png';
-import foodtekcoproject6Placeholder from 'assets/slice-irl-placeholder.jpg';
-
-// ==== Lap Size == 7 ==== //
-
-import foodtekcoproject7large from 'assets/sarvath/foodtekco/foodtekcoproject7large.png';
-import foodtekcoproject7Placeholder from 'assets/slice-app-placeholder.jpg';
-
-// // ==== Lap Size == 6 ==== //
-// import aqaryproject5large from 'assets/sarvath/aqary/aqaryproject5large.png';
-
-// import aqaryprojectlap5placeholder from 'assets/slice-app-placeholder.jpg';
-
 import sliceBackgroundLarge from 'assets/slice-background-large.jpg';
 import sliceBackgroundPlaceholder from 'assets/slice-background-placeholder.jpg';
 import sliceBackground from 'assets/slice-background.jpg';
 import { Footer } from 'components/Footer';
-import { Image } from 'components/Image';
 import { Meta } from 'components/Meta';
 import {
   ProjectBackground,
   ProjectContainer,
   ProjectHeader,
-  ProjectImage,
+  ProjectNextImage,
   ProjectSection,
   ProjectSectionColumns,
   ProjectSectionContent,
@@ -87,7 +45,7 @@ function Details() {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://www.foodtekco.com/"
+          // url="https://www.foodtekco.com/"
           roles={roles}
         />
         <ProjectSection padding="top">
@@ -99,9 +57,12 @@ function Details() {
                 and Footer
               </ProjectSectionText>
             </ProjectTextRow>
-            <ProjectImage
-              srcSet={[foodtekcoproject1large, foodtekcoproject1large]}
-              placeholder={foodtekcoprojectlap1olaceholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/jjBwowO.jpg',
+                'https://i.imgur.com/jjBwowO.jpg',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -118,9 +79,12 @@ function Details() {
                 Password and Alerts
               </ProjectSectionText>
             </ProjectTextRow>
-            <ProjectImage
-              srcSet={[foodtekcoproject2large, foodtekcoproject2large]}
-              placeholder={foodtekcoproject2ap1olaceholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/kaZBQQA.png',
+                'https://i.imgur.com/kaZBQQA.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -143,17 +107,23 @@ function Details() {
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
-              <Image
+              <ProjectNextImage
                 className={styles.sidebarImage}
-                srcSet={[foodtekcoproject3large1, foodtekcoproject3large1]}
-                placeholder={foodtekcoprojetphone3placeholder1}
+                srcSet={[
+                  'https://i.imgur.com/eimC3ow.png',
+                  'https://i.imgur.com/eimC3ow.png',
+                ]}
+                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
-              <Image
+              <ProjectNextImage
                 className={styles.sidebarImage}
-                srcSet={[foodtekcoproject3large2, foodtekcoproject3large2]}
-                placeholder={foodtekcoprojetphone3placeholder2}
+                srcSet={[
+                  'https://i.imgur.com/eimC3ow.png',
+                  'https://i.imgur.com/eimC3ow.png',
+                ]}
+                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -169,9 +139,12 @@ function Details() {
                 alerts, Mail information or File.
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              srcSet={[foodtekcoproject4large, foodtekcoproject4large]}
-              placeholder={foodtekcoprojectlap4placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/bNdupMv.png',
+                'https://i.imgur.com/bNdupMv.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -181,22 +154,17 @@ function Details() {
           <ProjectSectionContent className={styles.grid}>
             <div className={styles.gridImage}>
               <div className={styles.gridBackground}>
-                <Image
-                  srcSet={[foodtekcoproject5large, foodtekcoproject5large]}
-                  placeholder={foodtekcoproject3Placeholder1}
+                <ProjectNextImage
+                  srcSet={[
+                    'https://i.imgur.com/exOxopH.png',
+                    'https://i.imgur.com/exOxopH.png',
+                  ]}
+                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
                 />
               </div>
-              {/* <div className={styles.gridForeground}>
-                                <Image
-                                    srcSet={[aqaryproject3large2, aqaryproject3large2]}
-                                    placeholder={aqaryproject3Placeholder2}
-                                    alt="An annotation preview popover with statistics for shape perimeter and area."
-                                    sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
-                                />
-                            </div> */}
             </div>
             <div className={styles.gridText}>
               <ProjectSectionHeading>Data Tables (Listing Data's)</ProjectSectionHeading>
@@ -227,9 +195,9 @@ function Details() {
                 practices for implementing forms.
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              src={foodtekcoproject6large}
-              placeholder={foodtekcoproject6Placeholder}
+            <ProjectNextImage
+              srcSet={['https://i.imgur.com/DTNKXqG.png']}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -246,9 +214,12 @@ function Details() {
                 collection, processing, analysis, and the generation of reports.
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              srcSet={[foodtekcoproject7large, foodtekcoproject7large]}
-              placeholder={foodtekcoproject7Placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/VLUrGll.png',
+                'https://i.imgur.com/VLUrGll.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
