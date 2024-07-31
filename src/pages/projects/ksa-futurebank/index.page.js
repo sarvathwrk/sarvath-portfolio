@@ -1,46 +1,13 @@
-// ==== Lap Size == 1 ==== //
-import futurebankproject1large from 'assets/sarvath/futurebank/futurebankproject1large.png';
-import futurebankprojectlap1olaceholder from 'assets/slice-app-placeholder.jpg';
-// ==== Lap Size == 2 ==== //
-import futurebankproject2large from 'assets/sarvath/futurebank/futurebankproject2large.png';
-import futurebankproject2ap1olaceholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 3 ==== //
-import futurebankproject3large2 from 'assets/sarvath/futurebank/futurebankproject3large1.png';
-import futurebankproject3large1 from 'assets/sarvath/futurebank/futurebankproject3large2.png';
-import futurebankprojetphone3placeholder1 from 'assets/slice-sidebar-layers-placeholder.png';
-import futurebankprojetphone3placeholder2 from 'assets/slice-sidebar-annotations-placeholder.png';
-
-// ==== Lap Size == 4 ==== //
-import futurebankproject4large from 'assets/sarvath/futurebank/futurebankproject4large.png';
-import futurebankprojectlap4placeholder from 'assets/slice-app-placeholder.jpg';
-
-// ==== Lap Size == 5 ==== //
-
-import futurebankproject5large from 'assets/sarvath/futurebank/futurebankproject5large.png';
-import futurebankproject3Placeholder1 from 'assets/slice-background-bar-placeholder.jpg';
-
-// ==== Lap Size == 6 ==== //
-
-import futurebankproject6large from 'assets/sarvath/futurebank/futurebankproject6large.png';
-import futurebankproject6Placeholder from 'assets/slice-irl-placeholder.jpg';
-
-// ==== Lap Size == 7 ==== //
-
-import futurebankproject7large from 'assets/sarvath/futurebank/futurebankproject7large.png';
-import futurebankproject7Placeholder from 'assets/slice-app-placeholder.jpg';
-
 import sliceBackgroundLarge from 'assets/slice-background-large.jpg';
 import sliceBackgroundPlaceholder from 'assets/slice-background-placeholder.jpg';
 import sliceBackground from 'assets/slice-background.jpg';
 import { Footer } from 'components/Footer';
-import { Image } from 'components/Image';
 import { Meta } from 'components/Meta';
 import {
   ProjectBackground,
   ProjectContainer,
   ProjectHeader,
-  ProjectImage,
+  ProjectNextImage,
   ProjectSection,
   ProjectSectionColumns,
   ProjectSectionContent,
@@ -84,9 +51,12 @@ function Details() {
                 user-friendly layout, it ensures a seamless experience on various devices.
               </ProjectSectionText>
             </ProjectTextRow>
-            <ProjectImage
-              srcSet={[futurebankproject1large, futurebankproject1large]}
-              placeholder={futurebankprojectlap1olaceholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/GqZkxU1.jpg',
+                'https://i.imgur.com/GqZkxU1.jpg',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -103,9 +73,12 @@ function Details() {
                 an invitation to engage and embrace the richness of varied encounters.{' '}
               </ProjectSectionText>
             </ProjectTextRow>
-            <ProjectImage
-              srcSet={[futurebankproject2large, futurebankproject2large]}
-              placeholder={futurebankproject2ap1olaceholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/MwWHmhs.png',
+                'https://i.imgur.com/MwWHmhs.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -123,17 +96,23 @@ function Details() {
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
-              <Image
+              <ProjectNextImage
                 className={styles.sidebarImage}
-                srcSet={[futurebankproject3large1, futurebankproject3large1]}
-                placeholder={futurebankprojetphone3placeholder1}
+                srcSet={[
+                  'https://i.imgur.com/8152EZw.png',
+                  'https://i.imgur.com/8152EZw.png',
+                ]}
+                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
-              <Image
+              <ProjectNextImage
                 className={styles.sidebarImage}
-                srcSet={[futurebankproject3large2, futurebankproject3large2]}
-                placeholder={futurebankprojetphone3placeholder2}
+                srcSet={[
+                  'https://i.imgur.com/KJTcE97.png',
+                  'https://i.imgur.com/KJTcE97.png',
+                ]}
+                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -151,9 +130,12 @@ function Details() {
                 of our platform.{' '}
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              srcSet={[futurebankproject4large, futurebankproject4large]}
-              placeholder={futurebankprojectlap4placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/cpxoIcR.png',
+                'https://i.imgur.com/cpxoIcR.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -163,22 +145,17 @@ function Details() {
           <ProjectSectionContent className={styles.grid}>
             <div className={styles.gridImage}>
               <div className={styles.gridBackground}>
-                <Image
-                  srcSet={[futurebankproject5large, futurebankproject5large]}
-                  placeholder={futurebankproject3Placeholder1}
+                <ProjectNextImage
+                  srcSet={[
+                    'https://i.imgur.com/0PaHi9z.png',
+                    'https://i.imgur.com/0PaHi9z.png',
+                  ]}
+                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
                 />
               </div>
-              {/* <div className={styles.gridForeground}>
-                                <Image
-                                    srcSet={[aqaryproject3large2, aqaryproject3large2]}
-                                    placeholder={aqaryproject3Placeholder2}
-                                    alt="An annotation preview popover with statistics for shape perimeter and area."
-                                    sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
-                                />
-                            </div> */}
             </div>
             <div className={styles.gridText}>
               <ProjectSectionHeading>Topic Highlights</ProjectSectionHeading>
@@ -201,9 +178,9 @@ function Details() {
                 desktop, tablet, or mobile.{' '}
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              src={futurebankproject6large}
-              placeholder={futurebankproject6Placeholder}
+            <ProjectNextImage
+              srcSet={['https://i.imgur.com/cdijRpJ.png']}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -219,9 +196,12 @@ function Details() {
                 providing a convenient way to find and connect with us.{' '}
               </ProjectSectionText>
             </ProjectTextRow>
-            <Image
-              srcSet={[futurebankproject7large, futurebankproject7large]}
-              placeholder={futurebankproject7Placeholder}
+            <ProjectNextImage
+              srcSet={[
+                'https://i.imgur.com/HmXWGYi.png',
+                'https://i.imgur.com/HmXWGYi.png',
+              ]}
+              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
