@@ -16,7 +16,6 @@ import styles from './Contact.module.css';
 
 import { ProjectBackgroundContact, ProjectContainer } from 'layouts/Project';
 
-import GalleryLarge3 from 'assets/sarvath/GalleryLarge3.jpg';
 import GalleryLarge3placeholder from 'assets/volkihar-enderal-placeholder.jpg';
 
 import { CustomAboutHeader } from 'pages/about/header/customHeader';
@@ -109,7 +108,10 @@ export const Contact = () => {
       />
       <ProjectContainer>
         <ProjectBackgroundContact
-          srcSet={[GalleryLarge3, GalleryLarge3]}
+          srcSet={[
+            { src: 'https://i.imgur.com/mxEloNi.jpg' },
+            { src: 'https://i.imgur.com/mxEloNi.jpg' },
+          ]}
           placeholder={GalleryLarge3placeholder}
           opacity={0.4}
         />
