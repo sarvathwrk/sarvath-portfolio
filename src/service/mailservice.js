@@ -63,7 +63,7 @@ export async function sendMail(data) {
           <p>Dear ${data.name},</p>
           <p>Thank you for reaching out. I'm excited about the opportunity to connect.</p>
           <p>Attached is my CV for your reference:</p>
-          <a href="https://drive.google.com/file/d/1oideZPJ9dUgLz2cOz6S_m_3SjlXD46a9/view?usp=sharing" class="button">Download CV</a>
+          <a href="https://drive.google.com/file/d/1r7sI1CroFU3QiVRqhKy1ttN6SEN6SzEf/view?usp=sharing" class="button">Download CV</a>
           
           <div class="signature">
             <p>Best Regards,</p>

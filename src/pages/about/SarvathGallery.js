@@ -75,7 +75,7 @@ export function VolkiharKnight() {
           // roles={roles}
           description={description}
           linkLabel="Download my Cv"
-          url="https://drive.google.com/file/d/1oideZPJ9dUgLz2cOz6S_m_3SjlXD46a9/view?usp=sharing"
+          url="https://drive.google.com/file/d/1r7sI1CroFU3QiVRqhKy1ttN6SEN6SzEf/view?usp=sharing"
           linkLabel2="Reach Me"
           url2="/contact"
         />
