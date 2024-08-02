@@ -59,7 +59,6 @@ typings/
 
 build/
 public/sitemap.xml
-public/draco/
 public/og
 .serverless
 .next
