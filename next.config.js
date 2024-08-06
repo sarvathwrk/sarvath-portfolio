@@ -2,10 +2,13 @@ module.exports = {
   reactStrictMode: true,
   trailingSlash: true,
   pageExtensions: ['page.js', 'api.js'],
+  images: {
+    domains: ['i.imgur.com'],
+  },
   experimental: {
     reactCompiler: true,
   },
-  
+
   webpack(config, { isServer }) {
     // Run custom scripts
     if (isServer) {
