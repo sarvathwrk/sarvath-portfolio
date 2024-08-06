@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Portfolio site for Mohamed Sarvath Khan",
   "homepage": "https://sarvath-portfolio.vercel.app/",
-  "repository": "https://github.com/sarvathwrk/sarvath-portfolio.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sarvathwrk/sarvath-portfolio.git"
+  },
   "devDependencies": {
     "@svgr/webpack": "^6.3.1",
     "esbuild": "^0.15.2",
@@ -25,7 +28,8 @@
     "stylelint-config-css-modules": "^4.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^26.0.0",
-    "tsparticles": "^2.9.0"
+    "tsparticles": "^2.9.0",
+    "sharp": "^0.33.4"  
   },
   "dependencies": {
     "babel-plugin-react-compiler": "0.0.0-experimental-334f00b-20240725",
@@ -43,10 +47,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "eslint src --fix && yarn format",
+    "lint:fix": "eslint src --fix && npm run format",
     "lint:strict": "eslint --max-warnings=0 src",
     "format": "prettier -w .",
     "format:check": "prettier -c .",
     "postbuild": "next-sitemap --config next-sitemap.config.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
