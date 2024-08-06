@@ -7,8 +7,9 @@ import { Text } from 'components/Text';
 import { Transition } from 'components/Transition';
 import { useWindowSize } from 'hooks';
 import dynamic from 'next/dynamic';
-import { useState } from 'react';
+import { useState, useCallback, useMemo, useEffect } from 'react';
 import { media } from 'utils/style';
+import debounce from 'lodash/debounce';
 import styles from './ProjectSummary.module.css';
 
 const Model = dynamic(() => import('components/Model').then(mod => mod.Model), {
@@ -32,128 +33,126 @@ export const ProjectSummary = ({
   const { width } = useWindowSize();
   const titleId = `${id}-title`;
   const isMobile = width <= media.tablet;
-  const indexText = index < 10 ? `0${index}` : index;
-  const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
-  const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
+  const indexText = useMemo(() => (index < 10 ? `0${index}` : index), [index]);
 
-  const renderDetails = visible => (
-    <div className={styles.details}>
-      <div aria-hidden className={styles.index}>
-        <Divider
-          notchWidth="64px"
-          notchHeight="8px"
-          collapsed={!visible}
-          collapseDelay={1000}
-        />
-        <span className={styles.indexNumber} data-visible={visible}>
-          {indexText}
-        </span>
+  const phoneSizes = useMemo(() => `(max-width: ${media.tablet}px) 30vw, 20vw`, []);
+  const laptopSizes = useMemo(() => `(max-width: ${media.tablet}px) 80vw, 40vw`, []);
+
+  const renderDetails = useCallback(
+    visible => (
+      <div className={styles.details}>
+        <div aria-hidden className={styles.index}>
+          <Divider
+            notchWidth="64px"
+            notchHeight="8px"
+            collapsed={!visible}
+            collapseDelay={1000}
+          />
+          <span className={styles.indexNumber} data-visible={visible}>
+            {indexText}
+          </span>
+        </div>
+        <Heading
+          level={3}
+          as="h2"
+          className={styles.title}
+          data-visible={visible}
+          id={titleId}
+        >
+          {title}
+        </Heading>
+        <Text className={styles.description} data-visible={visible} as="p">
+          {description}
+        </Text>
+        <div className={styles.button} data-visible={visible}>
+          <Button iconHoverShift href={buttonLink} iconEnd="arrowRight">
+            {buttonText}
+          </Button>
+        </div>
       </div>
-      <Heading
-        level={3}
-        as="h2"
-        className={styles.title}
-        data-visible={visible}
-        id={titleId}
-      >
-        {title}
-      </Heading>
-      <Text className={styles.description} data-visible={visible} as="p">
-        {description}
-      </Text>
-      <div className={styles.button} data-visible={visible}>
-        <Button iconHoverShift href={buttonLink} iconEnd="arrowRight">
-          {buttonText}
-        </Button>
-      </div>
-    </div>
+    ),
+    [indexText, title, description, buttonLink, buttonText, titleId]
   );
 
-  const renderPreview = visible => (
-    <div className={styles.preview}>
-      {model.type === 'laptop' && (
-        <>
-          <div className={styles.model} data-device="laptop">
-            <Model
-              alt={model.alt}
-              cameraPosition={{ x: 0, y: 0, z: 8 }}
-              showDelay={700}
-              show={visible}
-              models={[
-                {
-                  ...deviceModels.laptop,
-                  texture: {
-                    ...model.textures[0],
-                    sizes: laptopSizes,
-                  },
-                },
-              ]}
-            />
+  const renderPreview = useCallback(
+    visible => {
+      const modelProps = {
+        alt: model.alt,
+        show: visible,
+        showDelay: model.type === 'phone' ? 300 : 500,
+        models: [],
+      };
+
+      if (model.type === 'laptop') {
+        modelProps.cameraPosition = { x: 0, y: 0, z: 8 };
+        modelProps.models.push({
+          ...deviceModels.laptop,
+          texture: {
+            ...model.textures[0],
+            sizes: laptopSizes,
+          },
+        });
+      } else if (model.type === 'phone') {
+        modelProps.cameraPosition = { x: 0, y: 0, z: 11.5 };
+        modelProps.models.push({
+          ...deviceModels.phone,
+          position: { x: -0.6, y: 1.1, z: 0 },
+          texture: {
+            ...model.textures[0],
+            sizes: phoneSizes,
+          },
+        });
+        modelProps.models.push({
+          ...deviceModels.phone,
+          position: { x: 0.6, y: -0.5, z: 0.3 },
+          texture: {
+            ...model.textures[1],
+            sizes: phoneSizes,
+          },
+        });
+      } else if (model.type === 'macwithphone') {
+        modelProps.cameraPosition = { x: 0, y: 0, z: 11 };
+        modelProps.models.push({
+          ...deviceModels.phone,
+          position: { x: -0.9, y: 1.2, z: 0 },
+          texture: {
+            ...model.textures[0],
+            sizes: phoneSizes,
+          },
+        });
+        modelProps.models.push({
+          ...deviceModels.laptop,
+          position: { x: 0.6, y: -0.5, z: 0.3 },
+          texture: {
+            ...model.textures[1],
+            sizes: laptopSizes,
+          },
+        });
+      }
+
+      return (
+        <div className={styles.preview}>
+          <div className={styles.model} data-device={model.type}>
+            <Model {...modelProps} />
           </div>
-        </>
-      )}
-      {model.type === 'phone' && (
-        <>
-          <div className={styles.model} data-device="phone">
-            <Model
-              alt={model.alt}
-              cameraPosition={{ x: 0, y: 0, z: 11.5 }}
-              showDelay={300}
-              show={visible}
-              models={[
-                {
-                  ...deviceModels.phone,
-                  position: { x: -0.6, y: 1.1, z: 0 },
-                  texture: {
-                    ...model.textures[0],
-                    sizes: phoneSizes,
-                  },
-                },
-                {
-                  ...deviceModels.phone,
-                  position: { x: 0.6, y: -0.5, z: 0.3 },
-                  texture: {
-                    ...model.textures[1],
-                    sizes: phoneSizes,
-                  },
-                },
-              ]}
-            />
-          </div>
-        </>
-      )}
-      {model.type === 'macwithphone' && (
-        <>
-          <div className={styles.model} data-device="macwithphone">
-            <Model
-              alt={model.alt}
-              cameraPosition={{ x: 0, y: 0, z: 11 }}
-              showDelay={500}
-              show={visible}
-              models={[
-                {
-                  ...deviceModels.phone,
-                  position: { x: -0.9, y: 1.2, z: 0 },
-                  texture: {
-                    ...model.textures[0],
-                    sizes: phoneSizes,
-                  },
-                },
-                {
-                  ...deviceModels.laptop,
-                  position: { x: 0.6, y: -0.5, z: 0.3 },
-                  texture: {
-                    ...model.textures[1],
-                    sizes: phoneSizes,
-                  },
-                },
-              ]}
-            />
-          </div>
-        </>
-      )}
-    </div>
+        </div>
+      );
+    },
+    [model, phoneSizes, laptopSizes]
   );
+
+  const handleResize = useMemo(
+    () =>
+      debounce(() => {
+        // Handle resize logic if necessary
+      }, 300),
+    []
+  );
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
 
   return (
     <Section

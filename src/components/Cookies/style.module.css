@@ -1,0 +1,155 @@
+.consentBanner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(20, 20, 20, 0.9);
+  padding: 1rem 2rem; /* Horizontal padding */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  animation: fadeIn 0.5s ease-out;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: var(--monoFontStack);
+  font-size: 0.875rem; /* Base font size */
+}
+
+.consentContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.consentText {
+  color: #fff;
+  margin-right: 1.5rem; /* Margin between text and buttons */
+  flex: 1;
+  font-size: 0.875rem; /* Adjusted font size for better readability */
+  line-height: 1.4; /* Adjusted line height */
+}
+
+.consentButtons {
+  display: flex;
+  gap: 1.5rem; /* Space between buttons */
+}
+
+.consentBanner .consentButton {
+  background: transparent;
+  color: white;
+  padding: 0.75rem 2rem; /* Increased padding for larger clickable area */
+  border-radius: 0.5rem;
+  border: 2px solid #ccc;
+  animation: pulse 1.5s infinite;
+  font-size: 1rem; /* Slightly larger font size */
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  /* Ensure hover effects are applied */
+}
+
+.consentBanner .consentButton:hover {
+  animation-play-state: paused;
+}
+
+.consentBanner .consentButton.accept:hover {
+  border-color: rgba(42, 192, 178, 0.6);
+  box-shadow: 0 0 10px rgba(42, 192, 178, 0.6);
+}
+
+.consentBanner .consentButton.decline:hover {
+  border-color: rgba(246, 184, 184, 0.6);
+  box-shadow: 0 0 10px rgba(246, 184, 184, 0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .consentBanner {
+    padding: 1rem; /* Reduced padding on smaller screens */
+  }
+
+  .consentContent {
+    display: block;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .consentText {
+    margin-right: 0; /* Remove right margin */
+    margin-bottom: 1rem; /* Add bottom margin for spacing */
+    font-size: 0.75rem; /* Smaller font size on smaller screens */
+  }
+
+  .consentButtons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.75rem; /* Reduced gap */
+  }
+
+  .consentBanner .consentButton {
+    padding: 0.5rem 1rem; /* Adjust button padding */
+    font-size: 0.75rem; /* Smaller font size */
+  }
+
+  .consentBanner .consentButton.accept:hover {
+    border-color: rgba(42, 192, 178, 0.6);
+    box-shadow: 0 0 10px rgba(42, 192, 178, 0.6);
+  }
+
+  .consentBanner .consentButton.decline:hover {
+    border-color: rgba(246, 184, 184, 0.6);
+    box-shadow: 0 0 10px rgba(246, 184, 184, 0.6);
+  }
+}
+
+@media (max-width: 480px) {
+  .consentBanner {
+    font-size: 0.75rem; /* Further reduced font size for very small screens */
+  }
+
+  .consentText {
+    font-size: 0.6875rem; /* Even smaller text size */
+  }
+
+  .consentButtons {
+    gap: 0.5rem; /* Even smaller gap between buttons */
+  }
+
+  .consentBanner .consentButton {
+    padding: 0.5rem 0.75rem; /* Further reduced padding */
+    font-size: 0.6875rem; /* Smaller font size */
+  }
+
+  .consentBanner .consentButton.accept:hover {
+    border-color: rgba(42, 192, 178, 0.6);
+    box-shadow: 0 0 10px rgba(42, 192, 178, 0.6);
+  }
+
+  .consentBanner .consentButton.decline:hover {
+    border-color: rgba(246, 184, 184, 0.6);
+    box-shadow: 0 0 10px rgba(246, 184, 184, 0.6);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -16,6 +16,7 @@ import { msToNum } from 'utils/style';
 import { ScrollRestore } from '../layouts/App/ScrollRestore';
 
 import ParticlesComp from './ParticlesComp';
+import ConsentBanner from 'components/Cookies/consentBanner';
 
 export const AppContext = createContext({});
 
@@ -61,7 +62,7 @@ const App = ({ Component, pageProps }) => {
             </VisuallyHidden>
             <Navbar />
             <ParticlesComp />
-
+            <ConsentBanner />
             <main className={styles.app} tabIndex={-1} id="MainContent">
               <AnimatePresence mode="wait">
                 {' '}
