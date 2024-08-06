@@ -37,7 +37,6 @@ import {
 
 // ==== Project 2 ==== //
 
-import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
 import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
 import {
   default as gamestackTexture2lap,
@@ -409,7 +408,7 @@ export const Home = () => {
             },
             {
               srcSet: [gamestackTexture2lap, gamestackTexture2lapLarge],
-              placeholder: gamestackTexture2Placeholder,
+              placeholder: gamestackTexturePlaceholder,
             },
           ],
         }}
