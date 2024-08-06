@@ -7179,6 +7179,7 @@ __metadata:
     react: "npm:19.0.0-rc-65903583-20240805"
     react-dom: "npm:19.0.0-rc-65903583-20240805"
     react-tsparticles: "npm:^2.9.0"
+    sharp: "npm:^0.33.4"
     stylelint: "npm:^14.9.1"
     stylelint-config-css-modules: "npm:^4.1.0"
     stylelint-config-prettier: "npm:^9.0.3"
