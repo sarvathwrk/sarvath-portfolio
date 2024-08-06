@@ -2,7 +2,7 @@ import { useTheme } from 'components/ThemeProvider';
 import { Transition } from 'components/Transition';
 import { useReducedMotion, useSpring } from 'framer-motion';
 import { useInViewport, useWindowSize } from 'hooks';
-import { startTransition, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import {
   AmbientLight,
   Color,
@@ -11,9 +11,8 @@ import {
   MeshPhongMaterial,
   PerspectiveCamera,
   Scene,
-  SphereGeometry, // Updated here
+  SphereGeometry,
   UniformsUtils,
-  Vector2,
   WebGLRenderer,
   sRGBEncoding,
 } from 'three';
@@ -33,16 +32,15 @@ export const DisplacementSphere = props => {
   const theme = useTheme();
   const { rgbBackground, themeId, colorWhite } = theme;
   const start = useRef(Date.now());
-  const canvasRef = useRef();
-  const mouse = useRef();
-  const renderer = useRef();
-  const camera = useRef();
-  const scene = useRef();
-  const lights = useRef();
-  const uniforms = useRef();
-  const material = useRef();
-  const geometry = useRef();
-  const sphere = useRef();
+  const canvasRef = useRef(null);
+  const renderer = useRef(null);
+  const camera = useRef(null);
+  const scene = useRef(null);
+  const lights = useRef([]);
+  const uniforms = useRef(null);
+  const material = useRef(null);
+  const geometry = useRef(null);
+  const sphere = useRef(null);
   const reduceMotion = useReducedMotion();
   const isInViewport = useInViewport(canvasRef);
   const windowSize = useWindowSize();
@@ -50,8 +48,9 @@ export const DisplacementSphere = props => {
   const rotationY = useSpring(0, springConfig);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const { innerWidth, innerHeight } = window;
-    mouse.current = new Vector2(0.8, 0.5);
     renderer.current = new WebGLRenderer({
       canvas: canvasRef.current,
       antialias: false,
@@ -80,13 +79,11 @@ export const DisplacementSphere = props => {
       shader.fragmentShader = fragShader;
     };
 
-    startTransition(() => {
-      geometry.current = new SphereGeometry(32, 128, 128); // Updated here
-      sphere.current = new Mesh(geometry.current, material.current);
-      sphere.current.position.z = 0;
-      sphere.current.modifier = Math.random();
-      scene.current.add(sphere.current);
-    });
+    geometry.current = new SphereGeometry(32, 128, 128);
+    sphere.current = new Mesh(geometry.current, material.current);
+    sphere.current.position.z = 0;
+    sphere.current.modifier = Math.random();
+    scene.current.add(sphere.current);
 
     return () => {
       cleanScene(scene.current);
@@ -95,12 +92,12 @@ export const DisplacementSphere = props => {
   }, []);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const dirLight = new DirectionalLight(colorWhite, 0.6);
     const ambientLight = new AmbientLight(colorWhite, themeId === 'light' ? 0.8 : 0.1);
 
-    dirLight.position.z = 200;
-    dirLight.position.x = 100;
-    dirLight.position.y = 100;
+    dirLight.position.set(100, 100, 200);
 
     lights.current = [dirLight, ambientLight];
     scene.current.background = new Color(...rgbToThreeColor(rgbBackground));
@@ -112,6 +109,8 @@ export const DisplacementSphere = props => {
   }, [rgbBackground, colorWhite, themeId]);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const { width, height } = windowSize;
 
     const adjustedHeight = height + height * 0.3;
@@ -119,24 +118,22 @@ export const DisplacementSphere = props => {
     camera.current.aspect = width / adjustedHeight;
     camera.current.updateProjectionMatrix();
 
-    // Render a single frame on resize when not animating
     if (reduceMotion) {
       renderer.current.render(scene.current, camera.current);
     }
 
     if (width <= media.mobile) {
-      sphere.current.position.x = 14;
-      sphere.current.position.y = 10;
+      sphere.current.position.set(14, 10, 0);
     } else if (width <= media.tablet) {
-      sphere.current.position.x = 18;
-      sphere.current.position.y = 14;
+      sphere.current.position.set(18, 14, 0);
     } else {
-      sphere.current.position.x = 22;
-      sphere.current.position.y = 16;
+      sphere.current.position.set(22, 16, 0);
     }
   }, [reduceMotion, windowSize]);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const onMouseMove = event => {
       const position = {
         x: event.clientX / window.innerWidth,
@@ -157,12 +154,14 @@ export const DisplacementSphere = props => {
   }, [isInViewport, reduceMotion, rotationX, rotationY]);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     let animation;
 
     const animate = () => {
       animation = requestAnimationFrame(animate);
 
-      if (uniforms.current !== undefined) {
+      if (uniforms.current) {
         uniforms.current.time.value = 0.00005 * (Date.now() - start.current);
       }
 

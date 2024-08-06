@@ -1,9 +1,9 @@
+import React, { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { Button } from 'components/Button';
 import { Icon } from 'components/Icon';
 import { useTheme } from 'components/ThemeProvider';
 import { useReducedMotion } from 'framer-motion';
 import { useHasMounted, useInViewport } from 'hooks';
-import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
 import { resolveSrcFromSrcSet, srcSetToString } from 'utils/image';
 import { classes, cssProps, numToMs } from 'utils/style';
 import styles from './Image.module.css';
@@ -22,7 +22,7 @@ export const Image = ({
   const [loaded, setLoaded] = useState(false);
   const { themeId } = useTheme();
   const containerRef = useRef();
-  const src = baseSrc || srcSet?.[0];
+  const src = baseSrc || (srcSet && srcSet[0]);
   const inViewport = useInViewport(containerRef, !getIsVideo(src));
 
   const onLoad = useCallback(() => {
@@ -84,8 +84,12 @@ const ImageElements = ({
 
   useEffect(() => {
     const resolveVideoSrc = async () => {
-      const resolvedVideoSrc = await resolveSrcFromSrcSet({ srcSet, sizes });
-      setVideoSrc(resolvedVideoSrc);
+      try {
+        const resolvedVideoSrc = await resolveSrcFromSrcSet({ srcSet, sizes });
+        setVideoSrc(resolvedVideoSrc);
+      } catch (error) {
+        console.error('Failed to resolve video source:', error);
+      }
     };
 
     if (isVideo && srcSet) {
@@ -127,7 +131,6 @@ const ImageElements = ({
 
   const togglePlaying = event => {
     event.preventDefault();
-
     setVideoInteracted(true);
 
     if (videoRef.current.paused) {

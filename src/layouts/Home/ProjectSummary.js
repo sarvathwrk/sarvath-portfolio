@@ -11,7 +11,9 @@ import { useState } from 'react';
 import { media } from 'utils/style';
 import styles from './ProjectSummary.module.css';
 
-const Model = dynamic(() => import('components/Model').then(mod => mod.Model));
+const Model = dynamic(() => import('components/Model').then(mod => mod.Model), {
+  ssr: false,
+});
 
 export const ProjectSummary = ({
   id,

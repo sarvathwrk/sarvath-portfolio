@@ -122,7 +122,7 @@ export const ProjectBackground = ({ opacity = 0.7, className, ...rest }) => {
           data-visible={visible}
         >
           <div className={styles.backgroundImageElement} ref={imageRef}>
-            <Image alt="" role="presentation" {...rest} />
+            <Image alt="dggd" role="presentation" {...rest} />
           </div>
           <div className={styles.backgroundScrim} style={cssProps({ opacity })} />
         </div>

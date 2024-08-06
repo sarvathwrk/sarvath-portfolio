@@ -243,6 +243,30 @@ export function VolkiharKnight() {
         </ProjectSection>
 
         <ExperienceLayout title={`4+ Years of Work Experience`} />
+        <ProjectSection padding="none" className={styles1.section}>
+          <ProjectSectionContent>
+            <ProjectTextRow stretch width="m">
+              <ProjectSectionHeading>Portfolio Use</ProjectSectionHeading>
+              <Table>
+                <TableBody>
+                  <TableRow>
+                    <TableHeadCell>Frameworks</TableHeadCell>
+                    <TableCell>
+                      React Js(19.0.0 RC), React Dom(19.0.0 RC), Next Js(15.0.0 RC)
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableHeadCell>Advanced Method</TableHeadCell>
+                    <TableCell>
+                      Framer Motion(^7.1.0), Three Js(^0.146.0), Es Lint(^8.21.0),
+                      Prettier(^2.8.8),{' '}
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow center centerMobile noMargin>
