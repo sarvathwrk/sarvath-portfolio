@@ -24,16 +24,17 @@
     "prettier": "^2.8.8",
     "puppeteer": "^16.1.0",
     "react-tsparticles": "^2.9.0",
+    "sharp": "^0.33.4",
     "stylelint": "^14.9.1",
     "stylelint-config-css-modules": "^4.1.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^26.0.0",
-    "tsparticles": "^2.9.0",
-    "sharp": "^0.33.4"
+    "tsparticles": "^2.9.0"
   },
   "dependencies": {
     "babel-plugin-react-compiler": "0.0.0-experimental-334f00b-20240725",
     "framer-motion": "^7.1.0",
+    "js-cookie": "^3.0.5",
     "mdx-bundler": "^9.0.1",
     "next": "^15.0.0-rc.0",
     "nodemailer": "^6.9.14",
@@ -52,8 +53,5 @@
     "format": "prettier -w .",
     "format:check": "prettier -c .",
     "postbuild": "next-sitemap --config next-sitemap.config.js"
-  },
-  "engines": {
-    "node": "20.x"
   }
 }

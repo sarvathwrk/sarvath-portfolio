@@ -6,7 +6,7 @@ import { ThemeProvider } from 'components/ThemeProvider';
 import { tokens } from 'components/ThemeProvider/theme';
 import { VisuallyHidden } from 'components/VisuallyHidden';
 import { AnimatePresence, LazyMotion, domAnimation, m } from 'framer-motion';
-import { useFoucFix, useLocalStorage } from 'hooks';
+import { useCookie } from 'hooks/useCookie';
 import styles from 'layouts/App/App.module.css';
 import { initialState, reducer } from 'layouts/App/reducer';
 import Head from 'next/head';
@@ -17,6 +17,7 @@ import { ScrollRestore } from '../layouts/App/ScrollRestore';
 
 import ParticlesComp from './ParticlesComp';
 import ConsentBanner from 'components/Cookies/consentBanner';
+import { useFoucFix } from 'hooks/useFoucFix';
 
 export const AppContext = createContext({});
 
@@ -27,7 +28,7 @@ __  __  __
 `;
 
 const App = ({ Component, pageProps }) => {
-  const [storedTheme] = useLocalStorage('theme', 'dark');
+  const [storedTheme, setStoredTheme] = useCookie('theme', 'dark');
   const [state, dispatch] = useReducer(reducer, initialState);
   const { route, asPath } = useRouter();
   const canonicalRoute = route === '/' ? '' : `${asPath}`;
@@ -40,6 +41,10 @@ const App = ({ Component, pageProps }) => {
   useEffect(() => {
     dispatch({ type: 'setTheme', value: storedTheme || 'dark' });
   }, [storedTheme]);
+
+  useEffect(() => {
+    setStoredTheme(state.theme);
+  }, [setStoredTheme, state.theme]);
 
   return (
     <AppContext.Provider value={{ ...state, dispatch }}>
@@ -65,8 +70,6 @@ const App = ({ Component, pageProps }) => {
             <ConsentBanner />
             <main className={styles.app} tabIndex={-1} id="MainContent">
               <AnimatePresence mode="wait">
-                {' '}
-                {/* Update to use 'wait' */}
                 <m.div
                   key={route}
                   className={styles.page}

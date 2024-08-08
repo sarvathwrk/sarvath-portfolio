@@ -11,6 +11,7 @@ import { createContext, useEffect } from 'react';
 import { classes, media } from 'utils/style';
 import { theme, tokens } from './theme';
 import { useTheme } from './useTheme';
+import Cookies from 'js-cookie'; // Import the js-cookie library
 
 export const ThemeContext = createContext({});
 
@@ -27,10 +28,10 @@ export const ThemeProvider = ({
   const isRootProvider = !parentTheme.themeId;
   const hasMounted = useHasMounted();
 
-  // Save root theme id to localstorage and apply class to body
+  // Save root theme id to cookies and apply class to body
   useEffect(() => {
     if (isRootProvider && hasMounted) {
-      window.localStorage.setItem('theme', JSON.stringify(themeId));
+      Cookies.set('theme', themeId, { expires: 365 }); // Save theme preference in cookies
       document.body.dataset.theme = themeId;
     }
   }, [themeId, isRootProvider, hasMounted]);

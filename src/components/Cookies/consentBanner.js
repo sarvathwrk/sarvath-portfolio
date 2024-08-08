@@ -1,127 +1,33 @@
 import { useState, useEffect } from 'react';
 import styles from './style.module.css'; // Import the CSS module
 
-const CONSENT_KEY = 'clarity_consent';
-const CLARITY_SCRIPT_URL = `https://www.clarity.ms/tag/${process.env.NEXT_PUBLIC_MICROSOFT_CLARITY}`;
-
-const loadClarityScript = () => {
-  return new Promise((resolve, reject) => {
-    if (document.getElementById('clarity-script')) {
-      console.log('Clarity script already loaded.');
-      resolve();
-      return;
-    }
-
-    const script = document.createElement('script');
-    script.id = 'clarity-script';
-    script.async = true;
-    script.src = CLARITY_SCRIPT_URL;
-
-    script.onload = () => {
-      console.log('Clarity script loaded successfully.');
-      resolve();
-    };
-
-    script.onerror = () => {
-      console.error('Error loading Clarity script.');
-      reject(new Error('Clarity script failed to load.'));
-    };
-
-    document.head.appendChild(script);
-  });
-};
-
-const waitForClarity = (timeout = 10000) => {
-  return new Promise((resolve, reject) => {
-    const start = Date.now();
-
-    const checkClarity = () => {
-      if (typeof window.clarity === 'function') {
-        resolve();
-        return;
-      }
-      if (Date.now() - start > timeout) {
-        reject(new Error('Clarity function not available within timeout.'));
-        return;
-      }
-      setTimeout(checkClarity, 500);
-    };
-
-    checkClarity();
-  });
-};
-
-const initializeClarity = accepted => {
-  const maxRetries = 10;
-  let retries = 0;
-
-  const retryInterval = setInterval(() => {
-    if (typeof window.clarity === 'function') {
-      window.clarity('consent', accepted);
-      clearInterval(retryInterval);
-      console.log(`Clarity consent ${accepted ? 'granted' : 'declined'}.`);
-    } else if (retries >= maxRetries) {
-      clearInterval(retryInterval);
-      console.error('window.clarity is not available after multiple retries.');
-    }
-    retries++;
-  }, 500);
-};
-
 const ConsentBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const checkConsent = async () => {
-      try {
-        const consent = localStorage.getItem(CONSENT_KEY);
-        if (consent === null) {
-          setIsVisible(true);
-        } else {
-          await loadClarityScript();
-          await waitForClarity();
-          initializeClarity(consent === 'true');
-        }
-      } catch (error) {
-        console.error('Error during consent check or Clarity initialization:', error);
-      }
-    };
-
-    checkConsent();
-
-    const handleConsentGranted = async () => {
-      const consent = localStorage.getItem(CONSENT_KEY);
-      if (consent === 'true') {
-        try {
-          await loadClarityScript();
-          await waitForClarity();
-          initializeClarity(true);
-        } catch (error) {
-          console.error('Error during Clarity initialization:', error);
-        }
-      }
-    };
-
-    window.addEventListener('consentGranted', handleConsentGranted);
-
-    return () => {
-      window.removeEventListener('consentGranted', handleConsentGranted);
-    };
+    // Check if consent cookie exists
+    const consent = document.cookie
+      .split('; ')
+      .find(row => row.startsWith('cookie_consent='));
+    if (!consent) {
+      setIsVisible(true);
+    }
   }, []);
 
   const handleConsent = async accepted => {
-    localStorage.setItem(CONSENT_KEY, accepted.toString());
-    setIsVisible(false);
-    try {
-      await loadClarityScript();
-      await waitForClarity();
-      initializeClarity(accepted);
-    } catch (error) {
-      console.error('Error during Clarity initialization:', error);
-    }
+    document.cookie = `cookie_consent=${accepted};path=/;max-age=${60 * 60 * 24 * 365}`; // 1 year expiry
 
-    const event = new Event('consentGranted');
-    window.dispatchEvent(event);
+    setIsVisible(false);
+    if (accepted) {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: 'consent_given' });
+
+      // Reload the GTM script
+      const script = document.createElement('script');
+      script.src = `https://www.googletagmanager.com/gtm.js?id=${process.env.NEXT_PUBLIC_GOOGLETAG}`;
+      script.async = true;
+      document.head.appendChild(script);
+    }
   };
 
   if (!isVisible) return null;
