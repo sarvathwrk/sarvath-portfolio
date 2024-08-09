@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 
 'use client';
-import { forwardRef, useEffect, useId } from 'react';
+import { forwardRef, useId } from 'react';
 import styles from './Monogram.module.css';
 import Link from 'next/link';
 import { Logo } from './Logo';

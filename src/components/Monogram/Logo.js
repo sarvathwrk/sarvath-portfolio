@@ -75,7 +75,7 @@ export const Logo = ({
         width="120"
         id="show"
         height="90"
-        viewBox="0 0 290 250"
+        viewBox="0 68 290 250"
         style={{ transition: 'opacity 1s ease-in-out' }}
         ref={ref}
         {...props}
