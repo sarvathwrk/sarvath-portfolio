@@ -2,6 +2,7 @@ import GothamBook from 'assets/fonts/gotham-book.woff2';
 import GothamMedium from 'assets/fonts/gotham-medium.woff2';
 import { fontStyles, tokenStyles } from 'components/ThemeProvider';
 import { Head, Html, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 export default function Document() {
   return (
@@ -35,6 +36,30 @@ export default function Document() {
         <Main />
         <NextScript />
         <div id="portal-root" />
+
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Mohamed Sarvath Khan',
+              url: 'https://sarvath-portfolio.vercel.app/',
+              sameAs: ['https://www.linkedin.com/in/mohamed-sarvath-khan-a19b2698/'],
+              jobTitle: 'Full Stack Developer',
+              worksFor: {
+                '@type': 'Organization',
+                name: 'Freelancing',
+              },
+              alumniOf: 'Anna University',
+              description:
+                'Experienced Frontend Developer specializing in React.js, Next.js, and TypeScript.',
+              image: 'https://i.imgur.com/32qoE9j.jpg',
+            }),
+          }}
+        />
       </body>
     </Html>
   );
