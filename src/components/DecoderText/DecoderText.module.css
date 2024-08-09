@@ -4,7 +4,10 @@
     visibility: hidden;
   }
 }
-
+.content {
+  width: 100%;
+  overflow: hidden;
+}
 .glyph {
   opacity: 0.8;
   font-weight: var(--fontWeightRegular);

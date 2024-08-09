@@ -38,6 +38,7 @@ const ButtonContent = forwardRef(
       iconEnd,
       iconHoverShift,
       iconOnly,
+      fontSize = false,
       children,
       rel,
       target,
@@ -72,7 +73,14 @@ const ButtonContent = forwardRef(
             icon={icon}
           />
         )}
-        {children && <span className={styles.text}>{children}</span>}
+        {children && (
+          <span
+            style={{ fontSize: fontSize ? fontSize : 'default' }}
+            className={styles.text}
+          >
+            {children}
+          </span>
+        )}
         {iconEnd && (
           <Icon
             className={styles.icon}

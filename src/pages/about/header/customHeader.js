@@ -4,8 +4,9 @@ import { Heading } from 'components/Heading';
 import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import Link from 'next/link';
-import { classes, cssProps, numToMs } from 'utils/style';
+import { classes, cssProps, media, numToMs } from 'utils/style';
 import styles from './../about.module.css';
+import { useWindowSize } from 'hooks';
 
 const initDelay = 300;
 
@@ -18,6 +19,10 @@ export function CustomAboutHeader({
   url2,
   className,
 }) {
+  const windowSize = useWindowSize();
+
+  const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
+
   return (
     <Section className={classes(styles.header, className)} as="section">
       <div
@@ -26,9 +31,18 @@ export function CustomAboutHeader({
       >
         <div className={styles.details}>
           <Heading className={styles.title} level={2} as="h1">
-            <DecoderText text={`${title}`} delay={1000} style={{ fontSize: '50px' }} />
+            <DecoderText
+              text={`${title}`}
+              delay={1000}
+              style={{ fontSize: isMobile ? '1.5rem' : '50px' }}
+            />
           </Heading>
-          <Text className={styles.description} size="xl" as="p">
+          <Text
+            // style={{ fontSize: '10px' }}
+            className={styles.description}
+            size={isMobile ? 'md' : 'xl'}
+            as="p"
+          >
             {description}
           </Text>
           <div className={styles.headcontentButton}>

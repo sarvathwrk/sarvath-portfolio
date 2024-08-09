@@ -1,19 +1,20 @@
-import { DecoderText } from 'components/DecoderText';
-import { Heading } from 'components/Heading';
+// import { DecoderText } from 'components/DecoderText';
+// import { Heading } from 'components/Heading';
 import { List, ListItem } from 'components/List';
 import { Section } from 'components/Section';
-import { ProjectSectionText } from 'layouts/Project';
-import { classes, cssProps, numToMs } from 'utils/style';
+import { ProjectSectionHeading, ProjectSectionText } from 'layouts/Project';
+import { classes, cssProps, media, numToMs } from 'utils/style';
 import styles from './experience.module.css';
 import { Button } from 'components/Button';
+import { useWindowSize } from 'hooks';
 
 const initDelay = 300;
 const experienceList = [
   {
     jobtitle: 'Web Developer',
     companyname: 'Aqary International Group',
-    duration: 'August 2023 - Present',
-    location: 'Abu Dhabi / United Arab Emirates',
+    duration: 'Aug 2023 - Present',
+    location: 'Abu Dhabi / UAE',
     description: [
       {
         label: `Leveraged advanced TypeScript and Next.js with server-side rendering and the latest MUI to architect responsive web applications, significantly enhancing user engagement and overall experience within the real estate sector.`,
@@ -74,6 +75,10 @@ const experienceList = [
   },
 ];
 export function ExperienceLayout({ title }) {
+  const windowSize = useWindowSize();
+
+  const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
+
   return (
     <Section className={classes(styles.header)} as="section">
       <div
@@ -81,32 +86,47 @@ export function ExperienceLayout({ title }) {
         style={cssProps({ initDelay: numToMs(initDelay) })}
       >
         <div className={styles.details}>
-          <Heading className={styles.title} level={2} as="h1">
-            <DecoderText
-              text={`${title}`}
-              delay={1000}
-              style={{ fontSize: '40px', paddingBottom: '309px' }}
-            />
-          </Heading>
+          {/* <Heading className={styles.title} level={2} as="h1"> */}
+          <ProjectSectionHeading>{title}</ProjectSectionHeading>
+          {/* </Heading> */}
 
           {experienceList.map((ival, i) => {
             return (
               <div key={i}>
-                <Heading key={`heading${1}`} className={styles.title} level={2} as="h2">
-                  <DecoderText
+                {/* <Heading key={`heading${1}`} className={styles.title} level={2} as="h2"> */}
+                {/* <DecoderText
                     text={`${ival.jobtitle} @ ${ival.companyname}`}
                     delay={1000}
-                    style={{ fontSize: '26px' }}
-                  />
-                  <div className={styles.headcontentButton}>
-                    <Button secondary className={styles.linkButton}>
-                      {ival.duration}
-                    </Button>
-                    <Button secondary className={styles.linkButton}>
-                      {ival.location}
-                    </Button>
-                  </div>
-                </Heading>
+                    style={{
+                      fontSize: isMobile ? '1rem' : '26px',
+                      width: '100%',
+                      overflow: 'hidden',
+                    }}
+                  /> */}
+                <ProjectSectionHeading
+                  as="h5"
+                  level={5}
+                  key={`heading${1}`}
+                  className={styles.title}
+                >{`${ival.jobtitle} @ ${ival.companyname}`}</ProjectSectionHeading>
+
+                <div className={styles.headcontentButton}>
+                  <Button
+                    fontSize={isMobile ? '.8rem' : false}
+                    secondary
+                    className={styles.linkButton}
+                  >
+                    {ival.duration}
+                  </Button>
+                  <Button
+                    fontSize={isMobile ? '.8rem' : false}
+                    secondary
+                    className={styles.linkButton}
+                  >
+                    {ival.location}
+                  </Button>
+                </div>
+                {/* </Heading> */}
 
                 <ProjectSectionText as="div">
                   <List>
