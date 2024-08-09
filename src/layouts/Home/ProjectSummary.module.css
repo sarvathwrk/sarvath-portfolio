@@ -43,7 +43,7 @@
   grid-template-columns: var(--textColumnWidth) 1fr;
   grid-column-gap: var(--space2XL);
 
-  @nest .summary[data-alternate='true'] & {
+  .summary[data-alternate='true'] & {
     grid-template-columns: 1fr var(--textColumnWidth);
   }
 
@@ -52,7 +52,7 @@
   }
 
   @media (--mediaTablet) {
-    @nest .summary[data-alternate='true'] & {
+    .summary[data-alternate='true'] & {
       grid-template-columns: 100%;
     }
 
@@ -139,10 +139,19 @@
   }
 }
 
+.loader {
+  opacity: 0;
+  transition: opacity 400ms ease 1000ms;
+
+  &[data-visible='true'] {
+    opacity: 1;
+  }
+}
+
 .svg {
   opacity: 0;
   transition: opacity 1200ms ease 1400ms;
-  fill: var(--colorTextTitle);
+  fill: var(--textTitle);
 
   &[data-visible='true'] {
     opacity: var(--opacity);
@@ -192,7 +201,7 @@
 .indexNumber {
   font-size: var(--fontSizeBodyS);
   font-weight: var(--fontWeightMedium);
-  color: rgb(var(--rgbPrimary));
+  color: var(--primary);
   opacity: 0;
   transition-property: opacity;
   transition-timing-function: var(--bezierFastoutSlowin);

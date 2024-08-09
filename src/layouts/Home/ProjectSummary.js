@@ -6,11 +6,9 @@ import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { Transition } from 'components/Transition';
 import { useHydrated, useWindowSize } from 'hooks';
-import dynamic from 'next/dynamic';
 import { useState, useCallback, useMemo, useEffect, Suspense, lazy } from 'react';
 import debounce from 'lodash/debounce';
 import styles from './ProjectSummary.module.css';
-import { Loader } from 'components/Loader';
 import { LoaderAlt } from 'components/LoaderAlt';
 
 // const Model = dynamic(() => import('components/Model').then(mod => mod.Model), {

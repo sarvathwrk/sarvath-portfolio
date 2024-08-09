@@ -6,19 +6,22 @@ import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
 import { VisuallyHidden } from 'components/VisuallyHidden';
 import { AnimatePresence } from 'framer-motion';
-import { useInterval, usePrevious, useScrollToHash } from 'hooks';
-import dynamic from 'next/dynamic';
+import { useHydrated, useInterval, usePrevious, useScrollToHash } from 'hooks';
 import Link from 'next/link';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, lazy, Suspense, useEffect, useState } from 'react';
 import { cssProps } from 'utils/style';
 import styles from './Intro.module.css';
 
 // Dynamic import of DisplacementSphere with a loading state
-const DisplacementSphere = dynamic(
-  () => import('layouts/Home/DisplacementSphere').then(mod => mod.DisplacementSphere),
-  { ssr: false, loading: () => <div style={{ opacity: 0 }}>Loading model...</div> }
+// const DisplacementSphere = dynamic(
+//   () => import('layouts/Home/DisplacementSphere').then(mod => mod.DisplacementSphere),
+//   { ssr: false, loading: () => <div style={{ opacity: 0 }}>Loading model...</div> }
+// );
+const DisplacementSphere = lazy(() =>
+  import('layouts/Home/DisplacementSphere').then(module => ({
+    default: module.DisplacementSphere,
+  }))
 );
-
 export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) {
   const theme = useTheme();
   const [disciplineIndex, setDisciplineIndex] = useState(0);
@@ -26,6 +29,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
   const currentDiscipline = disciplines[disciplineIndex];
   const titleId = `${id}-title`;
   const scrollToHash = useScrollToHash();
+  const isHydrated = useHydrated();
 
   // Cycle through disciplines every 5 seconds
   useInterval(
@@ -62,7 +66,11 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
       <Transition in key={theme.themeId} timeout={3000}>
         {(visible, status) => (
           <Fragment>
-            <DisplacementSphere />
+            {isHydrated && (
+              <Suspense fallback={<div style={{ opacity: 0 }}>Loading model...</div>}>
+                <DisplacementSphere />
+              </Suspense>
+            )}
             <header className={styles.text}>
               <h1 className={styles.name} data-visible={visible} id={titleId}>
                 <DecoderText text="Mohamed Sarvath Khan" delay={1000} />
