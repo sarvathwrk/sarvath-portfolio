@@ -9,18 +9,8 @@ export default function Document() {
       <Head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
-        <link
-          rel="shortcut icon"
-          id="favicon1"
-          href="/SarvathLogo1.png"
-          type="image/png"
-        />
-        <link
-          rel="shortcut icon"
-          id="favicon2"
-          href="/SarvathLogo1.svg"
-          type="image/svg+xml"
-        />
+        <link rel="shortcut icon" id="favicon1" href="/file.png" type="image/png" />
+
         <link rel="apple-touch-icon" href="/icon-256.png" />
         <link type="text/plain" rel="author" href="/humans.txt" />
 
