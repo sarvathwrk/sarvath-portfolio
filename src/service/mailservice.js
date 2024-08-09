@@ -120,7 +120,6 @@ export async function sendMail(data) {
           <h2>New Contact Inquiry</h2>
           <p><strong>Name:</strong> ${data.name}</p>
           <p><strong>Email:</strong> ${data.email}</p>
-          <p><strong>Phone No:</strong> ${data.phone}</p>
 
           <div class="message">
             <p><strong>Message:</strong>${data.message}</p>

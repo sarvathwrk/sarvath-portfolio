@@ -20,24 +20,24 @@ import GalleryLarge3placeholder from 'assets/volkihar-enderal-placeholder.jpg';
 
 import { CustomAboutHeader } from 'pages/about/header/customHeader';
 import { Fragment } from 'react';
-const validatePhoneNumber = phoneNumber => {
-  if (!phoneNumber) {
-    return 'Phone number is required.';
-  }
-  const phoneRegex = /^\+[1-9]\d{1,14}$/;
-  if (phoneNumber.length < 8) {
-    return 'Invalid Phone Number';
-  }
-  if (!phoneRegex.test(phoneNumber)) {
-    return 'Please enter a valid phone number with country code.'; // Return error message
-  }
+// const validatePhoneNumber = phoneNumber => {
+//   if (!phoneNumber) {
+//     return 'Phone number is required.';
+//   }
+//   const phoneRegex = /^\+[1-9]\d{1,14}$/;
+//   if (phoneNumber.length < 8) {
+//     return 'Invalid Phone Number';
+//   }
+//   if (!phoneRegex.test(phoneNumber)) {
+//     return 'Please enter a valid phone number with country code.'; // Return error message
+//   }
 
-  return false; // Return empty string if no error
-};
+//   return false; // Return empty string if no error
+// };
 export const Contact = () => {
   const errorRef = useRef();
   const email = useFormInput('');
-  const phone = useFormInput('');
+  // const phone = useFormInput('');
   const name = useFormInput('');
 
   const message = useFormInput('');
@@ -53,13 +53,13 @@ export const Contact = () => {
 
     if (sending) return;
     try {
-      let validate = validatePhoneNumber(phone.value);
-      if (validate) {
-        alert(validate);
-        setSending(false);
+      // let validate = validatePhoneNumber(phone.value);
+      // if (validate) {
+      //   alert(validate);
+      //   setSending(false);
 
-        return false;
-      }
+      //   return false;
+      // }
       const response = await fetch('/api', {
         method: 'POST',
         headers: {
@@ -68,7 +68,7 @@ export const Contact = () => {
         body: JSON.stringify({
           email: email.value,
           message: message.value,
-          phone: phone.value,
+          // phone: phone.value,
           name: name.value,
         }),
       });
@@ -156,7 +156,7 @@ export const Contact = () => {
                   maxLength={512}
                   {...email}
                 />
-                <Input
+                {/* <Input
                   required
                   className={styles.input}
                   data-status={status}
@@ -166,7 +166,7 @@ export const Contact = () => {
                   type={'tel'}
                   maxLength={13}
                   {...phone}
-                />
+                /> */}
                 <Input
                   required
                   multiline
