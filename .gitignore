@@ -58,6 +58,7 @@ typings/
 .env.local
 
 build/
+public/sitemap.xml
 public/og
 .serverless
 .next
