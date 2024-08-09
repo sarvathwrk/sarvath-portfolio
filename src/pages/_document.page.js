@@ -55,7 +55,7 @@ export default function Document() {
               },
               alumniOf: 'Anna University',
               description:
-                'Experienced Frontend Developer specializing in React.js, Next.js, and TypeScript.',
+                'Experienced Full Stack Developer specializing in React.js, Next.js, Node.js and TypeScript.',
               image: 'https://i.imgur.com/32qoE9j.jpg',
             }),
           }}
