@@ -8,7 +8,7 @@ export function useCookie(key, initialValue) {
       // Check if cookieValue is valid JSON
       if (cookieValue) {
         try {
-          return JSON.parse(cookieValue);
+          return cookieValue;
         } catch (error) {
           console.error('Failed to parse cookie as JSON:', error);
           return cookieValue; // Fallback to raw cookie value if parsing fails

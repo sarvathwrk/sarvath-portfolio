@@ -38,20 +38,10 @@ export default function Document() {
           type="font/woff2"
           crossOrigin="anonymous"
         />
-
         <style dangerouslySetInnerHTML={{ __html: fontStyles }} />
         <style dangerouslySetInnerHTML={{ __html: tokenStyles }} />
       </Head>
       <body data-theme="dark" tabIndex={-1}>
-        <noscript>
-          <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GOOGLETAG}`}
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          ></iframe>
-        </noscript>
-
         <Main />
         <NextScript />
         <div id="portal-root" />
