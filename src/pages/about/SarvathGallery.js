@@ -35,15 +35,6 @@ const description = `Dedicated Full Stack Web Developer with over four years of 
 // ];
 
 export function VolkiharKnight() {
-  const [currentImage, setCurrentImage] = useState(1);
-  useEffect(() => {
-    const changeImage = () => {
-      setCurrentImage(prevImage => (prevImage % 8) + 1);
-    };
-    const intervalId = setInterval(changeImage, 4000);
-    return () => clearInterval(intervalId);
-  }, []);
-
   return (
     <Fragment>
       <Meta title={title} prefix="Projects" description={description} />
@@ -272,10 +263,10 @@ export function VolkiharKnight() {
             <ProjectTextRow center centerMobile noMargin>
               <div className="image-container">
                 <img
-                  src={`/SarvathLogo${currentImage}.png`}
+                  src={`/file.png`}
                   placeholder={volkiharEnderalLogoPlaceholder}
                   className="logoiconGallery"
-                  alt="The Enderal game logo"
+                  alt="SarvathIco"
                   sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 100vw, 220px`}
                 />
               </div>
