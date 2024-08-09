@@ -13,9 +13,10 @@ import { Fragment, useEffect, useState } from 'react';
 import { cssProps } from 'utils/style';
 import styles from './Intro.module.css';
 
+// Dynamic import of DisplacementSphere with a loading state
 const DisplacementSphere = dynamic(
   () => import('layouts/Home/DisplacementSphere').then(mod => mod.DisplacementSphere),
-  { ssr: false }
+  { ssr: false, loading: () => <div style={{ opacity: 0 }}>Loading model...</div> }
 );
 
 export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) {
@@ -26,6 +27,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
   const titleId = `${id}-title`;
   const scrollToHash = useScrollToHash();
 
+  // Cycle through disciplines every 5 seconds
   useInterval(
     () => {
       setDisciplineIndex((disciplineIndex + 1) % disciplines.length);
@@ -34,12 +36,14 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
     theme.themeId
   );
 
+  // Reset discipline index when theme changes
   useEffect(() => {
     if (prevTheme && prevTheme.themeId !== theme.themeId) {
       setDisciplineIndex(0);
     }
   }, [theme.themeId, prevTheme]);
 
+  // Handle scroll to section on click
   const handleScrollClick = event => {
     event.preventDefault();
     scrollToHash(event.currentTarget.href);
@@ -104,7 +108,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 </div>
               </span>
             </header>
-            <Link href="/#project-1" aria-label={`Project1`}>
+            <Link href="/#project-1" aria-label="Scroll to projects">
               <span
                 className={styles.scrollIndicator}
                 data-status={status}
@@ -114,7 +118,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 <VisuallyHidden>Scroll to projects</VisuallyHidden>
               </span>
             </Link>
-            <Link href="/#project-1" aria-label={`Project2`}>
+            <Link href="/#project-1" aria-label="Scroll to projects">
               <span
                 className={styles.mobileScrollIndicator}
                 data-status={status}

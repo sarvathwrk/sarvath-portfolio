@@ -8,12 +8,12 @@ import { Transition } from 'components/Transition';
 import { useWindowSize } from 'hooks';
 import dynamic from 'next/dynamic';
 import { useState, useCallback, useMemo, useEffect } from 'react';
-import { media } from 'utils/style';
 import debounce from 'lodash/debounce';
 import styles from './ProjectSummary.module.css';
 
 const Model = dynamic(() => import('components/Model').then(mod => mod.Model), {
   ssr: false,
+  loading: () => <div style={{ opacity: 0 }}>Loading model...</div>,
 });
 
 export const ProjectSummary = ({
@@ -32,11 +32,12 @@ export const ProjectSummary = ({
   const [focused, setFocused] = useState(false);
   const { width } = useWindowSize();
   const titleId = `${id}-title`;
-  const isMobile = width <= media.tablet;
+  const isMobile = width <= 768; // Adjust the breakpoint as needed
+
   const indexText = useMemo(() => (index < 10 ? `0${index}` : index), [index]);
 
-  const phoneSizes = useMemo(() => `(max-width: ${media.tablet}px) 30vw, 20vw`, []);
-  const laptopSizes = useMemo(() => `(max-width: ${media.tablet}px) 80vw, 40vw`, []);
+  const phoneSizes = useMemo(() => `(max-width: 768px) 30vw, 20vw`, []);
+  const laptopSizes = useMemo(() => `(max-width: 768px) 80vw, 40vw`, []);
 
   const renderDetails = useCallback(
     visible => (
