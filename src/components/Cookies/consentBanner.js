@@ -71,7 +71,7 @@ const ConsentBanner = () => {
       )}
 
       {isVisible && (
-        <div className={styles.consentBanner} role="dialog" aria-live="polite">
+        <div className={styles.consentBanner} role="dialog" aria-label='concent' aria-labelledby='BannerConcent' aria-live="polite">
           <div className={styles.consentContent}>
             <p className={styles.consentText}>
               We use cookies to enhance your experience on our website and to analyze site
