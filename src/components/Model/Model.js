@@ -59,6 +59,8 @@ export const Model = ({
   showDelay = 0,
   cameraPosition = { x: 0, y: 0, z: 8 },
   style,
+  onLoad,
+
   className,
   alt,
   ...rest
@@ -344,6 +346,7 @@ export const Model = ({
           renderFrame={renderFrame}
           index={index}
           setLoaded={setLoaded}
+          onLoad={onLoad}
           model={model}
         />
       ))}
@@ -359,6 +362,8 @@ const Device = ({
   index,
   showDelay,
   setLoaded,
+  onLoad,
+
   show,
 }) => {
   const [loadDevice, setLoadDevice] = useState();
@@ -497,10 +502,11 @@ const Device = ({
     if (!loadDevice || !show) return;
     let animation;
 
-    const onLoad = async () => {
+    const onModelLoad = async () => {
       const { loadFullResTexture, playAnimation } = await loadDevice.start();
 
       setLoaded(true);
+      onLoad?.();
 
       if (!reduceMotion) {
         animation = playAnimation();
@@ -514,7 +520,7 @@ const Device = ({
     };
 
     startTransition(() => {
-      onLoad();
+      onModelLoad();
     });
 
     return () => {

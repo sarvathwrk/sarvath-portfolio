@@ -5,16 +5,22 @@ import { deviceModels } from 'components/Model/deviceModels';
 import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { Transition } from 'components/Transition';
-import { useWindowSize } from 'hooks';
+import { useHydrated, useWindowSize } from 'hooks';
 import dynamic from 'next/dynamic';
-import { useState, useCallback, useMemo, useEffect } from 'react';
+import { useState, useCallback, useMemo, useEffect, Suspense, lazy } from 'react';
 import debounce from 'lodash/debounce';
 import styles from './ProjectSummary.module.css';
+import { Loader } from 'components/Loader';
+import { LoaderAlt } from 'components/LoaderAlt';
 
-const Model = dynamic(() => import('components/Model').then(mod => mod.Model), {
-  ssr: false,
-  loading: () => <div style={{ opacity: 0 }}>Loading model...</div>,
-});
+// const Model = dynamic(() => import('components/Model').then(mod => mod.Model), {
+//   ssr: false,
+//   loading: () => <div style={{ opacity: 0 }}>Loading model...</div>,
+// });
+
+const Model = lazy(() =>
+  import('components/Model').then(module => ({ default: module.Model }))
+);
 
 export const ProjectSummary = ({
   id,
@@ -33,12 +39,16 @@ export const ProjectSummary = ({
   const { width } = useWindowSize();
   const titleId = `${id}-title`;
   const isMobile = width <= 768; // Adjust the breakpoint as needed
+  const isHydrated = useHydrated();
+  const [modelLoaded, setModelLoaded] = useState(false);
 
   const indexText = useMemo(() => (index < 10 ? `0${index}` : index), [index]);
 
   const phoneSizes = useMemo(() => `(max-width: 768px) 30vw, 20vw`, []);
   const laptopSizes = useMemo(() => `(max-width: 768px) 80vw, 40vw`, []);
-
+  function handleModelLoad() {
+    setModelLoaded(true);
+  }
   const renderDetails = useCallback(
     visible => (
       <div className={styles.details}>
@@ -134,12 +144,16 @@ export const ProjectSummary = ({
       return (
         <div className={styles.preview}>
           <div className={styles.model} data-device={model.type}>
-            <Model {...modelProps} />
+            {isHydrated && visible && (
+              <Suspense fallback={<div style={{ opacity: 0 }}>Loading model...</div>}>
+                <Model onLoad={handleModelLoad} {...modelProps} />
+              </Suspense>
+            )}
           </div>
         </div>
       );
     },
-    [model, phoneSizes, laptopSizes]
+    [model.alt, model.type, model.textures, isHydrated, laptopSizes, phoneSizes]
   );
 
   const handleResize = useMemo(
@@ -173,6 +187,9 @@ export const ProjectSummary = ({
         <Transition in={sectionVisible || focused}>
           {visible => (
             <>
+              {!modelLoaded && (
+                <LoaderAlt center className={styles.loader} data-visible={visible} />
+              )}
               {!alternate && !isMobile && (
                 <>
                   {renderDetails(visible)}
