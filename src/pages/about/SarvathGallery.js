@@ -16,7 +16,7 @@ import {
   ProjectTextRow,
 } from 'layouts/Project';
 // import dynamic from 'next/dynamic';
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment } from 'react';
 import { media } from 'utils/style';
 import { ExperienceLayout } from './experience/experience';
 import { CustomAboutHeader } from './header/customHeader';
