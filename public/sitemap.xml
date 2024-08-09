@@ -1,59 +1,81 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/about/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/contact/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/about/experience/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/projects/Aqary/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/projects/Difuza/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/projects/Foodtekco/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/projects/InkyPencil/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/projects/SteerAuto/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/projects/Teawork/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/projects/Teawork-Dashboard/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/projects/VidhyaOnline/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/projects/Wololo/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://sarvath-portfolio.vercel.app/projects/ksa-futurebank/</loc>
-    <changefreq>monthly</changefreq>
-  </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/about/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/contact/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/projects/Aqary/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/projects/Foodtekco/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/projects/Teawork-Dashboard/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/projects/Teawork/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/projects/Difuza/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/projects/VidhyaOnline/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/projects/Wololo/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/projects/InkyPencil/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/projects/ksa-futurebank/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/projects/SteerAuto/</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://sarvath-portfolio.vercel.app/humans.txt</loc>
+  <lastmod>2024-08-09T09:56:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
 
 </urlset>
