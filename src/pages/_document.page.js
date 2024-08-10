@@ -9,7 +9,6 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
-        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         {/* <!-- For standard browsers --> */}
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
