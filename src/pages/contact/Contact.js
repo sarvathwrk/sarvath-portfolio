@@ -109,8 +109,8 @@ export const Contact = () => {
       <ProjectContainer>
         <ProjectBackgroundContact
           srcSet={[
-            { src: 'https://i.imgur.com/mxEloNi.jpg' },
-            { src: 'https://i.imgur.com/mxEloNi.jpg' },
+            { src: 'https://i.imgur.com/mxEloNi.jpg', width: 500 },
+            { src: 'https://i.imgur.com/mxEloNi.jpg', width: 500 },
           ]}
           placeholder={GalleryLarge3placeholder}
           opacity={0.4}
