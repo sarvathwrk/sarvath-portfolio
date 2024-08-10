@@ -15,6 +15,9 @@ export default function Document() {
 
         {/* <!-- For high-resolution displays --> */}
         <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png" />
+        <link rel="icon" href="/favicon64.png" sizes="64x64" type="image/png" />
+        <link rel="icon" href="/favicon-128.png" sizes="128x128" type="image/png" />
         <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
 
         {/* <!-- For Apple devices --> */}
