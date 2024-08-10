@@ -237,20 +237,21 @@ export function VolkiharKnight() {
         <ProjectSection padding="none" className={styles1.section}>
           <ProjectSectionContent>
             <ProjectTextRow stretch width="m">
-              <ProjectSectionHeading>Portfolio Use</ProjectSectionHeading>
+              <ProjectSectionHeading>Portfolio Uses</ProjectSectionHeading>
               <Table>
                 <TableBody>
                   <TableRow>
                     <TableHeadCell>Frameworks</TableHeadCell>
                     <TableCell>
-                      React Js(19.0.0 RC), React Dom(19.0.0 RC), Next Js(15.0.0 RC)
+                      React Js(19.0.0 RC), React Dom(19.0.0 RC), Next Js(15.0.0 RC),Three
+                      Js(^0.146.0)
                     </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableHeadCell>Advanced Method</TableHeadCell>
                     <TableCell>
                       Framer Motion(^7.1.0), Three Js(^0.146.0), Es Lint(^8.21.0),
-                      Prettier(^2.8.8),{' '}
+                      Prettier(^2.8.8), Stylelint(14.9.1)
                     </TableCell>
                   </TableRow>
                 </TableBody>
