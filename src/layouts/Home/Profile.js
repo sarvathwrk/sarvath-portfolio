@@ -82,7 +82,7 @@ export const Profile = ({ id, visible, sectionRef }) => {
                     { src: 'https://i.imgur.com/XIRbVpx.jpg', width: 960 },
                   ]}
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-                  alt="Me standing on PlayGround in my HomeTown"
+                  alt="sarvath"
                 />
                 {/* <svg
                   aria-hidden="true"

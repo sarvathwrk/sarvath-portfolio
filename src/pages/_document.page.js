@@ -9,10 +9,26 @@ export default function Document() {
     <Html lang="en">
       <Head>
         <meta charSet="utf-8" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        {/* <!-- For standard browsers --> */}
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+        {/* <!-- For high-resolution displays --> */}
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
+
+        {/* <!-- For Apple devices --> */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/apple-touch-icon-152x152.png"
+        />
+
         <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" id="favicon1" href="/file.png" type="image/png" />
 
-        <link rel="apple-touch-icon" href="/icon-256.png" />
         <link type="text/plain" rel="author" href="/humans.txt" />
 
         <link
@@ -55,7 +71,7 @@ export default function Document() {
               },
               alumniOf: 'Anna University',
               description:
-                'Experienced Full Stack Developer specializing in React.js, Next.js, Node.js and TypeScript.',
+                'Experienced Full Stack Developer specializing in React.js, Next.js, Node.js, Mongo DB and TypeScript.',
               image: 'https://i.imgur.com/32qoE9j.jpg',
             }),
           }}
