@@ -5,9 +5,9 @@ import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
-import { useParallax } from 'hooks';
+import { useParallax, useWindowSize } from 'hooks';
 import { forwardRef, useRef } from 'react';
-import { classes, cssProps, msToNum, numToMs } from 'utils/style';
+import { classes, cssProps, media, msToNum, numToMs } from 'utils/style';
 import styles from './Project.module.css';
 import { DecoderText } from 'components/DecoderText';
 import Link from 'next/link';
@@ -22,6 +22,10 @@ export function ProjectHeader({
   roles,
   className,
 }) {
+  const windowSize = useWindowSize();
+
+  const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
+
   return (
     <Section className={classes(styles.header, className)} as="section">
       <div
@@ -30,9 +34,13 @@ export function ProjectHeader({
       >
         <div className={styles.details}>
           <Heading className={styles.title} level={2} as="h1">
-            <DecoderText text={`${title}`} delay={1000} style={{ fontSize: '50px' }} />
+            <DecoderText
+              text={`${title}`}
+              delay={1000}
+              style={{ fontSize: isMobile ? '1.4rem' : '50px' }}
+            />
           </Heading>
-          <Text className={styles.description} size="xl" as="p">
+          <Text className={styles.description} size={isMobile ? 'md' : 'xl'} as="p">
             {description}
           </Text>
           {!!url && (
@@ -122,7 +130,7 @@ export const ProjectBackground = ({ opacity = 0.7, className, ...rest }) => {
           data-visible={visible}
         >
           <div className={styles.backgroundImageElement} ref={imageRef}>
-            <Image alt="dggd" role="presentation" {...rest} />
+            <Image alt="dggd" {...rest} />
           </div>
           <div className={styles.backgroundScrim} style={cssProps({ opacity })} />
         </div>
@@ -156,22 +164,20 @@ export const ProjectBackgroundContact = ({ opacity = 0.7, className, ...rest }) 
   );
 };
 export const ProjectNextImage = ({ className, alt, srcSet, placeholder, ...rest }) => {
-  let srcSetarray = [];
-  for (let index = 0; index < srcSet.length; index++) {
-    const element = srcSet[index];
-    if (element) {
-      srcSetarray.push({ src: element });
-    }
-  }
-  let place = { src: placeholder };
+  let srcSetarray = srcSet.map(
+    ival =>
+      `${ival && ival.src ? ival.src : ival} ${ival && ival.width ? ival.width : 480}w`
+  );
+  let placeholderImage = { src: placeholder };
+
   return (
     <div className={classes(styles.image, className)}>
       <Image
         reveal
         alt={alt}
         delay={300}
-        srcSet={srcSetarray}
-        placeholder={place}
+        srcSet={srcSetarray.join(', ')}
+        placeholder={placeholderImage}
         {...rest}
       />
     </div>

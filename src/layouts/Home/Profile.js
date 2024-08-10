@@ -78,8 +78,8 @@ export const Profile = ({ id, visible, sectionRef }) => {
                   delay={100}
                   placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
                   srcSet={[
-                    'https://i.imgur.com/32qoE9j.jpg',
-                    'https://i.imgur.com/XIRbVpx.jpg',
+                    { src: 'https://i.imgur.com/32qoE9j.jpg', width: 480 },
+                    { src: 'https://i.imgur.com/XIRbVpx.jpg', width: 960 },
                   ]}
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
                   alt="Me standing on PlayGround in my HomeTown"

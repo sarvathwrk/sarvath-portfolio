@@ -49,6 +49,7 @@ export function CustomAboutHeader({
             {!!url && (
               <Link href={url} target="_Blank">
                 <Button
+                  fontSize={isMobile ? '.8rem' : false}
                   secondary
                   iconHoverShift
                   className={styles.linkButton}
@@ -62,6 +63,7 @@ export function CustomAboutHeader({
               <Link href={url2}>
                 <Button
                   secondary
+                  fontSize={isMobile ? '.8rem' : false}
                   iconHoverShift
                   className={styles.linkButton}
                   icon="chevronRight"

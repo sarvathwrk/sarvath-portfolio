@@ -55,8 +55,8 @@ export function VolkiharKnight() {
       <ProjectContainer>
         <ProjectBackground
           srcSet={[
-            { src: 'https://i.imgur.com/GpQDsrG.png' },
-            { src: 'https://i.imgur.com/GpQDsrG.png' },
+            { src: 'https://i.imgur.com/GpQDsrG.png', width: 500 },
+            { src: 'https://i.imgur.com/GpQDsrG.png', width: 700 },
           ]}
           placeholder={GalleryLargePlaceholder}
           opacity={0.5}

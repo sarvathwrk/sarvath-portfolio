@@ -17,6 +17,7 @@ export const Image = ({
   src: baseSrc,
   srcSet,
   placeholder,
+  priority,
   ...rest
 }) => {
   const [loaded, setLoaded] = useState(false);
@@ -48,6 +49,7 @@ export const Image = ({
         src={src}
         srcSet={srcSet}
         placeholder={placeholder}
+        priority={priority}
         {...rest}
       />
     </div>

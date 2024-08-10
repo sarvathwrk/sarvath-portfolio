@@ -15,7 +15,7 @@ import {
   ProjectSectionText,
   ProjectTextRow,
 } from 'layouts/Project';
-import { Fragment } from 'react';
+import { Fragment, Suspense } from 'react';
 import { media } from 'utils/style';
 import styles from './Aqary.module.css';
 
@@ -31,12 +31,13 @@ function Details() {
     <Fragment>
       <Meta title={title} prefix="Projects" description={description} />
       <ProjectContainer className={styles.slice}>
-        <ProjectBackground
-          src={'sliceBackground'}
-          srcSet={`${sliceBackground.src} 1280w, ${sliceBackgroundLarge.src} 2560w`}
-          placeholder={sliceBackgroundPlaceholder}
-          opacity={0.8}
-        />
+        <Suspense fallback={<div style={{ opacity: 0 }}>Loading model...</div>}>
+          <ProjectBackground
+            srcSet={`${sliceBackground.src} 1280w, ${sliceBackgroundLarge.src} 2560w`}
+            placeholder={sliceBackgroundPlaceholder}
+            opacity={0.8}
+          />
+        </Suspense>
         <ProjectHeader
           title={title}
           description={description}
