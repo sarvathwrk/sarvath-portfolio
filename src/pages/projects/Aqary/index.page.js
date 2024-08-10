@@ -44,7 +44,7 @@ function Details() {
           url="https://dashboard.aqaryint.com/"
           roles={roles}
         />
-        <ProjectSection padding="top">
+        {/* <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectTextRow>
               <ProjectSectionHeading>Log In Page</ProjectSectionHeading>
@@ -65,7 +65,7 @@ function Details() {
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
-        </ProjectSection>
+        </ProjectSection> */}
         <ProjectSection>
           <ProjectSectionColumns centered className={styles.columns}>
             <div className={styles.imagesText}>
@@ -158,7 +158,7 @@ function Details() {
             </div>
           </ProjectSectionContent>
         </ProjectSection>
-        <ProjectSection>
+        {/* <ProjectSection>
           <ProjectSectionContent>
             <ProjectTextRow>
               <ProjectSectionHeading>Forms UI</ProjectSectionHeading>
@@ -178,7 +178,7 @@ function Details() {
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
-        </ProjectSection>
+        </ProjectSection> */}
 
         <ProjectSection light>
           <ProjectSectionContent>
