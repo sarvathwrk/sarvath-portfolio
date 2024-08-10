@@ -23,22 +23,12 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const AppContext = createContext({});
 
-const repoPrompt = `
-__  __  __
-\\ \\ \\ \\ \\ \\ \u2215\n \\ \\ \\ \u2215\\ \\ \n  \\ \u2215  \\ \u2215
-\n\nTaking a peek huh? Check out the source code: https://github.com/sarvathwrk/sarvath-portfolio
-`;
-
 const App = ({ Component, pageProps }) => {
   const [storedTheme, setStoredTheme] = useCookie('theme', 'dark');
   const [state, dispatch] = useReducer(reducer, initialState);
   const { route, asPath } = useRouter();
   const canonicalRoute = route === '/' ? '' : `${asPath}`;
   useFoucFix();
-
-  useEffect(() => {
-    console.info(`${repoPrompt}\n\n`);
-  }, []);
 
   useEffect(() => {
     dispatch({ type: 'setTheme', value: storedTheme || 'dark' });
