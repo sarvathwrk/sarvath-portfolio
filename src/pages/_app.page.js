@@ -18,6 +18,7 @@ import { ScrollRestore } from '../layouts/App/ScrollRestore';
 import ParticlesComp from './ParticlesComp';
 // import ConsentBanner from 'components/Cookies/consentBanner';
 import { useFoucFix } from 'hooks/useFoucFix';
+import { Analytics } from '@vercel/analytics/react';
 
 export const AppContext = createContext({});
 
@@ -85,6 +86,7 @@ const App = ({ Component, pageProps }) => {
                 >
                   <ScrollRestore />
                   <Component {...pageProps} />
+                  <Analytics mode={'production'} />;
                 </m.div>
               </AnimatePresence>
             </main>
