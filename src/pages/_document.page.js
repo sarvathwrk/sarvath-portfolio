@@ -3,6 +3,7 @@ import GothamMedium from 'assets/fonts/gotham-medium.woff2';
 import { fontStyles, tokenStyles } from 'components/ThemeProvider';
 import { Head, Html, Main, NextScript } from 'next/document';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function Document() {
   return (
@@ -84,6 +85,7 @@ export default function Document() {
             }),
           }}
         />
+        <Analytics />
       </body>
     </Html>
   );
