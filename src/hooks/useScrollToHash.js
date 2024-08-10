@@ -9,8 +9,23 @@ export function useScrollToHash() {
 
   const scrollToHash = useCallback(
     (hash, onDone) => {
+      if (typeof hash !== 'string') {
+        console.error('Invalid hash value:', hash);
+        return;
+      }
+
       const id = hash.split('#')[1];
+      if (!id) {
+        console.error('Hash does not contain an ID:', hash);
+        return;
+      }
+
       const targetElement = document.getElementById(id);
+      if (!targetElement) {
+        console.error('No element found with ID:', id);
+        return;
+      }
+
       const route = asPath.split('#')[0];
       const newPath = `${route}#${id}`;
 

@@ -13,7 +13,6 @@ import {
   useScrollToHash,
   useWindowSize,
 } from 'hooks';
-import Link from 'next/link';
 import { Fragment, lazy, Suspense, useEffect, useState } from 'react';
 import { cssProps, media } from 'utils/style';
 import styles from './Intro.module.css';
@@ -57,9 +56,9 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
   }, [theme.themeId, prevTheme]);
 
   // Handle scroll to section on click
-  const handleScrollClick = event => {
+  const handleScrollClick = href => {
+    scrollToHash(href);
     event.preventDefault();
-    scrollToHash(event.currentTarget.href);
   };
 
   return (
@@ -125,27 +124,23 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 </div>
               </span>
             </header>
-            <Link href="/#project-1" aria-label="Scroll to projects">
-              <span
-                className={styles.scrollIndicator}
-                data-status={status}
-                data-hidden={scrollIndicatorHidden}
-                onClick={handleScrollClick}
-              >
-                <VisuallyHidden>Scroll to projects</VisuallyHidden>
-              </span>
-            </Link>
-            <Link href="/#project-1" aria-label="Scroll to projects">
-              <span
-                className={styles.mobileScrollIndicator}
-                data-status={status}
-                data-hidden={scrollIndicatorHidden}
-                onClick={handleScrollClick}
-              >
-                <VisuallyHidden>Scroll to projects</VisuallyHidden>
-                <ArrowDown aria-hidden />
-              </span>
-            </Link>
+            <span
+              className={styles.scrollIndicator}
+              data-status={status}
+              data-hidden={scrollIndicatorHidden}
+              onClick={() => handleScrollClick('/#project-1')}
+            >
+              <VisuallyHidden>Scroll to projects</VisuallyHidden>
+            </span>
+            <span
+              className={styles.mobileScrollIndicator}
+              data-status={status}
+              data-hidden={scrollIndicatorHidden}
+              onClick={() => handleScrollClick('/#project-1')}
+            >
+              <VisuallyHidden>Scroll to projects</VisuallyHidden>
+              <ArrowDown aria-hidden />
+            </span>
           </Fragment>
         )}
       </Transition>
