@@ -250,8 +250,8 @@ export function VolkiharKnight() {
                   <TableRow>
                     <TableHeadCell>Advanced Method</TableHeadCell>
                     <TableCell>
-                      Framer Motion(^7.1.0), Three Js(^0.146.0), Es Lint(^8.21.0),
-                      Prettier(^2.8.8), Stylelint(14.9.1)
+                      Framer Motion(^7.1.0), Es Lint(^8.21.0), Prettier(^2.8.8),
+                      Stylelint(14.9.1)
                     </TableCell>
                   </TableRow>
                 </TableBody>

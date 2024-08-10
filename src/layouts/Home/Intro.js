@@ -6,10 +6,16 @@ import { tokens } from 'components/ThemeProvider/theme';
 import { Transition } from 'components/Transition';
 import { VisuallyHidden } from 'components/VisuallyHidden';
 import { AnimatePresence } from 'framer-motion';
-import { useHydrated, useInterval, usePrevious, useScrollToHash } from 'hooks';
+import {
+  useHydrated,
+  useInterval,
+  usePrevious,
+  useScrollToHash,
+  useWindowSize,
+} from 'hooks';
 import Link from 'next/link';
 import { Fragment, lazy, Suspense, useEffect, useState } from 'react';
-import { cssProps } from 'utils/style';
+import { cssProps, media } from 'utils/style';
 import styles from './Intro.module.css';
 
 // Dynamic import of DisplacementSphere with a loading state
@@ -30,6 +36,9 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
   const titleId = `${id}-title`;
   const scrollToHash = useScrollToHash();
   const isHydrated = useHydrated();
+  const windowSize = useWindowSize();
+
+  const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
 
   // Cycle through disciplines every 5 seconds
   useInterval(
@@ -106,7 +115,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                             <DecoderText
                               text={item}
                               delay={2000}
-                              style={{ fontSize: '50px' }}
+                              style={{ fontSize: isMobile ? '1.5rem' : '50px' }}
                             />
                           </span>
                         )}
