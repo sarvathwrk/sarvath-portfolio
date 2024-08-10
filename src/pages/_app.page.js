@@ -19,6 +19,7 @@ import ParticlesComp from './ParticlesComp';
 // import ConsentBanner from 'components/Cookies/consentBanner';
 import { useFoucFix } from 'hooks/useFoucFix';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const AppContext = createContext({});
 
@@ -86,7 +87,8 @@ const App = ({ Component, pageProps }) => {
                 >
                   <ScrollRestore />
                   <Component {...pageProps} />
-                  <Analytics mode={'production'} />;
+                  <Analytics mode={'production'} />
+                  <SpeedInsights />
                 </m.div>
               </AnimatePresence>
             </main>
