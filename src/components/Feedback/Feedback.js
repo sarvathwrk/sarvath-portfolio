@@ -133,7 +133,9 @@ export const Feedback = () => {
                     <p className={styles.count}>
                       {counts && counts.length > 1 && counts[1].count
                         ? counts[1].count
-                        : '0'}
+                        : counts && counts.length > 0 && counts[0].count
+                        ? '0'
+                        : ''}
                     </p>
                   </button>
                 </div>
