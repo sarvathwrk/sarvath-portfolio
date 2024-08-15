@@ -35,20 +35,21 @@ export const Feedback = () => {
       setShowFeedback(true);
     }
   }, [feedbackSubmitted]);
-
   useEffect(() => {
     async function fetchFeedbackCounts() {
       try {
         if (isView) {
-          const response = await fetch('/api', { method: 'GET' });
+          const response = await fetch('/api', { method: 'GET' }); // Updated endpoint
           if (!response.ok) {
-            throw new Error('Network response was not ok');
+            const errorDetails = await response.text(); // Capture response body for more details
+            throw new Error(`Network response was not ok: ${errorDetails}`);
           }
           const data = await response.json();
           setCounts(data);
         }
       } catch (error) {
         console.error('Failed to fetch feedback counts:', error);
+        // Optionally, you could set an error state to show an error message in the UI
       }
     }
     fetchFeedbackCounts();

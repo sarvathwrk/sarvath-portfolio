@@ -60,9 +60,10 @@ export default async function handler(req, res) {
       res.status(200).json(result.rows);
     } catch (error) {
       console.error('Database error:', error);
-      res
-        .status(500)
-        .json({ error: 'Failed to retrieve feedback counts', details: error.message });
+      res.status(500).json({
+        error: 'Failed to retrieve feedback counts',
+        details: error.message,
+      });
     } finally {
       try {
         await client.end(); // Ensure the connection is closed
