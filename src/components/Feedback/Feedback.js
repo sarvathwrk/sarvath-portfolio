@@ -108,7 +108,7 @@ export const Feedback = () => {
 
             <div className={styles.expandedContent}>
               <>
-                <div className={styles.feedbackText}>Visitor Feedback</div>
+                <div className={styles.feedbackText}>Visitor Like's</div>
                 <div className={styles.feedbackButtons}>
                   <button
                     className={`${styles.feedbackButton} ${
