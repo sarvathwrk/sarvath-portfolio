@@ -118,7 +118,9 @@ export const Feedback = () => {
                   >
                     <ThumbUpIcon className={styles.thumbIcon} />{' '}
                     <p className={styles.count}>
-                      {counts && counts.length && counts[0].count ? counts[0].count : ''}
+                      {counts && counts.length > 0 && counts[0].count
+                        ? counts[0].count
+                        : ''}
                     </p>
                   </button>
                   <button
@@ -129,7 +131,9 @@ export const Feedback = () => {
                   >
                     <ThumbDownIcon className={styles.thumbIcon} />{' '}
                     <p className={styles.count}>
-                      {counts && counts.length && counts[1].count ? counts[1].count : ''}
+                      {counts && counts.length > 1 && counts[1].count
+                        ? counts[1].count
+                        : '0'}
                     </p>
                   </button>
                 </div>
