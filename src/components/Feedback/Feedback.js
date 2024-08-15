@@ -21,7 +21,6 @@ export const Feedback = () => {
 
   const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
   const feedbackSubmitted = Cookies.get('feedbackSubmitted');
-  console.log(feedbackSubmitted, 'feedbackSubmitted', isExpanded, 'isExpanded');
   useEffect(() => {
     if (router == '/about/') {
       setView(true);
@@ -36,12 +35,11 @@ export const Feedback = () => {
       setShowFeedback(true);
     }
   }, [feedbackSubmitted]);
-  console.log(showFeedback, 'showFeedback');
 
   useEffect(() => {
     async function fetchFeedbackCounts() {
       try {
-        const response = await fetch('/api');
+        const response = await fetch('/api', { method: 'GET' });
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -54,7 +52,6 @@ export const Feedback = () => {
 
     fetchFeedbackCounts();
   }, [isView]);
-  console.log(counts, 'counts');
 
   const handleFeedback = async type => {
     setFeedback(type);
