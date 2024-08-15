@@ -39,17 +39,18 @@ export const Feedback = () => {
   useEffect(() => {
     async function fetchFeedbackCounts() {
       try {
-        const response = await fetch('/api', { method: 'GET' });
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
+        if (isView) {
+          const response = await fetch('/api', { method: 'GET' });
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          const data = await response.json();
+          setCounts(data);
         }
-        const data = await response.json();
-        setCounts(data);
       } catch (error) {
         console.error('Failed to fetch feedback counts:', error);
       }
     }
-
     fetchFeedbackCounts();
   }, [isView]);
 
@@ -63,7 +64,7 @@ export const Feedback = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ type, isFeedback: true }),
+        body: JSON.stringify({ type }),
       });
       setIsSubmitted(true);
 
