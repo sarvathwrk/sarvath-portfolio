@@ -20,6 +20,7 @@ import ParticlesComp from './ParticlesComp';
 import { useFoucFix } from 'hooks/useFoucFix';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Feedback } from 'components/Feedback';
 
 export const AppContext = createContext({});
 
@@ -57,6 +58,7 @@ const App = ({ Component, pageProps }) => {
             >
               Skip to main content
             </VisuallyHidden>
+            <Feedback />
             <Navbar />
             <ParticlesComp />
             {/* <ConsentBanner /> */}

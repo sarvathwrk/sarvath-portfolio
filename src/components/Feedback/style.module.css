@@ -1,0 +1,224 @@
+.feedbackWrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.feedbackContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  width: 120px;
+  height: 40px;
+}
+
+.feedbackContainer.expanded {
+  width: 240px;
+  height: 90px; /* Reduced height */
+}
+.consentText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 37px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.tickIcon {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.expanded .consentText {
+  margin-top: 3px;
+
+  opacity: 0;
+  height: 0;
+  padding: 0;
+}
+
+.expandedContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.expanded .expandedContent {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.feedbackText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.feedbackButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px; /* Space between buttons */
+}
+
+.feedbackButton {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 5px;
+}
+
+.feedbackButton:hover {
+  transform: scale(1.1);
+}
+
+.thumbIcon {
+  width: 35px;
+  height: 35px;
+  transition: all 0.3s ease;
+  fill: #ffffff;
+}
+.down {
+  margin-top: 5px;
+}
+@keyframes rgbAnimation {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.7));
+  }
+  33% {
+    filter: drop-shadow(0 0 5px rgba(0, 255, 0, 0.7));
+  }
+  66% {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 255, 0.7));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.7));
+  }
+}
+
+.feedbackButton:hover .thumbIcon {
+  animation: rgbAnimation 2s linear infinite;
+}
+
+@keyframes thumbAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.feedbackButton.animating .thumbIcon {
+  animation: thumbAnimation 1s ease;
+}
+
+/* ... (previous styles remain the same) ... */
+
+.thankYouMessage {
+  animation: fadeIn 0.5s ease-in-out;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ... (rest of the styles remain the same) ... */
+
+/* ... (previous styles remain the same) ... */
+
+.loadingAnimation {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.loadingAnimation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+.loadingThumb {
+  width: 32px;
+  height: 32px;
+  fill: #ffffff;
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* ... (rest of the styles remain the same) ... */
