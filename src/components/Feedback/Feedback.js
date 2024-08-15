@@ -39,7 +39,7 @@ export const Feedback = () => {
     async function fetchFeedbackCounts() {
       try {
         if (isView && feedbackSubmitted) {
-          const response = await fetch('/api', { method: 'GET' }); // Updated endpoint
+          const response = await fetch('/api/feedback', { method: 'GET' }); // Updated endpoint
           if (!response.ok) {
             const errorDetails = await response.text(); // Capture response body for more details
             throw new Error(`Network response was not ok: ${errorDetails}`);
@@ -60,19 +60,24 @@ export const Feedback = () => {
     setIsAnimating(true);
     setIsLoading(true);
     try {
-      await fetch('/api', {
+      const response = await fetch('/api/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ type }),
       });
-      setIsSubmitted(true);
 
-      setTimeout(() => {
-        setShowFeedback(false);
-        Cookies.set('feedbackSubmitted', 'true', { expires: 30 });
-      }, 3000);
+      if (!response.ok) {
+        throw new Error(`Failed to submit feedback: ${await response.text()}`);
+      } else {
+        setIsSubmitted(true);
+
+        setTimeout(() => {
+          setShowFeedback(false);
+          Cookies.set('feedbackSubmitted', 'true', { expires: 30 });
+        }, 3000);
+      }
     } catch (error) {
       console.error('Failed to submit feedback:', error);
     } finally {
