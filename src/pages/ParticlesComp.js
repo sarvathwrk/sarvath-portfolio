@@ -24,11 +24,11 @@ const ParticlesComp = () => {
           interactivity: {
             events: {
               onClick: {
-                enable: true,
+                enable: false,
                 mode: 'push',
               },
               onHover: {
-                enable: true,
+                enable: false,
                 mode: 'repulse',
                 distance: 400,
               },
@@ -36,7 +36,7 @@ const ParticlesComp = () => {
             },
             modes: {
               push: {
-                quantity: 4,
+                quantity: 0,
               },
               repulse: {
                 distance: 150,
@@ -55,7 +55,7 @@ const ParticlesComp = () => {
               distance: 120,
               enable: true,
               opacity: 0.1,
-              width: 0.2,
+              width: 0.3,
             },
             collisions: {
               enable: true,

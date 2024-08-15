@@ -18,10 +18,26 @@
   width: 120px;
   height: 40px;
 }
-
+.feedbackContainerabout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  width: 120px;
+  height: 40px;
+}
 .feedbackContainer.expanded {
   width: 240px;
   height: 90px; /* Reduced height */
+}
+.feedbackContainerabout.expanded {
+  width: 240px;
+  height: 100px; /* Reduced height */
 }
 .consentText {
   display: flex;
@@ -37,6 +53,11 @@
   width: 100%;
   text-align: center;
   transition: opacity 0.3s ease;
+}
+.count {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .tickIcon {
@@ -222,3 +243,17 @@
 }
 
 /* ... (rest of the styles remain the same) ... */
+
+/*  */
+
+.expandedContent {
+  display: flex;
+  z-index: 100;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
