@@ -38,7 +38,7 @@ export const Feedback = () => {
   useEffect(() => {
     async function fetchFeedbackCounts() {
       try {
-        if (isView) {
+        if (isView && feedbackSubmitted) {
           const response = await fetch('/api', { method: 'GET' }); // Updated endpoint
           if (!response.ok) {
             const errorDetails = await response.text(); // Capture response body for more details
@@ -53,7 +53,7 @@ export const Feedback = () => {
       }
     }
     fetchFeedbackCounts();
-  }, [isView]);
+  }, [isView, feedbackSubmitted]);
 
   const handleFeedback = async type => {
     setFeedback(type);
