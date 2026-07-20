@@ -1,12 +1,17 @@
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 const siteUrl = process.env.NEXT_PUBLIC_WEBSITE_URL;
+const baseUrl = siteUrl?.replace(/\/$/, '');
 const name = 'Mohamed Sarvath Khan';
 const twitterHandle = '@sarvath';
-const defaultOgImage = `${siteUrl}/social-image.png`;
+const defaultOgImage = `${baseUrl}/social-image.png`;
 
 export const Meta = ({ title, description, prefix = name, ogImage = defaultOgImage }) => {
   const titleText = [prefix, title].filter(Boolean).join(' | ');
+  const { asPath } = useRouter();
+  const path = asPath.split('?')[0].split('#')[0];
+  const pageUrl = `${baseUrl}${path === '/' ? '' : path}`;
 
   return (
     <Head>
@@ -23,7 +28,7 @@ export const Meta = ({ title, description, prefix = name, ogImage = defaultOgIma
       <meta property="og:title" content={titleText} />
       <meta property="og:site_name" content={name} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={siteUrl} />
+      <meta property="og:url" content={pageUrl} />
       <meta property="og:description" content={description} />
 
       <meta name="twitter:card" content="summary_large_image" />

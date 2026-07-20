@@ -20,7 +20,7 @@ import { media } from 'utils/style';
 import styles from './Wololo.module.css';
 
 const title = 'Wololo LTD';
-const description = 'Devoloped a Project for Selling a Cloths,Shoes,Essentials';
+const description = 'Developed a Project for Selling a Cloths,Shoes,Essentials';
 const roles = ['Wololo', 'ECommerce'];
 
 // function Add_Posts()
@@ -54,10 +54,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/FUffDfr.jpg',
-                'https://i.imgur.com/FUffDfr.jpg',
+                '/images/Wololo/FUffDfr.jpg',
+                '/images/Wololo/FUffDfr.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Wololo/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -76,10 +76,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/nfyFKYj.jpg',
-                'https://i.imgur.com/nfyFKYj.jpg',
+                '/images/Wololo/nfyFKYj.jpg',
+                '/images/Wololo/nfyFKYj.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Wololo/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -101,20 +101,20 @@ function Details() {
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/2DvIfmz.png',
-                  'https://i.imgur.com/2DvIfmz.png',
+                  '/images/Wololo/2DvIfmz.png',
+                  '/images/Wololo/2DvIfmz.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/Wololo/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/IdvcoUH.png',
-                  'https://i.imgur.com/IdvcoUH.png',
+                  '/images/Wololo/IdvcoUH.png',
+                  '/images/Wololo/IdvcoUH.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/Wololo/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -134,10 +134,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/jb1fkSu.jpg',
-                'https://i.imgur.com/jb1fkSu.jpg',
+                '/images/Wololo/jb1fkSu.jpg',
+                '/images/Wololo/jb1fkSu.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Wololo/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -149,10 +149,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/uTZsddm.png',
-                    'https://i.imgur.com/uTZsddm.png',
+                    '/images/Wololo/uTZsddm.png',
+                    '/images/Wololo/uTZsddm.png',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/Wololo/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -183,10 +183,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/Nw5m1YL.png',
-                'https://i.imgur.com/Nw5m1YL.png',
+                '/images/Wololo/Nw5m1YL.png',
+                '/images/Wololo/Nw5m1YL.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Wololo/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -206,10 +206,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/X6nV3k7.png',
-                'https://i.imgur.com/X6nV3k7.png',
+                '/images/Wololo/X6nV3k7.png',
+                '/images/Wololo/X6nV3k7.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Wololo/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />

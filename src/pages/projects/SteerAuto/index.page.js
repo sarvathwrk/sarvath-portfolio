@@ -21,7 +21,7 @@ import styles from './steerauto.module.css';
 
 const title = 'SteerAuto Kun Group';
 const description =
-  'Devoloped a Project for Buying and Selling Used Cars, Auctions, Maintanence Works, Filter Feature for Buying Car Page etc';
+  'Developed a Project for Buying and Selling Used Cars, Auctions, Maintenance Works, Filter Feature for Buying Car Page etc';
 const roles = [
   'SteerAuto Site',
   'Buying and Selling Cars',
@@ -61,10 +61,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/eMoLuUV.jpg',
-                'https://i.imgur.com/eMoLuUV.jpg',
+                '/images/SteerAuto/eMoLuUV.jpg',
+                '/images/SteerAuto/eMoLuUV.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -84,10 +84,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/30IVUQL.jpg',
-                'https://i.imgur.com/30IVUQL.jpg',
+                '/images/SteerAuto/30IVUQL.jpg',
+                '/images/SteerAuto/30IVUQL.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -109,20 +109,20 @@ function Details() {
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/PaJ7aM6.png',
-                  'https://i.imgur.com/PaJ7aM6.png',
+                  '/images/SteerAuto/PaJ7aM6.png',
+                  '/images/SteerAuto/PaJ7aM6.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/uptqxK1.png',
-                  'https://i.imgur.com/uptqxK1.png',
+                  '/images/SteerAuto/uptqxK1.png',
+                  '/images/SteerAuto/uptqxK1.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -142,10 +142,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/qkKZN5e.png',
-                'https://i.imgur.com/qkKZN5e.png',
+                '/images/SteerAuto/qkKZN5e.png',
+                '/images/SteerAuto/qkKZN5e.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -157,10 +157,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/lKMIDzr.jpg',
-                    'https://i.imgur.com/lKMIDzr.jpg',
+                    '/images/SteerAuto/lKMIDzr.jpg',
+                    '/images/SteerAuto/lKMIDzr.jpg',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -189,8 +189,8 @@ function Details() {
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectNextImage
-              srcSet={['https://i.imgur.com/6mtqqG5.png']}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              srcSet={['/images/SteerAuto/6mtqqG5.png']}
+              placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -210,10 +210,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/rRrAQ2t.png',
-                'https://i.imgur.com/rRrAQ2t.png',
+                '/images/SteerAuto/rRrAQ2t.png',
+                '/images/SteerAuto/rRrAQ2t.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />

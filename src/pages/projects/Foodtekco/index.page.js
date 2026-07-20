@@ -21,7 +21,7 @@ import styles from './Foodtekco.module.css';
 
 const title = 'Foodtekco LTD';
 const description =
-  'Devoloped a Project for Buying Ingredients for making Foods and Selling Foods and Get All Types of Reports and User Details in Dashboard';
+  'Developed a Project for Buying Ingredients for making Foods and Selling Foods and Get All Types of Reports and User Details in Dashboard';
 const roles = [
   'Foodtekco Site',
   'Foodtekco Dashboard',
@@ -59,10 +59,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/jjBwowO.jpg',
-                'https://i.imgur.com/jjBwowO.jpg',
+                '/images/Foodtekco/jjBwowO.jpg',
+                '/images/Foodtekco/jjBwowO.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -81,10 +81,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/kaZBQQA.png',
-                'https://i.imgur.com/kaZBQQA.png',
+                '/images/Foodtekco/kaZBQQA.png',
+                '/images/Foodtekco/kaZBQQA.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -110,20 +110,20 @@ function Details() {
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/eimC3ow.png',
-                  'https://i.imgur.com/eimC3ow.png',
+                  '/images/Foodtekco/eimC3ow.png',
+                  '/images/Foodtekco/eimC3ow.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/eimC3ow.png',
-                  'https://i.imgur.com/eimC3ow.png',
+                  '/images/Foodtekco/eimC3ow.png',
+                  '/images/Foodtekco/eimC3ow.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -141,10 +141,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/bNdupMv.png',
-                'https://i.imgur.com/bNdupMv.png',
+                '/images/Foodtekco/bNdupMv.png',
+                '/images/Foodtekco/bNdupMv.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -156,10 +156,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/exOxopH.png',
-                    'https://i.imgur.com/exOxopH.png',
+                    '/images/Foodtekco/exOxopH.png',
+                    '/images/Foodtekco/exOxopH.png',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -196,8 +196,8 @@ function Details() {
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectNextImage
-              srcSet={['https://i.imgur.com/DTNKXqG.png']}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              srcSet={['/images/Foodtekco/DTNKXqG.png']}
+              placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -216,10 +216,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/VLUrGll.png',
-                'https://i.imgur.com/VLUrGll.png',
+                '/images/Foodtekco/VLUrGll.png',
+                '/images/Foodtekco/VLUrGll.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />

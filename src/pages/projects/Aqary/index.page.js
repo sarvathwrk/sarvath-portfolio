@@ -21,7 +21,7 @@ import styles from './Aqary.module.css';
 
 const title = 'Aqary International Group';
 const description =
-  'Devoloped a Project for Buying and Selling Real Estate Properties and Get All Types of Reports and User Details in Dashboard';
+  'Developed a Project for Buying and Selling Real Estate Properties and Get All Types of Reports and User Details in Dashboard';
 const roles = ['Aqary Dashboard', 'Statistics and Reports', 'Real Estate'];
 
 // function Add_Posts()
@@ -57,10 +57,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/ld0xzWa.png',
-                'https://i.imgur.com/ld0xzWa.png',
+                '/images/Aqary/ld0xzWa.png',
+                '/images/Aqary/ld0xzWa.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Aqary/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -84,20 +84,20 @@ function Details() {
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/VgI5B7s.png',
-                  'https://i.imgur.com/VgI5B7s.png',
+                  '/images/Aqary/VgI5B7s.png',
+                  '/images/Aqary/VgI5B7s.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/Aqary/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/YMFSEby.png',
-                  'https://i.imgur.com/YMFSEby.png',
+                  '/images/Aqary/YMFSEby.png',
+                  '/images/Aqary/YMFSEby.png',
                 ]}
-                placeholder={'https://i.imgur.com/D1CDStb.jpg'}
+                placeholder={'/images/Aqary/D1CDStb.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -115,10 +115,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/23AHmOf.png',
-                'https://i.imgur.com/23AHmOf.png',
+                '/images/Aqary/23AHmOf.png',
+                '/images/Aqary/23AHmOf.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Aqary/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -130,10 +130,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/dqTbAQ2.png',
-                    'https://i.imgur.com/dqTbAQ2.png',
+                    '/images/Aqary/dqTbAQ2.png',
+                    '/images/Aqary/dqTbAQ2.png',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/Aqary/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -171,10 +171,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/02AueMh.png',
-                'https://i.imgur.com/02AueMh.png',
+                '/images/Aqary/02AueMh.png',
+                '/images/Aqary/02AueMh.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Aqary/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -193,10 +193,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/vpjEZP1.png',
-                'https://i.imgur.com/vpjEZP1.png',
+                '/images/Aqary/vpjEZP1.png',
+                '/images/Aqary/vpjEZP1.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Aqary/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />

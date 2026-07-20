@@ -81,7 +81,7 @@ export default function Document() {
               alumniOf: 'Anna University',
               description:
                 'Experienced Full Stack Developer specializing in React.js, Next.js, Node.js, Mongo DB and TypeScript.',
-              image: 'https://i.imgur.com/32qoE9j.jpg',
+              image: 'https://sarvath-portfolio.vercel.app/images/profile/32qoE9j.jpg',
             }),
           }}
         />

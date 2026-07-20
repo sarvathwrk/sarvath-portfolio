@@ -21,7 +21,7 @@ import styles from './Difuza.module.css';
 
 const title = 'Difuza Service Dashboard';
 const description =
-  'Devoloped a Project for Selling Web Service like Website With Dashboard Access, Getting SiteData Reports, Getting Customer Enquiries, Listing Datas Etc..';
+  'Developed a Project for Selling Web Service like Website With Dashboard Access, Getting SiteData Reports, Getting Customer Enquiries, Listing Datas Etc..';
 const roles = [
   'Difuza Dashboard',
   'Service provider',
@@ -59,10 +59,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/05Enef2.png',
-                'https://i.imgur.com/05Enef2.png',
+                '/images/Difuza/05Enef2.png',
+                '/images/Difuza/05Enef2.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Difuza/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -81,10 +81,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/58IYq1y.png',
-                'https://i.imgur.com/58IYq1y.png',
+                '/images/Difuza/58IYq1y.png',
+                '/images/Difuza/58IYq1y.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Difuza/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -110,20 +110,20 @@ function Details() {
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/gjPfll2.png',
-                  'https://i.imgur.com/gjPfll2.png',
+                  '/images/Difuza/gjPfll2.png',
+                  '/images/Difuza/gjPfll2.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/Difuza/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/bJeAwGC.png',
-                  'https://i.imgur.com/bJeAwGC.png',
+                  '/images/Difuza/bJeAwGC.png',
+                  '/images/Difuza/bJeAwGC.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/Difuza/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -143,10 +143,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/OwQUFty.png',
-                'https://i.imgur.com/OwQUFty.png',
+                '/images/Difuza/OwQUFty.png',
+                '/images/Difuza/OwQUFty.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Difuza/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -158,10 +158,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/eoighVl.png',
-                    'https://i.imgur.com/eoighVl.png',
+                    '/images/Difuza/eoighVl.png',
+                    '/images/Difuza/eoighVl.png',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/Difuza/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -199,10 +199,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/bSP0jUy.png',
-                'https://i.imgur.com/bSP0jUy.png',
+                '/images/Difuza/bSP0jUy.png',
+                '/images/Difuza/bSP0jUy.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Difuza/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -221,10 +221,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/7NVrNlG.png',
-                'https://i.imgur.com/7NVrNlG.png',
+                '/images/Difuza/7NVrNlG.png',
+                '/images/Difuza/7NVrNlG.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Difuza/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />

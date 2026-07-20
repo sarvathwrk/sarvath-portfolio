@@ -21,7 +21,7 @@ import styles from './teawork.module.css';
 
 const title = 'Teawork LTD';
 const description =
-  'Devoloped a Project for Buying and Selling Food Products, Whole Seller Dealer Login, Customer logged with Buying Ingredients';
+  'Developed a Project for Buying and Selling Food Products, Whole Seller Dealer Login, Customer logged with Buying Ingredients';
 const roles = ['Teawork', 'WholeSeller Login', 'Customer login', 'ECommerce', 'Cart'];
 
 // function Add_Posts()
@@ -55,10 +55,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/7GQJVKL.jpg',
-                'https://i.imgur.com/7GQJVKL.jpg',
+                '/images/Teawork/7GQJVKL.jpg',
+                '/images/Teawork/7GQJVKL.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Teawork/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -77,10 +77,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/TWae4CM.png',
-                'https://i.imgur.com/TWae4CM.png',
+                '/images/Teawork/TWae4CM.png',
+                '/images/Teawork/TWae4CM.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Teawork/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -101,20 +101,20 @@ function Details() {
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/RrFUI47.png',
-                  'https://i.imgur.com/RrFUI47.png',
+                  '/images/Teawork/RrFUI47.png',
+                  '/images/Teawork/RrFUI47.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/Teawork/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/uWzFZHn.png',
-                  'https://i.imgur.com/uWzFZHn.png',
+                  '/images/Teawork/uWzFZHn.png',
+                  '/images/Teawork/uWzFZHn.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/Teawork/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -136,10 +136,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/VNjNPKk.png',
-                'https://i.imgur.com/VNjNPKk.png',
+                '/images/Teawork/VNjNPKk.png',
+                '/images/Teawork/VNjNPKk.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Teawork/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -151,10 +151,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/UxeeuVT.png',
-                    'https://i.imgur.com/UxeeuVT.png',
+                    '/images/Teawork/UxeeuVT.png',
+                    '/images/Teawork/UxeeuVT.png',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/Teawork/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -183,8 +183,8 @@ function Details() {
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectNextImage
-              srcSet={['https://i.imgur.com/Zrl6AhN.png']}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              srcSet={['/images/Teawork/Zrl6AhN.png']}
+              placeholder={'/images/Teawork/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -204,10 +204,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/FfVSdek.png',
-                'https://i.imgur.com/FfVSdek.png',
+                '/images/Teawork/FfVSdek.png',
+                '/images/Teawork/FfVSdek.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/Teawork/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />

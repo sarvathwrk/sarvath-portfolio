@@ -3,7 +3,8 @@ module.exports = {
   trailingSlash: true,
   pageExtensions: ['page.js', 'api.js'],
   images: {
-    remotePatterns: [{ protocol: 'https', hostname: 'i.imgur.com' }],
+    // Images are self-hosted under /public/images/<project>/ — no remote hosts needed.
+    remotePatterns: [],
   },
   reactCompiler: true,
 

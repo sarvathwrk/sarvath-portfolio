@@ -21,7 +21,7 @@ import styles from './vidhyaonline.module.css';
 
 const title = 'Vidhyaonline Coromandel Group';
 const description =
-  'Devoloped a Project for Learning Comapny Related Courses Provided by VidhyaOnline. We Have Quiz Questions in Middle of Video, Getting Reports At the Last of Video and Download Certificate After Finished Course';
+  'Developed a Project for Learning Company Related Courses Provided by VidhyaOnline. We Have Quiz Questions in Middle of Video, Getting Reports At the Last of Video and Download Certificate After Finished Course';
 const roles = [
   'Vidhyaonline',
   'Employee Login',
@@ -61,10 +61,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/GTn7ESy.jpg',
-                'https://i.imgur.com/GTn7ESy.jpg',
+                '/images/VidhyaOnline/GTn7ESy.jpg',
+                '/images/VidhyaOnline/GTn7ESy.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -82,10 +82,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/FQIOf8V.jpg',
-                'https://i.imgur.com/FQIOf8V.jpg',
+                '/images/VidhyaOnline/FQIOf8V.jpg',
+                '/images/VidhyaOnline/FQIOf8V.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -106,20 +106,20 @@ function Details() {
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/WlaZkPa.png',
-                  'https://i.imgur.com/WlaZkPa.png',
+                  '/images/VidhyaOnline/WlaZkPa.png',
+                  '/images/VidhyaOnline/WlaZkPa.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
                 alt="Multiple user annotations on a shared layer."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/RuBQNCm.png',
-                  'https://i.imgur.com/RuBQNCm.png',
+                  '/images/VidhyaOnline/RuBQNCm.png',
+                  '/images/VidhyaOnline/RuBQNCm.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
                 alt="The layers sidebar design, now with user profiles."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
@@ -140,10 +140,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/t43jqGC.png',
-                'https://i.imgur.com/t43jqGC.png',
+                '/images/VidhyaOnline/t43jqGC.png',
+                '/images/VidhyaOnline/t43jqGC.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -155,10 +155,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/jSlEb7w.png',
-                    'https://i.imgur.com/jSlEb7w.png',
+                    '/images/VidhyaOnline/jSlEb7w.png',
+                    '/images/VidhyaOnline/jSlEb7w.png',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -188,10 +188,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/XlwrnpT.png',
-                'https://i.imgur.com/XlwrnpT.png',
+                '/images/VidhyaOnline/XlwrnpT.png',
+                '/images/VidhyaOnline/XlwrnpT.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
               alt="Students at the University of New South Wales using the new collaborative annotation features"
             />
           </ProjectSectionContent>
@@ -209,10 +209,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/BYBUCJm.png',
-                'https://i.imgur.com/BYBUCJm.png',
+                '/images/VidhyaOnline/BYBUCJm.png',
+                '/images/VidhyaOnline/BYBUCJm.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -231,10 +231,10 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/rgMLeuC.png',
-                'https://i.imgur.com/rgMLeuC.png',
+                '/images/VidhyaOnline/rgMLeuC.png',
+                '/images/VidhyaOnline/rgMLeuC.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
               alt="The new My Slides tab in slice, showing annotated and favorited slides."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
