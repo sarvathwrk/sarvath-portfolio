@@ -21,7 +21,7 @@ import styles from './InkyPencil.module.css';
 
 const title = 'InkyPencil';
 const description =
-  'Devoloped a Project for Showing Events, Translation Service. This is Author Website';
+  'Developed a Project for Showing Events, Translation Service. This is Author Website';
 const roles = ['InkyPencil', 'Auther', 'Events', 'Translation'];
 
 // function Add_Posts()
@@ -55,11 +55,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/vh7FQxE.png',
-                'https://i.imgur.com/vh7FQxE.png',
+                '/images/InkyPencil/vh7FQxE.png',
+                '/images/InkyPencil/vh7FQxE.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
+              alt="The InkyPencil home page with event listings and translation services."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -77,11 +77,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/AXNC4mX.jpg',
-                'https://i.imgur.com/AXNC4mX.jpg',
+                '/images/InkyPencil/AXNC4mX.jpg',
+                '/images/InkyPencil/AXNC4mX.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
+              alt="The InkyPencil Explore page for discovering events and content."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -101,21 +101,21 @@ function Details() {
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/FYLbsHK.png',
-                  'https://i.imgur.com/FYLbsHK.png',
+                  '/images/InkyPencil/FYLbsHK.png',
+                  '/images/InkyPencil/FYLbsHK.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-                alt="Multiple user annotations on a shared layer."
+                placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
+                alt="The InkyPencil responsive navigation menu on a mobile device."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/CL2Cft3.png',
-                  'https://i.imgur.com/CL2Cft3.png',
+                  '/images/InkyPencil/CL2Cft3.png',
+                  '/images/InkyPencil/CL2Cft3.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-                alt="The layers sidebar design, now with user profiles."
+                placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
+                alt="The responsive menu adapting across different screen sizes."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -133,11 +133,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/1LcuiJf.png',
-                'https://i.imgur.com/1LcuiJf.png',
+                '/images/InkyPencil/1LcuiJf.png',
+                '/images/InkyPencil/1LcuiJf.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
+              alt="The InkyPencil About Us page introducing the author."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -148,10 +148,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/84nndBK.png',
-                    'https://i.imgur.com/84nndBK.png',
+                    '/images/InkyPencil/84nndBK.png',
+                    '/images/InkyPencil/84nndBK.png',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -182,11 +182,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/dRy5bez.png',
-                'https://i.imgur.com/dRy5bez.png',
+                '/images/InkyPencil/dRy5bez.png',
+                '/images/InkyPencil/dRy5bez.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
+              placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
+              alt="The InkyPencil Contact Us page with an inquiry form."
             />
           </ProjectSectionContent>
         </ProjectSection>
@@ -205,11 +205,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/JZsPTgC.png',
-                'https://i.imgur.com/JZsPTgC.png',
+                '/images/InkyPencil/JZsPTgC.png',
+                '/images/InkyPencil/JZsPTgC.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
+              alt="The InkyPencil website footer with navigation and social links."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>

@@ -17,7 +17,7 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I'am Sarvath, Skilled full stack web developer based in Abu Dhabi. With extensive
+      I'm Sarvath, Skilled full stack web developer based in Abu Dhabi. With extensive
       experience in developing scalable web applications, I specialize in crafting
       intuitive user interfaces and robust backend solutions
       <Link href="/about"> About Me</Link>.
@@ -76,10 +76,10 @@ export const Profile = ({ id, visible, sectionRef }) => {
                 <ProjectNextImage
                   reveal
                   delay={100}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/profile/7Eof7aC.jpg'}
                   srcSet={[
-                    { src: 'https://i.imgur.com/32qoE9j.jpg', width: 480 },
-                    { src: 'https://i.imgur.com/XIRbVpx.jpg', width: 960 },
+                    { src: '/images/profile/32qoE9j.jpg', width: 480 },
+                    { src: '/images/profile/XIRbVpx.jpg', width: 960 },
                   ]}
                   sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
                   alt="sarvath"

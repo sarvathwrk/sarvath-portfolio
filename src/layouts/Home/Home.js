@@ -194,12 +194,12 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="Aqary International Group"
-        description="Devoloped a Project for Buying and Selling Real Estate Properties and Get All Types of Reports and User Details in Dashboard"
+        description="A real-estate platform for buying and selling properties, with a dashboard for reports, analytics, and user management."
         buttonText="View Project"
         buttonLink="/projects/Aqary"
         model={{
           type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          alt: 'Aqary International Group real-estate dashboard',
           textures: [
             {
               srcSet: [aqaryTexture, aqaryTextureLarge],
@@ -215,7 +215,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
         title="FOODTEKCO LTD"
-        description="Design and development for a video game tracking app built in React Native"
+        description="An e-commerce platform for buying and selling food ingredients, with a dashboard for reports and user management."
         buttonText="View Project"
         buttonLink="/projects/Foodtekco"
         model={{
@@ -240,7 +240,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectThree.current)}
         index={3}
         title="TeaWork Dashboard"
-        description="Devoloped a Project for Buying and Selling Food Products and Get All Types of Reports and User Details in Dashboard"
+        description="Admin dashboard for a food-products marketplace — orders, reports, analytics, and user management."
         buttonText="View Project"
         buttonLink="/projects/Teawork-Dashboard"
         model={{
@@ -261,7 +261,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectFour.current)}
         index={4}
         title="Teawork PVT"
-        description="Devoloped a Project for Buying and Selling Food Products, Whole Seller Dealer Login, Customer logged with Buying Ingredients"
+        description="A food-products marketplace with separate wholesaler and customer logins for buying and selling ingredients."
         buttonText="View Project"
         buttonLink="/projects/Teawork"
         model={{
@@ -286,7 +286,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectFive.current)}
         index={5}
         title="Difuza Service Dashboard"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        description="A web-service marketplace with dashboard access, site-data reports, and customer-enquiry management."
         buttonText="View Project"
         buttonLink="/projects/Difuza"
         model={{
@@ -307,7 +307,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectSix.current)}
         index={6}
         title="VidhyaOnline Coromandel Group"
-        description="Design and development for a video game tracking app built in React Native"
+        description="An e-learning platform with in-video quizzes, completion reports, and downloadable course certificates."
         buttonText="View Project"
         buttonLink="/projects/VidhyaOnline"
         model={{
@@ -331,12 +331,12 @@ export const Home = () => {
         visible={visibleSections.includes(projectseven.current)}
         index={7}
         title="Wololo LTD"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        description="An online store for clothing, shoes, and everyday essentials."
         buttonText="View Project"
         buttonLink="/projects/Wololo"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'Wololo online store',
           textures: [
             {
               srcSet: [Wolololaplarge, Wolololaplarge],
@@ -352,7 +352,7 @@ export const Home = () => {
         visible={visibleSections.includes(projecteight.current)}
         index={8}
         title="InkyPencil"
-        description="Design and development for a video game tracking app built in React Native"
+        description="An author's website featuring event listings and translation services."
         buttonText="View Project"
         buttonLink="/projects/InkyPencil"
         model={{
@@ -377,13 +377,12 @@ export const Home = () => {
         visible={visibleSections.includes(projectnine.current)}
         index={9}
         title="Future Bank Summit KSA"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
+        description="Event website for the Future Bank Summit KSA — agenda, speakers, and registration."
         buttonText="View Project"
         buttonLink="/projects/ksa-futurebank"
-        // buttonLink="/projects/slice"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'Future Bank Summit KSA event website',
           textures: [
             {
               srcSet: [futurebanklarge, futurebanklarge],
@@ -399,7 +398,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectten.current)}
         index={10}
         title="SteerAuto Kun"
-        description="Design and development for a video game tracking app built in React Native"
+        description="A used-car marketplace with auctions, maintenance booking, and advanced search filters."
         buttonText="View Project"
         buttonLink="/projects/SteerAuto"
         model={{

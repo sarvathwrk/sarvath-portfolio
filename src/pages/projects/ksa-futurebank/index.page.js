@@ -21,7 +21,7 @@ import styles from './futurebank.module.css';
 
 const title = 'KSA-FutureBank Summit';
 const description =
-  'Devoloped a Project for Buying and Selling Food Products, Whole Seller Dealer Login, Customer logged with Buying Ingredients';
+  'Designed and built a responsive event website mockup for the Future Bank Summit KSA, covering the agenda, speaker highlights, and registration.';
 const roles = ['KSA-FutureBank Summit', 'Mockup Website', 'Free Lance', 'Static Site'];
 
 function Details() {
@@ -53,11 +53,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/GqZkxU1.jpg',
-                'https://i.imgur.com/GqZkxU1.jpg',
+                '/images/ksa-futurebank/GqZkxU1.jpg',
+                '/images/ksa-futurebank/GqZkxU1.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
+              alt="Future Bank Summit home page"
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -75,11 +75,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/MwWHmhs.png',
-                'https://i.imgur.com/MwWHmhs.png',
+                '/images/ksa-futurebank/MwWHmhs.png',
+                '/images/ksa-futurebank/MwWHmhs.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
+              alt="Future Bank Summit who will you meet section"
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -99,21 +99,21 @@ function Details() {
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/8152EZw.png',
-                  'https://i.imgur.com/8152EZw.png',
+                  '/images/ksa-futurebank/8152EZw.png',
+                  '/images/ksa-futurebank/8152EZw.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-                alt="Multiple user annotations on a shared layer."
+                placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
+                alt="Future Bank Summit login page, responsive layout"
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/KJTcE97.png',
-                  'https://i.imgur.com/KJTcE97.png',
+                  '/images/ksa-futurebank/KJTcE97.png',
+                  '/images/ksa-futurebank/KJTcE97.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-                alt="The layers sidebar design, now with user profiles."
+                placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
+                alt="Future Bank Summit login page on mobile"
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -132,11 +132,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/cpxoIcR.png',
-                'https://i.imgur.com/cpxoIcR.png',
+                '/images/ksa-futurebank/cpxoIcR.png',
+                '/images/ksa-futurebank/cpxoIcR.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
+              alt="Future Bank Summit website footer"
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -147,10 +147,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/0PaHi9z.png',
-                    'https://i.imgur.com/0PaHi9z.png',
+                    '/images/ksa-futurebank/0PaHi9z.png',
+                    '/images/ksa-futurebank/0PaHi9z.png',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -179,9 +179,9 @@ function Details() {
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectNextImage
-              srcSet={['https://i.imgur.com/cdijRpJ.png']}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
+              srcSet={['/images/ksa-futurebank/cdijRpJ.png']}
+              placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
+              alt="Future Bank Summit responsive cards"
             />
           </ProjectSectionContent>
         </ProjectSection>
@@ -198,11 +198,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/HmXWGYi.png',
-                'https://i.imgur.com/HmXWGYi.png',
+                '/images/ksa-futurebank/HmXWGYi.png',
+                '/images/ksa-futurebank/HmXWGYi.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
+              alt="Future Bank Summit contact us page"
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>

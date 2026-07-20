@@ -21,7 +21,7 @@ import styles from './vidhyaonline.module.css';
 
 const title = 'Vidhyaonline Coromandel Group';
 const description =
-  'Devoloped a Project for Learning Comapny Related Courses Provided by VidhyaOnline. We Have Quiz Questions in Middle of Video, Getting Reports At the Last of Video and Download Certificate After Finished Course';
+  'Developed a Project for Learning Company Related Courses Provided by VidhyaOnline. We Have Quiz Questions in Middle of Video, Getting Reports At the Last of Video and Download Certificate After Finished Course';
 const roles = [
   'Vidhyaonline',
   'Employee Login',
@@ -61,11 +61,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/GTn7ESy.jpg',
-                'https://i.imgur.com/GTn7ESy.jpg',
+                '/images/VidhyaOnline/GTn7ESy.jpg',
+                '/images/VidhyaOnline/GTn7ESy.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
+              alt="VidhyaOnline home page with course navigation and quick access."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -82,11 +82,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/FQIOf8V.jpg',
-                'https://i.imgur.com/FQIOf8V.jpg',
+                '/images/VidhyaOnline/FQIOf8V.jpg',
+                '/images/VidhyaOnline/FQIOf8V.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
+              alt="VidhyaOnline video listing of available company course videos."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -106,21 +106,21 @@ function Details() {
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/WlaZkPa.png',
-                  'https://i.imgur.com/WlaZkPa.png',
+                  '/images/VidhyaOnline/WlaZkPa.png',
+                  '/images/VidhyaOnline/WlaZkPa.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-                alt="Multiple user annotations on a shared layer."
+                placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
+                alt="Responsive VidhyaOnline login page on desktop."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/RuBQNCm.png',
-                  'https://i.imgur.com/RuBQNCm.png',
+                  '/images/VidhyaOnline/RuBQNCm.png',
+                  '/images/VidhyaOnline/RuBQNCm.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-                alt="The layers sidebar design, now with user profiles."
+                placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
+                alt="Responsive VidhyaOnline login page on mobile."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -140,11 +140,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/t43jqGC.png',
-                'https://i.imgur.com/t43jqGC.png',
+                '/images/VidhyaOnline/t43jqGC.png',
+                '/images/VidhyaOnline/t43jqGC.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
+              alt="VidhyaOnline courses list with instructors, durations, and enrollment links."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -155,10 +155,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/jSlEb7w.png',
-                    'https://i.imgur.com/jSlEb7w.png',
+                    '/images/VidhyaOnline/jSlEb7w.png',
+                    '/images/VidhyaOnline/jSlEb7w.png',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -188,11 +188,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/XlwrnpT.png',
-                'https://i.imgur.com/XlwrnpT.png',
+                '/images/VidhyaOnline/XlwrnpT.png',
+                '/images/VidhyaOnline/XlwrnpT.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
+              alt="VidhyaOnline sub course list with progress and certificate access."
             />
           </ProjectSectionContent>
         </ProjectSection>
@@ -209,11 +209,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/BYBUCJm.png',
-                'https://i.imgur.com/BYBUCJm.png',
+                '/images/VidhyaOnline/BYBUCJm.png',
+                '/images/VidhyaOnline/BYBUCJm.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
+              alt="VidhyaOnline overall course report with quiz scores and time."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -231,11 +231,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/rgMLeuC.png',
-                'https://i.imgur.com/rgMLeuC.png',
+                '/images/VidhyaOnline/rgMLeuC.png',
+                '/images/VidhyaOnline/rgMLeuC.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
+              alt="VidhyaOnline contact us page with inquiry form."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>

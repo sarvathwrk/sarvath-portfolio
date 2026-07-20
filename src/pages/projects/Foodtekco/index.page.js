@@ -21,7 +21,7 @@ import styles from './Foodtekco.module.css';
 
 const title = 'Foodtekco LTD';
 const description =
-  'Devoloped a Project for Buying Ingredients for making Foods and Selling Foods and Get All Types of Reports and User Details in Dashboard';
+  'Developed a Project for Buying Ingredients for making Foods and Selling Foods and Get All Types of Reports and User Details in Dashboard';
 const roles = [
   'Foodtekco Site',
   'Foodtekco Dashboard',
@@ -59,11 +59,11 @@ function Details() {
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/jjBwowO.jpg',
-                'https://i.imgur.com/jjBwowO.jpg',
+                '/images/Foodtekco/jjBwowO.jpg',
+                '/images/Foodtekco/jjBwowO.jpg',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
+              alt="Foodtekco responsive home page with slider and navigation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -73,19 +73,17 @@ function Details() {
             <ProjectTextRow>
               <ProjectSectionHeading>Log In Page</ProjectSectionHeading>
               <ProjectSectionText>
-                Identify the primary users or audience who will interact with the
-                dashboard login page. This may include administrators, employees, or
-                specific user roles with lots of Validation for Email,Username and
-                Password and Alerts
+                Secure login page for Foodtekco administrators and staff, with validation
+                for email, username, and password plus clear inline error alerts.
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/kaZBQQA.png',
-                'https://i.imgur.com/kaZBQQA.png',
+                '/images/Foodtekco/kaZBQQA.png',
+                '/images/Foodtekco/kaZBQQA.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
+              alt="Foodtekco dashboard login page."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -97,34 +95,33 @@ function Details() {
                 Responsive statistics Using Google looker Studio
               </ProjectSectionHeading>
               <ProjectSectionText>
-                List and describe the types of statistics charts included in the
-                responsive design. This may include bar charts, line charts, pie charts,
-                etc.
+                Interactive statistics presented through bar, line, and pie charts to
+                track sales, orders, and ingredient trends across the platform.
               </ProjectSectionText>
               <ProjectSectionText>
-                Detail how the charts adapt to different screen sizes, resolutions, and
-                orientations. Explain the responsive design principles implemented.
+                The Looker Studio charts reflow across screen sizes and orientations,
+                keeping reports readable on desktop, tablet, and mobile.
               </ProjectSectionText>
             </div>
             <div className={styles.sidebarImages}>
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/eimC3ow.png',
-                  'https://i.imgur.com/eimC3ow.png',
+                  '/images/Foodtekco/eimC3ow.png',
+                  '/images/Foodtekco/eimC3ow.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-                alt="Multiple user annotations on a shared layer."
+                placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
+                alt="Foodtekco statistics dashboard built with Google Looker Studio."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
                 className={styles.sidebarImage}
                 srcSet={[
-                  'https://i.imgur.com/eimC3ow.png',
-                  'https://i.imgur.com/eimC3ow.png',
+                  '/images/Foodtekco/eimC3ow.png',
+                  '/images/Foodtekco/eimC3ow.png',
                 ]}
-                placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-                alt="The layers sidebar design, now with user profiles."
+                placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
+                alt="Responsive Foodtekco statistics charts across screen sizes."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -135,17 +132,17 @@ function Details() {
             <ProjectTextRow>
               <ProjectSectionHeading>Notification Functionality</ProjectSectionHeading>
               <ProjectSectionText>
-                Describe notifications generated by the system, such as New, Confirmation
-                alerts, Mail information or File.
+                System notifications keep users informed with new alerts, confirmation
+                messages, and email or file updates.
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/bNdupMv.png',
-                'https://i.imgur.com/bNdupMv.png',
+                '/images/Foodtekco/bNdupMv.png',
+                '/images/Foodtekco/bNdupMv.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
+              alt="Foodtekco dashboard notification panel with alerts."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -156,10 +153,10 @@ function Details() {
               <div className={styles.gridBackground}>
                 <ProjectNextImage
                   srcSet={[
-                    'https://i.imgur.com/exOxopH.png',
-                    'https://i.imgur.com/exOxopH.png',
+                    '/images/Foodtekco/exOxopH.png',
+                    '/images/Foodtekco/exOxopH.png',
                   ]}
-                  placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
+                  placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
                   alt=""
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
@@ -169,17 +166,8 @@ function Details() {
             <div className={styles.gridText}>
               <ProjectSectionHeading>Data Tables (Listing Data's)</ProjectSectionHeading>
               <ProjectSectionText>
-                Detail how data is presented in a tabular format, including rows and
-                columns.
-                <br />
-                Explain how users can sort data in ascending or descending order based on
-                specific columns.
-                <br />
-                Describe the filtering options available to users to narrow down the
-                displayed data based on specific criteria.
-                <br />
-                Explain how large datasets are divided into pages, and users can navigate
-                through them.
+                Records are displayed in sortable, filterable tables with pagination, so
+                administrators can quickly navigate and analyze large datasets.
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>
@@ -189,16 +177,14 @@ function Details() {
             <ProjectTextRow>
               <ProjectSectionHeading>Forms UI</ProjectSectionHeading>
               <ProjectSectionText>
-                The Forms module in our project facilitates user interaction by providing
-                a structured way to collect and submit data. This document outlines the
-                various form components, their usage, validation mechanisms, and best
-                practices for implementing forms.
+                The forms module provides a structured way to collect and submit data
+                across Foodtekco, with validated inputs and clear submission feedback.
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectNextImage
-              srcSet={['https://i.imgur.com/DTNKXqG.png']}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
+              srcSet={['/images/Foodtekco/DTNKXqG.png']}
+              placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
+              alt="Foodtekco data entry form with validated fields."
             />
           </ProjectSectionContent>
         </ProjectSection>
@@ -208,19 +194,17 @@ function Details() {
             <ProjectTextRow>
               <ProjectSectionHeading>Statistics And Reports</ProjectSectionHeading>
               <ProjectSectionText>
-                The Statistics and Reports module in our project enables the collection,
-                processing, and analysis of data to derive meaningful insights. This
-                document provides an overview of the processes involved in data
-                collection, processing, analysis, and the generation of reports.
+                The statistics and reports module collects and analyzes platform data to
+                surface meaningful insights and generate detailed reports for administrators.
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectNextImage
               srcSet={[
-                'https://i.imgur.com/VLUrGll.png',
-                'https://i.imgur.com/VLUrGll.png',
+                '/images/Foodtekco/VLUrGll.png',
+                '/images/Foodtekco/VLUrGll.png',
               ]}
-              placeholder={'https://i.imgur.com/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              placeholder={'/images/Foodtekco/7Eof7aC.jpg'}
+              alt="Foodtekco statistics and reports dashboard view."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
