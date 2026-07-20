@@ -3,11 +3,9 @@ module.exports = {
   trailingSlash: true,
   pageExtensions: ['page.js', 'api.js'],
   images: {
-    domains: ['i.imgur.com'],
+    remotePatterns: [{ protocol: 'https', hostname: 'i.imgur.com' }],
   },
-  experimental: {
-    reactCompiler: true,
-  },
+  reactCompiler: true,
 
   webpack(config, { isServer }) {
     // Run custom scripts

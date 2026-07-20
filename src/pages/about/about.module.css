@@ -55,7 +55,7 @@
 
 #Resume::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0, 0.3);
   background-color: #555;
 }
 
@@ -174,6 +174,7 @@
     margin-top: var(--spaceL);
   }
 }
+
 .quicklink {
   list-style-type: none;
   margin: 0;
@@ -188,9 +189,11 @@
     margin-top: var(--spaceL);
   }
 }
+
 .metaItem {
   padding: var(--spaceL) 0;
   font-size: 9px;
+
   /* font-weight: var(--fontWeightRegular); */
   border-top: 1px solid rgb(var(--rgbText) / 0.2);
 

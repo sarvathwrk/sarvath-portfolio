@@ -34,6 +34,7 @@
   transition-duration: var(--durationXL);
   transition-delay: var(--delay);
   position: relative;
+
   @media (--mediaUseMotion) {
     transition-property: transform, opacity;
     transform: translate3d(0, var(--space5XL), 0);

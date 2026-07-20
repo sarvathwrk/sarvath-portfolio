@@ -55,7 +55,7 @@
 
 #Resume::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgb(0, 0, 0, 0.3);
   background-color: #555;
 }
 
@@ -153,6 +153,7 @@
 .linkButton {
   padding-left: var(--spaceXS);
   cursor: default;
+
   @media (--mediaUseMotion) {
     opacity: 0;
     animation: projectFadeSlide 1.4s var(--bezierFastoutSlowin)

@@ -10,11 +10,11 @@ import {
   Mesh,
   MeshPhongMaterial,
   PerspectiveCamera,
+  SRGBColorSpace,
   Scene,
   SphereGeometry,
   UniformsUtils,
   WebGLRenderer,
-  sRGBEncoding,
 } from 'three';
 import { media, rgbToThreeColor } from 'utils/style';
 import { cleanRenderer, cleanScene } from 'utils/three';
@@ -61,7 +61,7 @@ export const DisplacementSphere = props => {
     });
     renderer.current.setSize(innerWidth, innerHeight);
     renderer.current.setPixelRatio(window.devicePixelRatio);
-    renderer.current.outputEncoding = sRGBEncoding;
+    renderer.current.outputColorSpace = SRGBColorSpace;
 
     // Initialize Camera
     camera.current = new PerspectiveCamera(54, innerWidth / innerHeight, 0.1, 100);
@@ -90,13 +90,25 @@ export const DisplacementSphere = props => {
     scene.current.add(sphere.current);
 
     // Initialize Lights
-    const dirLight = new DirectionalLight(colorWhite, 0.6);
-    const ambientLight = new AmbientLight(colorWhite, themeId === 'light' ? 0.8 : 0.1);
+    // three r155+ uses physically-correct lighting (legacy lights were removed),
+    // which is ~PI dimmer for these materials. Scale intensities by PI to match
+    // the original brightness the scene was authored for.
+    const dirLight = new DirectionalLight(colorWhite, 0.6 * Math.PI);
+    const ambientLight = new AmbientLight(
+      colorWhite,
+      (themeId === 'light' ? 0.8 : 0.1) * Math.PI
+    );
 
     dirLight.position.set(100, 100, 200);
 
     lights.current = [dirLight, ambientLight];
-    scene.current.background = new Color(...rgbToThreeColor(rgbBackground));
+    // rgbToThreeColor yields sRGB-encoded 0-1 values; tag them as sRGB so
+    // color management converts them correctly (otherwise the dark background
+    // is treated as linear and renders washed-out gray).
+    scene.current.background = new Color().setRGB(
+      ...rgbToThreeColor(rgbBackground),
+      SRGBColorSpace
+    );
     lights.current.forEach(light => scene.current.add(light));
 
     return () => {

@@ -1,105 +1,98 @@
-import { useCallback } from 'react';
-import Particles from 'react-tsparticles';
-import { loadFull } from 'tsparticles';
+import Particles, { ParticlesProvider } from '@tsparticles/react';
+import { loadSlim } from '@tsparticles/slim';
+import { useMemo } from 'react';
+
+// tsparticles v4: the provider registers the engine plugins once and gates
+// rendering of <Particles> until the engine is loaded.
+const initEngine = async engine => {
+  await loadSlim(engine);
+};
 
 const ParticlesComp = () => {
-  const particlesInit = useCallback(async engine => {
-    await loadFull(engine);
-  }, []);
+  const options = useMemo(
+    () => ({
+      fullScreen: false,
+      background: {},
+      fpsLimit: 60,
+      interactivity: {
+        events: {
+          onClick: {
+            enable: false,
+            mode: 'push',
+          },
+          onHover: {
+            enable: false,
+            mode: 'repulse',
+            distance: 400,
+          },
+          resize: {
+            enable: true,
+          },
+        },
+        modes: {
+          push: {
+            quantity: 0,
+          },
+          repulse: {
+            distance: 150,
+            duration: 0.4,
+          },
+        },
+      },
+      particles: {
+        color: {
+          value: '#cacaca',
+        },
+        links: {
+          color: '#cacaca',
+          distance: 120,
+          enable: true,
+          opacity: 0.1,
+          width: 0.3,
+        },
+        collisions: {
+          enable: true,
+        },
+        move: {
+          direction: 'none',
+          enable: true,
+          outModes: {
+            default: 'bounce',
+          },
+          random: false,
+          speed: 1,
+          straight: false,
+        },
+        number: {
+          density: {
+            enable: true,
+            width: 1200,
+            height: 1200,
+          },
+          value: 100,
+        },
+        opacity: {
+          value: 0.5,
+        },
+        shape: {
+          type: 'circle',
+        },
+        size: {
+          value: { min: 1, max: 2 },
+        },
+      },
+      detectRetina: true,
+    }),
+    []
+  );
 
   return (
-    <div className="w-full h-full">
-      <Particles
-        className="w-full h-screen"
-        id="tsparticles"
-        init={particlesInit}
-        options={{
-          fullScreen: false,
-          background: {
-            // color: {
-            //   value: "#0d47a1",
-            // },
-          },
-          fpsLimit: 60,
-          interactivity: {
-            events: {
-              onClick: {
-                enable: false,
-                mode: 'push',
-              },
-              onHover: {
-                enable: false,
-                mode: 'repulse',
-                distance: 400,
-              },
-              resize: true,
-            },
-            modes: {
-              push: {
-                quantity: 0,
-              },
-              repulse: {
-                distance: 150,
-                duration: 0.4,
-              },
-            },
-          },
-          particles: {
-            color: {
-              // value: "#cfcfcf2c",
-              value: '#cacaca',
-            },
-            links: {
-              // color: "#cfcfcf2c",
-              color: '#cacaca',
-              distance: 120,
-              enable: true,
-              opacity: 0.1,
-              width: 0.3,
-            },
-            collisions: {
-              enable: true,
-            },
-            move: {
-              directions: 'none',
-              enable: true,
-              outModes: {
-                default: 'bounce',
-              },
-              random: false,
-              speed: 1,
-              straight: false,
-            },
-            number: {
-              density: {
-                enable: true,
-                area: 1200,
-              },
-              value: 100,
-            },
-            opacity: {
-              value: 0.5,
-            },
-            shape: {
-              type: 'circle',
-            },
-            size: {
-              value: { min: 1, max: 2 },
-            },
-          },
-          detectRetina: true,
-        }}
-      />
-    </div>
+    <ParticlesProvider init={initEngine}>
+      <div className="w-full h-full">
+        <Particles className="w-full h-screen" id="tsparticles" options={options} />
+      </div>
+    </ParticlesProvider>
   );
 };
 
 export default ParticlesComp;
-
-// mode: "grab",
-// grab: {
-//   distance: 300,
-//   line_linked: {
-//     opacity: 0.5,
-//   },
-// },

@@ -173,10 +173,12 @@
     transform: none;
   }
 }
+
 .mobileNavLinkA {
   display: block;
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0;
 }
+
 .mobileNavLink {
   display: block;
   width: 100%;
