@@ -1,7 +1,11 @@
-import { sql } from '@vercel/postgres';
+import { neon } from '@neondatabase/serverless';
 
 export default async function handler(req, res) {
   const { method } = req;
+
+  // Neon's HTTP driver is stateless, so the client is created per request.
+  // Uses the connection string provisioned by the Vercel/Neon integration.
+  const sql = neon(process.env.DATABASE_URL || process.env.POSTGRES_URL);
 
   if (method === 'POST') {
     const { type } = req.body;
@@ -21,12 +25,12 @@ export default async function handler(req, res) {
     }
   } else if (method === 'GET') {
     try {
-      const result = await sql`
+      const rows = await sql`
         SELECT type, COUNT(*) AS count
         FROM feedback
         GROUP BY type;
       `;
-      return res.status(200).json(result.rows);
+      return res.status(200).json(rows);
     } catch (error) {
       console.error('Database error:', error);
       return res

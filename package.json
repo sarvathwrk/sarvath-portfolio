@@ -9,7 +9,6 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
-    "esbuild": "^0.15.2",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.2.10",
     "eslint-config-prettier": "^10.1.8",
@@ -29,22 +28,24 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@neondatabase/serverless": "^1.1.0",
     "@tsparticles/react": "^4.3.2",
     "@tsparticles/slim": "^4.3.2",
     "@vercel/analytics": "^2.0.1",
-    "@vercel/postgres": "^0.10.0",
     "@vercel/speed-insights": "^2.0.0",
     "babel-plugin-react-compiler": "^1.0.0",
     "framer-motion": "^12.42.2",
     "js-cookie": "^3.0.8",
     "lodash": "^4.18.1",
-    "mdx-bundler": "^9.0.1",
     "next": "^16.2.10",
     "nodemailer": "^9.0.3",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "three": "^0.185.1",
     "three-stdlib": "^2.36.1"
+  },
+  "engines": {
+    "node": "22.x"
   },
   "scripts": {
     "dev": "next dev --webpack",
