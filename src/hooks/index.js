@@ -4,7 +4,6 @@ export * from './useFoucFix';
 export * from './useHasMounted';
 export * from './useInterval';
 export * from './useInViewport';
-export * from './useLocalStorage';
 export * from './useParallax';
 export * from './usePrevious';
 export * from './useScrollToHash';
