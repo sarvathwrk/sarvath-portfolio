@@ -59,7 +59,7 @@ function Details() {
                 '/images/Teawork/7GQJVKL.jpg',
               ]}
               placeholder={'/images/Teawork/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="Teawork home page for buying and selling food products."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -81,7 +81,7 @@ function Details() {
                 '/images/Teawork/TWae4CM.png',
               ]}
               placeholder={'/images/Teawork/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="Product listing page with filters for browsing food ingredients."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -105,7 +105,7 @@ function Details() {
                   '/images/Teawork/RrFUI47.png',
                 ]}
                 placeholder={'/images/Teawork/7Eof7aC.jpg'}
-                alt="Multiple user annotations on a shared layer."
+                alt="Responsive login page for wholesalers and customers."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
@@ -115,7 +115,7 @@ function Details() {
                   '/images/Teawork/uWzFZHn.png',
                 ]}
                 placeholder={'/images/Teawork/7Eof7aC.jpg'}
-                alt="The layers sidebar design, now with user profiles."
+                alt="Login screen adapting seamlessly across desktop and mobile devices."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -140,7 +140,7 @@ function Details() {
                 '/images/Teawork/VNjNPKk.png',
               ]}
               placeholder={'/images/Teawork/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="Product detail page showing ingredients, pricing, and availability."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -185,7 +185,7 @@ function Details() {
             <ProjectNextImage
               srcSet={['/images/Teawork/Zrl6AhN.png']}
               placeholder={'/images/Teawork/7Eof7aC.jpg'}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
+              alt="Product reservation form for selecting items and quantities."
             />
           </ProjectSectionContent>
         </ProjectSection>
@@ -208,7 +208,7 @@ function Details() {
                 '/images/Teawork/FfVSdek.png',
               ]}
               placeholder={'/images/Teawork/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="Customer profile page managing account details and order history."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>

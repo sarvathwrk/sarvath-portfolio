@@ -58,7 +58,7 @@ function Details() {
                 '/images/Wololo/FUffDfr.jpg',
               ]}
               placeholder={'/images/Wololo/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="The Wololo LTD home page with navigation and featured products."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -80,7 +80,7 @@ function Details() {
                 '/images/Wololo/nfyFKYj.jpg',
               ]}
               placeholder={'/images/Wololo/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="The Wololo LTD blog section listing recent posts."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -105,7 +105,7 @@ function Details() {
                   '/images/Wololo/2DvIfmz.png',
                 ]}
                 placeholder={'/images/Wololo/7Eof7aC.jpg'}
-                alt="Multiple user annotations on a shared layer."
+                alt="Wololo LTD product listing with clothing and footwear."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
@@ -115,7 +115,7 @@ function Details() {
                   '/images/Wololo/IdvcoUH.png',
                 ]}
                 placeholder={'/images/Wololo/7Eof7aC.jpg'}
-                alt="The layers sidebar design, now with user profiles."
+                alt="Wololo LTD product listing with filters and product cards."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -138,7 +138,7 @@ function Details() {
                 '/images/Wololo/jb1fkSu.jpg',
               ]}
               placeholder={'/images/Wololo/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="The Wololo LTD articles section with featured reading content."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -187,7 +187,7 @@ function Details() {
                 '/images/Wololo/Nw5m1YL.png',
               ]}
               placeholder={'/images/Wololo/7Eof7aC.jpg'}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
+              alt="Wololo LTD contact page with inquiry form and details."
             />
           </ProjectSectionContent>
         </ProjectSection>
@@ -210,7 +210,7 @@ function Details() {
                 '/images/Wololo/X6nV3k7.png',
               ]}
               placeholder={'/images/Wololo/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="The Wololo LTD website footer with quick links and social media."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>

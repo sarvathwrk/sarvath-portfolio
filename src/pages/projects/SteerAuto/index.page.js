@@ -65,7 +65,7 @@ function Details() {
                 '/images/SteerAuto/eMoLuUV.jpg',
               ]}
               placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="SteerAuto Kun home page with quick navigation and key services."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -88,7 +88,7 @@ function Details() {
                 '/images/SteerAuto/30IVUQL.jpg',
               ]}
               placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="Used car listings showing make, model, year, mileage, and price."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -113,7 +113,7 @@ function Details() {
                   '/images/SteerAuto/PaJ7aM6.png',
                 ]}
                 placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
-                alt="Multiple user annotations on a shared layer."
+                alt="Responsive car filter refining results by make, model, and price."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
@@ -123,7 +123,7 @@ function Details() {
                   '/images/SteerAuto/uptqxK1.png',
                 ]}
                 placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
-                alt="The layers sidebar design, now with user profiles."
+                alt="Car search filter panel adapting to mobile screens."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -146,7 +146,7 @@ function Details() {
                 '/images/SteerAuto/qkKZN5e.png',
               ]}
               placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="Sell cars flow guiding users through listing their vehicle."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -191,7 +191,7 @@ function Details() {
             <ProjectNextImage
               srcSet={['/images/SteerAuto/6mtqqG5.png']}
               placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
+              alt="Contact page with contact details and inquiry interface."
             />
           </ProjectSectionContent>
         </ProjectSection>
@@ -214,7 +214,7 @@ function Details() {
                 '/images/SteerAuto/rRrAQ2t.png',
               ]}
               placeholder={'/images/SteerAuto/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="Site footer showcasing featured car listings."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>

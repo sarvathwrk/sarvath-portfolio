@@ -59,7 +59,7 @@ function Details() {
                 '/images/InkyPencil/vh7FQxE.png',
               ]}
               placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="The InkyPencil home page with event listings and translation services."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -81,7 +81,7 @@ function Details() {
                 '/images/InkyPencil/AXNC4mX.jpg',
               ]}
               placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="The InkyPencil Explore page for discovering events and content."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -105,7 +105,7 @@ function Details() {
                   '/images/InkyPencil/FYLbsHK.png',
                 ]}
                 placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
-                alt="Multiple user annotations on a shared layer."
+                alt="The InkyPencil responsive navigation menu on a mobile device."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
@@ -115,7 +115,7 @@ function Details() {
                   '/images/InkyPencil/CL2Cft3.png',
                 ]}
                 placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
-                alt="The layers sidebar design, now with user profiles."
+                alt="The responsive menu adapting across different screen sizes."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -137,7 +137,7 @@ function Details() {
                 '/images/InkyPencil/1LcuiJf.png',
               ]}
               placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="The InkyPencil About Us page introducing the author."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -186,7 +186,7 @@ function Details() {
                 '/images/InkyPencil/dRy5bez.png',
               ]}
               placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
+              alt="The InkyPencil Contact Us page with an inquiry form."
             />
           </ProjectSectionContent>
         </ProjectSection>
@@ -209,7 +209,7 @@ function Details() {
                 '/images/InkyPencil/JZsPTgC.png',
               ]}
               placeholder={'/images/InkyPencil/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="The InkyPencil website footer with navigation and social links."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>

@@ -21,7 +21,7 @@ import styles from './futurebank.module.css';
 
 const title = 'KSA-FutureBank Summit';
 const description =
-  'Developed a Project for Buying and Selling Food Products, Whole Seller Dealer Login, Customer logged with Buying Ingredients';
+  'Designed and built a responsive event website mockup for the Future Bank Summit KSA, covering the agenda, speaker highlights, and registration.';
 const roles = ['KSA-FutureBank Summit', 'Mockup Website', 'Free Lance', 'Static Site'];
 
 function Details() {
@@ -57,7 +57,7 @@ function Details() {
                 '/images/ksa-futurebank/GqZkxU1.jpg',
               ]}
               placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="Future Bank Summit home page"
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -79,7 +79,7 @@ function Details() {
                 '/images/ksa-futurebank/MwWHmhs.png',
               ]}
               placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="Future Bank Summit who will you meet section"
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -103,7 +103,7 @@ function Details() {
                   '/images/ksa-futurebank/8152EZw.png',
                 ]}
                 placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
-                alt="Multiple user annotations on a shared layer."
+                alt="Future Bank Summit login page, responsive layout"
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
@@ -113,7 +113,7 @@ function Details() {
                   '/images/ksa-futurebank/KJTcE97.png',
                 ]}
                 placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
-                alt="The layers sidebar design, now with user profiles."
+                alt="Future Bank Summit login page on mobile"
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -136,7 +136,7 @@ function Details() {
                 '/images/ksa-futurebank/cpxoIcR.png',
               ]}
               placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="Future Bank Summit website footer"
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -181,7 +181,7 @@ function Details() {
             <ProjectNextImage
               srcSet={['/images/ksa-futurebank/cdijRpJ.png']}
               placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
+              alt="Future Bank Summit responsive cards"
             />
           </ProjectSectionContent>
         </ProjectSection>
@@ -202,7 +202,7 @@ function Details() {
                 '/images/ksa-futurebank/HmXWGYi.png',
               ]}
               placeholder={'/images/ksa-futurebank/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="Future Bank Summit contact us page"
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>

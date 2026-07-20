@@ -65,7 +65,7 @@ function Details() {
                 '/images/VidhyaOnline/GTn7ESy.jpg',
               ]}
               placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="VidhyaOnline home page with course navigation and quick access."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -86,7 +86,7 @@ function Details() {
                 '/images/VidhyaOnline/FQIOf8V.jpg',
               ]}
               placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
-              alt="The Slice web application showing a selected user annotation."
+              alt="VidhyaOnline video listing of available company course videos."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -110,7 +110,7 @@ function Details() {
                   '/images/VidhyaOnline/WlaZkPa.png',
                 ]}
                 placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
-                alt="Multiple user annotations on a shared layer."
+                alt="Responsive VidhyaOnline login page on desktop."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <ProjectNextImage
@@ -120,7 +120,7 @@ function Details() {
                   '/images/VidhyaOnline/RuBQNCm.png',
                 ]}
                 placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
-                alt="The layers sidebar design, now with user profiles."
+                alt="Responsive VidhyaOnline login page on mobile."
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -144,7 +144,7 @@ function Details() {
                 '/images/VidhyaOnline/t43jqGC.png',
               ]}
               placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="VidhyaOnline courses list with instructors, durations, and enrollment links."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -192,7 +192,7 @@ function Details() {
                 '/images/VidhyaOnline/XlwrnpT.png',
               ]}
               placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
-              alt="Students at the University of New South Wales using the new collaborative annotation features"
+              alt="VidhyaOnline sub course list with progress and certificate access."
             />
           </ProjectSectionContent>
         </ProjectSection>
@@ -213,7 +213,7 @@ function Details() {
                 '/images/VidhyaOnline/BYBUCJm.png',
               ]}
               placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="VidhyaOnline overall course report with quiz scores and time."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
@@ -235,7 +235,7 @@ function Details() {
                 '/images/VidhyaOnline/rgMLeuC.png',
               ]}
               placeholder={'/images/VidhyaOnline/7Eof7aC.jpg'}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
+              alt="VidhyaOnline contact us page with inquiry form."
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
