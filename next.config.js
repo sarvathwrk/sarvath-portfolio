@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   trailingSlash: true,
-  pageExtensions: ['page.js', 'api.js'],
+  pageExtensions: ['page.tsx', 'page.ts', 'page.js', 'api.ts', 'api.js'],
   images: {
     // Images are self-hosted under /public/images/<project>/ — no remote hosts needed.
     remotePatterns: [],
