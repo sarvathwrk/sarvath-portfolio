@@ -37,7 +37,7 @@ const description = `Dedicated Full Stack Web Developer with over four years of 
 export function VolkiharKnight() {
   return (
     <Fragment>
-      <Meta title={title} prefix="Projects" description={description} />
+      <Meta title="About" description={description} />
       <style
         dangerouslySetInnerHTML={{
           __html: `
