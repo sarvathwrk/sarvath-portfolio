@@ -101,7 +101,7 @@ export function Intro({
             )}
             <header className={styles.text}>
               <h1 className={styles.name} data-visible={visible} id={titleId}>
-                <DecoderText text="Mohamed Sarvath Khan" delay={1000} />
+                <DecoderText text="Mohamed Sarvath Khan" delay={300} />
               </h1>
               <span className={styles.title}>
                 <span aria-hidden className={styles.row}>
@@ -133,7 +133,7 @@ export function Intro({
                           >
                             <DecoderText
                               text={item}
-                              delay={2000}
+                              delay={600}
                               style={{ fontSize: isMobile ? '1.5rem' : '50px' }}
                             />
                           </span>
