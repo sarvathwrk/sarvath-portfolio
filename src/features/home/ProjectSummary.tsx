@@ -145,7 +145,7 @@ export const ProjectSummary = ({
       const modelProps: PreviewModelProps = {
         alt: model.alt,
         show: visible,
-        showDelay: model.type === 'phone' ? 300 : 500,
+        showDelay: model.type === 'phone' ? 0 : 100,
         models: [],
       };
 

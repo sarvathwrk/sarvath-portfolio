@@ -157,7 +157,10 @@ export const Home = () => {
           }
         });
       },
-      { rootMargin: '0px 0px -10% 0px', threshold: 0.1 }
+      // Positive bottom margin: reveal fires ~a third of a viewport BEFORE the
+      // section scrolls in, so the 3D model loads/animates ahead and is ready
+      // by the time the user reaches it (instead of black-then-late).
+      { rootMargin: '0px 0px 35% 0px', threshold: 0 }
     );
 
     const indicatorObserver = new IntersectionObserver(

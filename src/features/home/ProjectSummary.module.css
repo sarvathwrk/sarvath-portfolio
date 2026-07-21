@@ -141,7 +141,7 @@
 
 .loader {
   opacity: 0;
-  transition: opacity 400ms ease 1000ms;
+  transition: opacity 300ms ease 150ms;
 
   &[data-visible='true'] {
     opacity: 1;
@@ -206,7 +206,7 @@
   transition-property: opacity;
   transition-timing-function: var(--bezierFastoutSlowin);
   transition-duration: var(--durationM);
-  transition-delay: 1.3s;
+  transition-delay: 0.3s;
 
   @media (--mediaUseMotion) {
     transition-property: transform, opacity;
