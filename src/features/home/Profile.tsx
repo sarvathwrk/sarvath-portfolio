@@ -22,9 +22,9 @@ const ProfileText = ({ visible, titleId }: ProfileTextProps) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I'm Sarvath, Skilled full stack web developer based in Abu Dhabi. With extensive
-      experience in developing scalable web applications, I specialize in crafting
-      intuitive user interfaces and robust backend solutions
+      I'm Sarvath, a full-stack developer based in Dubai with 5+ years building
+      scalable SaaS platforms, Web3 apps, and real-time systems — end to end, from
+      Next.js frontends to NestJS backends and database design.
       <Link href="/about"> About Me</Link>.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">

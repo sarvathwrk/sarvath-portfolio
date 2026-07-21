@@ -99,15 +99,16 @@ const disciplines = [
   'React.js',
   'Next.js',
   'TypeScript',
-  'JavaScript',
   'Node.js',
-  'Express.js',
+  'NestJS',
+  'PostgreSQL',
   'MongoDB',
-  'MySQL',
   'Redis',
-  'Firebase',
+  'WebSockets',
+  'Stripe',
+  'Tailwind CSS',
+  'Web3',
   'Material UI',
-  'REST APIs',
 ];
 
 export const Home = () => {
@@ -127,6 +128,9 @@ export const Home = () => {
   const projecteight = useRef<HTMLDivElement>(null);
   const projectnine = useRef<HTMLDivElement>(null);
   const projectten = useRef<HTMLDivElement>(null);
+  const projectEleven = useRef<HTMLDivElement>(null);
+  const projectTwelve = useRef<HTMLDivElement>(null);
+  const projectThirteen = useRef<HTMLDivElement>(null);
 
   const details = useRef<HTMLDivElement>(null);
 
@@ -143,6 +147,9 @@ export const Home = () => {
       projecteight,
       projectnine,
       projectten,
+      projectEleven,
+      projectTwelve,
+      projectThirteen,
       details,
     ];
 
@@ -422,6 +429,67 @@ export const Home = () => {
             {
               srcSet: [gamestackTexture2lap, gamestackTexture2lapLarge],
               placeholder: gamestackTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-11"
+        sectionRef={projectEleven}
+        visible={visibleSections.includes(projectEleven.current)}
+        index={11}
+        title="maiHRMS Platform"
+        description="An AI-powered HR SaaS platform automating workforce management — attendance, payroll, workflow automation, and predictive analytics."
+        buttonText="View Project"
+        buttonLink="/projects/maiHRMS"
+        model={{
+          type: 'laptop',
+          alt: 'maiHRMS AI HR SaaS platform',
+          textures: [
+            {
+              srcSet: [sprTexturePlaceholder],
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-12"
+        alternate
+        sectionRef={projectTwelve}
+        visible={visibleSections.includes(projectTwelve.current)}
+        index={12}
+        title="Homnifi Platform"
+        description="A Web3 + AI platform for decentralized wallets, cross-chain integration, staking and rewards, and AI-driven insights."
+        buttonText="View Project"
+        buttonLink="/projects/Homnifi"
+        model={{
+          type: 'laptop',
+          alt: 'Homnifi Web3 and AI platform',
+          textures: [
+            {
+              srcSet: [sprTexturePlaceholder],
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-13"
+        sectionRef={projectThirteen}
+        visible={visibleSections.includes(projectThirteen.current)}
+        index={13}
+        title="Skillami"
+        description="A skill-based platform with commission and points wallets, transaction management, and user earning workflows."
+        buttonText="View Project"
+        buttonLink="/projects/Skillami"
+        model={{
+          type: 'laptop',
+          alt: 'Skillami wallet and earning platform',
+          textures: [
+            {
+              srcSet: [sprTexturePlaceholder],
+              placeholder: sprTexturePlaceholder,
             },
           ],
         }}

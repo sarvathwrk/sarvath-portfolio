@@ -12,9 +12,32 @@ import type { ReactNode } from 'react';
 const initDelay = 300;
 const experienceList = [
   {
+    jobtitle: 'Full Stack Developer',
+    companyname: 'SoftBuilders Software Design LLC',
+    duration: 'Sep 2024 - Present',
+    location: 'Dubai / UAE',
+    description: [
+      {
+        label: `Architected and shipped scalable full-stack SaaS platforms end to end — frontend with Next.js, backend with NestJS, and database design across PostgreSQL and MongoDB.`,
+      },
+      {
+        label: `Built real-time systems with Redis and WebSockets, powering live notifications, session management, and geo-based attendance validation.`,
+      },
+      {
+        label: `Implemented subscription, billing, and credit/seat SaaS models with Stripe, alongside cron-driven automation for recurring workflows.`,
+      },
+      {
+        label: `Delivered maiHRMS, an AI-powered HR SaaS platform (onboarding, real-time attendance, payroll automation, and predictive analytics), owning the frontend, backend, and data architecture.`,
+      },
+      {
+        label: `Developed Homnifi, a Web3 + AI platform for decentralized wallets, cross-chain integration, and staking/rewards, building the full stack and NestJS APIs.`,
+      },
+    ],
+  },
+  {
     jobtitle: 'Web Developer',
     companyname: 'Aqary International Group',
-    duration: 'Aug 2023 - Present',
+    duration: 'Aug 2023 - Aug 2024',
     location: 'Abu Dhabi / UAE',
     description: [
       {

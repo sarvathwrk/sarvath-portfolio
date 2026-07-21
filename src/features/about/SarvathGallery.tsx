@@ -25,7 +25,7 @@ import styles1 from './header/Uses.module.css';
 // import PDF from 'react-pdf-js-infinite';
 
 const title = 'Mohamed Sarvath Khan';
-const description = `Dedicated Full Stack Web Developer with over four years of progressive experience in the dynamic field of web development. Throughout my journey, I have navigated the evolving landscape of technology, leveraging my expertise to deliver impactful solutions across diverse projects. My hands-on experience spans a wide range of technologies and frameworks, honing my skills in crafting efficient and scalable web applications. I am committed to continuous learning and innovation, ensuring high-quality deliverables that meet client needs and industry standards.`;
+const description = `Full Stack Developer with 5+ years of experience building scalable SaaS platforms, Web3 applications, and real-time systems. Strong across the MERN stack, NestJS, PostgreSQL, MongoDB, Redis, and Next.js, with end-to-end ownership of product development — frontend, backend, and database design. Currently at SoftBuilders in Dubai, where I've delivered an AI-powered HR SaaS platform (maiHRMS), a Web3 + AI platform (Homnifi), and a wallet-based earning system, handling everything from architecture to billing and real-time infrastructure.`;
 
 // const roles = [
 //   '+971 543571747',
@@ -233,7 +233,7 @@ export function VolkiharKnight() {
           </ProjectSectionContent>
         </ProjectSection>
 
-        <ExperienceLayout title={`4+ Years of Work Experience`} />
+        <ExperienceLayout title={`5+ Years of Work Experience`} />
         <ProjectSection padding="none" className={styles1.section}>
           <ProjectSectionContent>
             <ProjectTextRow stretch width="m">
@@ -278,10 +278,10 @@ export function VolkiharKnight() {
               <ProjectSectionHeading>Let's Connect</ProjectSectionHeading>
 
               <ProjectSectionText>
-                With over four years as a Full Stack Web Developer, I have a proven track
-                record of delivering impactful projects. My expertise ranges from
-                designing responsive and intuitive user interfaces to architecting robust
-                back-end systems.
+                With 5+ years as a Full Stack Web Developer, I have a proven track
+                record of delivering impactful SaaS and Web3 products. My expertise ranges
+                from designing responsive, intuitive user interfaces to architecting
+                robust back-end systems and real-time infrastructure.
               </ProjectSectionText>
               <ProjectSectionText>
                 I am eager to collaborate, engage in discussions, and expand my network.
