@@ -21,7 +21,7 @@ import styles from './InkyPencil.module.css';
 
 const title = 'InkyPencil';
 const description =
-  'Developed a Project for Showing Events, Translation Service. This is Author Website';
+  "An author's website featuring event listings and translation services.";
 const roles = ['InkyPencil', 'Auther', 'Events', 'Translation'];
 
 // function Add_Posts()

@@ -21,7 +21,7 @@ import styles from './vidhyaonline.module.css';
 
 const title = 'Vidhyaonline Coromandel Group';
 const description =
-  'Developed a Project for Learning Company Related Courses Provided by VidhyaOnline. We Have Quiz Questions in Middle of Video, Getting Reports At the Last of Video and Download Certificate After Finished Course';
+  'An e-learning platform delivering company courses, with in-video quiz questions, end-of-course reports, and downloadable completion certificates.';
 const roles = [
   'Vidhyaonline',
   'Employee Login',

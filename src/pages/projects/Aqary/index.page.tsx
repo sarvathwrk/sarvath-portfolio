@@ -21,7 +21,7 @@ import styles from './Aqary.module.css';
 
 const title = 'Aqary International Group';
 const description =
-  'Developed a Project for Buying and Selling Real Estate Properties and Get All Types of Reports and User Details in Dashboard';
+  'A real-estate platform for buying and selling properties, with a dashboard for reports, analytics, and user management.';
 const roles = ['Aqary Dashboard', 'Statistics and Reports', 'Real Estate'];
 
 // function Add_Posts()

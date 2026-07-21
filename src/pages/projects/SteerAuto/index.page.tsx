@@ -21,7 +21,7 @@ import styles from './steerauto.module.css';
 
 const title = 'SteerAuto Kun Group';
 const description =
-  'Developed a Project for Buying and Selling Used Cars, Auctions, Maintenance Works, Filter Feature for Buying Car Page etc';
+  'A used-car marketplace with auctions, maintenance booking, and advanced search filters.';
 const roles = [
   'SteerAuto Site',
   'Buying and Selling Cars',

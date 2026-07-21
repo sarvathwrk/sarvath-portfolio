@@ -21,7 +21,7 @@ import styles from './Difuza.module.css';
 
 const title = 'Difuza Service Dashboard';
 const description =
-  'Developed a Project for Selling Web Service like Website With Dashboard Access, Getting SiteData Reports, Getting Customer Enquiries, Listing Datas Etc..';
+  'A web-service platform with dashboard access, site-data reports, and customer-enquiry management.';
 const roles = [
   'Difuza Dashboard',
   'Service provider',

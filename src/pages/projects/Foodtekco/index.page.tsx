@@ -21,7 +21,7 @@ import styles from './Foodtekco.module.css';
 
 const title = 'Foodtekco LTD';
 const description =
-  'Developed a Project for Buying Ingredients for making Foods and Selling Foods and Get All Types of Reports and User Details in Dashboard';
+  'An e-commerce platform for buying and selling food ingredients, with a dashboard for reports and user management.';
 const roles = [
   'Foodtekco Site',
   'Foodtekco Dashboard',

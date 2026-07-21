@@ -21,7 +21,7 @@ import styles from './teawork.module.css';
 
 const title = 'Teawork LTD';
 const description =
-  'Developed a Project for Buying and Selling Food Products, Whole Seller Dealer Login, Customer logged with Buying Ingredients';
+  'A food-products marketplace with separate wholesaler and customer logins for buying and selling ingredients.';
 const roles = ['Teawork', 'WholeSeller Login', 'Customer login', 'ECommerce', 'Cart'];
 
 // function Add_Posts()

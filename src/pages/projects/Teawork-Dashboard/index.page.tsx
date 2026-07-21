@@ -21,7 +21,7 @@ import styles from './teaworkdashboard.module.css';
 
 const title = 'Teawork Admin Dashboard';
 const description =
-  'Developed a Project for Buying Ingredients for making Foods and Selling Foods and Get All Types of Reports and User Details in Dashboard';
+  'Admin dashboard for a food-products marketplace, covering orders, reports, analytics, and user management.';
 const roles = [
   'Teawork Dashboard',
   'Statistics and Reports',

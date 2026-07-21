@@ -20,7 +20,7 @@ import { media } from '@/lib/style';
 import styles from './Wololo.module.css';
 
 const title = 'Wololo LTD';
-const description = 'Developed a Project for Selling a Cloths,Shoes,Essentials';
+const description = 'An online store for clothing, shoes, and everyday essentials.';
 const roles = ['Wololo', 'ECommerce'];
 
 // function Add_Posts()
