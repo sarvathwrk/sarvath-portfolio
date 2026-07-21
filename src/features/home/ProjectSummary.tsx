@@ -23,6 +23,7 @@ import type { StaticImageData } from 'next/image';
 import debounce from 'lodash/debounce';
 import styles from './ProjectSummary.module.css';
 import { LoaderAlt } from '@/components/ui/LoaderAlt';
+import { Image } from '@/components/ui/Image';
 
 /** Which device frame(s) a project preview renders into. */
 export type ProjectModelType = 'laptop' | 'phone' | 'macwithphone';
@@ -142,6 +143,27 @@ export const ProjectSummary = ({
 
   const renderPreview = useCallback(
     (visible: boolean): ReactNode => {
+      // Mobile GPUs can't hold this many live WebGL contexts (one Three.js
+      // scene per project) — fast-scrolling spins up several at once and the
+      // renderer crashes to a white page. On mobile, render a static
+      // screenshot instead of the 3D model.
+      if (isMobile) {
+        const texture = model.textures[0];
+        return (
+          <div className={styles.preview}>
+            <div className={styles.model} data-device={model.type}>
+              <Image
+                reveal
+                srcSet={texture.srcSet}
+                placeholder={texture.placeholder}
+                alt={model.alt}
+                sizes="(max-width: 768px) 90vw, 40vw"
+              />
+            </div>
+          </div>
+        );
+      }
+
       const modelProps: PreviewModelProps = {
         alt: model.alt,
         show: visible,
@@ -211,7 +233,7 @@ export const ProjectSummary = ({
         </div>
       );
     },
-    [model.alt, model.type, model.textures, isHydrated, laptopSizes, phoneSizes]
+    [model.alt, model.type, model.textures, isHydrated, isMobile, laptopSizes, phoneSizes]
   );
 
   const handleResize = useMemo(
@@ -245,7 +267,7 @@ export const ProjectSummary = ({
         <Transition in={sectionVisible || focused}>
           {visible => (
             <>
-              {!modelLoaded && (
+              {!modelLoaded && !isMobile && (
                 <LoaderAlt center className={styles.loader} data-visible={visible} />
               )}
               {!alternate && !isMobile && (
