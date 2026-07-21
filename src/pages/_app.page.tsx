@@ -10,6 +10,7 @@ import { useCookie } from '@/hooks/useCookie';
 import styles from '@/styles/App.module.css';
 import { initialState, reducer } from '@/app/reducer';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app';
 import type { AppContextValue } from '@/hooks/useAppContext';
@@ -23,7 +24,11 @@ import {
 import { msToNum } from '@/lib/style';
 import { ScrollRestore } from '@/app/ScrollRestore';
 
-import ParticlesComp from '@/app/ParticlesComp';
+// Background particle field — decorative and client-only, so defer it out of
+// the initial bundle (pulls in the tsparticles engine on idle, not on load).
+const ParticlesComp = dynamic(() => import('@/app/ParticlesComp'), {
+  ssr: false,
+});
 // import ConsentBanner from '@/components/Cookies/consentBanner';
 import { useFoucFix } from '@/hooks/useFoucFix';
 import { Analytics } from '@vercel/analytics/react';

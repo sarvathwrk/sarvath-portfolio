@@ -5,6 +5,10 @@ module.exports = {
   images: {
     // Images are self-hosted under /public/images/<project>/ — no remote hosts needed.
     remotePatterns: [],
+    // Serve modern formats (AVIF first, WebP fallback) from the optimizer.
+    formats: ['image/avif', 'image/webp'],
+    // Optimized variants are content-hashed and immutable — cache them ~31 days.
+    minimumCacheTTL: 2678400,
   },
   reactCompiler: true,
 
