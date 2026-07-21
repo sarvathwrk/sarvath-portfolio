@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.1.0",
+    "@tsparticles/engine": "4.3.2",
     "@tsparticles/react": "^4.3.2",
     "@tsparticles/slim": "^4.3.2",
     "@vercel/analytics": "^2.0.1",
@@ -59,5 +60,6 @@
     "format": "prettier -w .",
     "format:check": "prettier -c .",
     "postbuild": "next-sitemap --config next-sitemap.config.js"
-  }
+  },
+  "packageManager": "yarn@4.17.1"
 }
