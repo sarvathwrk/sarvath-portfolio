@@ -96,14 +96,18 @@ import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.css';
 
 const disciplines = [
-  'Next JS',
-  'Typescript',
-  'React JS',
-  'Node JS',
-  'Express JS',
-  'Mongo DB',
+  'React.js',
+  'Next.js',
+  'TypeScript',
+  'JavaScript',
+  'Node.js',
+  'Express.js',
+  'MongoDB',
   'MySQL',
+  'Redis',
   'Firebase',
+  'Material UI',
+  'REST APIs',
 ];
 
 export const Home = () => {

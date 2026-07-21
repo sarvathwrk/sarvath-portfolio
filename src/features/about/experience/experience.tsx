@@ -30,7 +30,7 @@ const experienceList = [
         label: `Employed Formik, React Hook Form, YUP, and Zod to implement sophisticated form handling and validation, significantly improving data integrity and user interaction across lead, contact, and payment plan functionalities.`,
       },
       {
-        label: `Integrated React ApexCharts and TenStack Tables for comprehensive data visualization and analytics, empowering stakeholders to make informed decisions based on actionable insights from customer and project data.`,
+        label: `Integrated React ApexCharts and TanStack Table for comprehensive data visualization and analytics, empowering stakeholders to make informed decisions based on actionable insights from customer and project data.`,
       },
       {
         label: `Directed cross-functional collaboration with design teams through Figma and backend teams to ensure cohesive communication and alignment, driving the successful delivery of high-performance web solutions that consistently exceed client expectations.`,
