@@ -2,7 +2,6 @@ import GothamBook from '@/assets/fonts/gotham-book.woff2';
 import GothamMedium from '@/assets/fonts/gotham-medium.woff2';
 import { fontStyles, tokenStyles } from '@/components/ThemeProvider';
 import { Head, Html, Main, NextScript } from 'next/document';
-import Script from 'next/script';
 // import { Analytics } from '@vercel/analytics/react';
 
 export default function Document() {
@@ -56,36 +55,66 @@ export default function Document() {
         />
         <style dangerouslySetInnerHTML={{ __html: fontStyles }} />
         <style dangerouslySetInnerHTML={{ __html: tokenStyles }} />
+
+        {/* Structured data — server-rendered so Google indexes the person
+            entity for "Mohamed Sarvath Khan" / "Sarvath Khan" / "Sarvath". */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'Person',
+                  '@id': 'https://sarvath-portfolio.vercel.app/#person',
+                  name: 'Mohamed Sarvath Khan',
+                  alternateName: ['Sarvath Khan', 'Sarvath', 'Mohamed Sarvath'],
+                  url: 'https://sarvath-portfolio.vercel.app/',
+                  image: 'https://sarvath-portfolio.vercel.app/images/profile/32qoE9j.jpg',
+                  jobTitle: 'Full Stack Developer',
+                  description:
+                    'Full Stack Developer based in Abu Dhabi, specializing in React.js, Next.js, Node.js, TypeScript and MongoDB.',
+                  worksFor: { '@type': 'Organization', name: 'Freelance' },
+                  alumniOf: { '@type': 'CollegeOrUniversity', name: 'Anna University' },
+                  address: {
+                    '@type': 'PostalAddress',
+                    addressLocality: 'Abu Dhabi',
+                    addressCountry: 'AE',
+                  },
+                  knowsAbout: [
+                    'React',
+                    'Next.js',
+                    'Node.js',
+                    'Express.js',
+                    'TypeScript',
+                    'MongoDB',
+                    'MySQL',
+                    'Firebase',
+                  ],
+                  sameAs: [
+                    'https://www.linkedin.com/in/mohamed-sarvath-khan-a19b2698/',
+                    'https://github.com/sarvathwrk',
+                  ],
+                },
+                {
+                  '@type': 'WebSite',
+                  '@id': 'https://sarvath-portfolio.vercel.app/#website',
+                  url: 'https://sarvath-portfolio.vercel.app/',
+                  name: 'Mohamed Sarvath Khan — Portfolio',
+                  description:
+                    'Portfolio of Mohamed Sarvath Khan, a Full Stack Developer based in Abu Dhabi.',
+                  inLanguage: 'en',
+                  publisher: { '@id': 'https://sarvath-portfolio.vercel.app/#person' },
+                },
+              ],
+            }),
+          }}
+        />
       </Head>
       <body data-theme="dark" tabIndex={-1}>
         <Main />
         <NextScript />
         <div id="portal-root" />
-
-        <Script
-          id="json-ld"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Person',
-              name: 'Mohamed Sarvath Khan',
-              url: 'https://sarvath-portfolio.vercel.app/',
-              sameAs: ['https://www.linkedin.com/in/mohamed-sarvath-khan-a19b2698/'],
-              jobTitle: 'Full Stack Developer',
-              worksFor: {
-                '@type': 'Organization',
-                name: 'Freelancing',
-              },
-              alumniOf: 'Anna University',
-              description:
-                'Experienced Full Stack Developer specializing in React.js, Next.js, Node.js, Mongo DB and TypeScript.',
-              image: 'https://sarvath-portfolio.vercel.app/images/profile/32qoE9j.jpg',
-            }),
-          }}
-        />
-        {/* <Analytics /> */}
       </body>
     </Html>
   );
