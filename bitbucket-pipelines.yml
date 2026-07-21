@@ -1,0 +1,34 @@
+# Deploy to Vercel on every push to `main` using the Vercel CLI + a token.
+#
+# Why: the Vercel <-> Bitbucket OAuth git integration keeps losing repo
+# access, and this GitHub account is flagged (can't authorize Vercel). This
+# pipeline deploys via the CLI + token instead — no OAuth, nothing to drop.
+#
+# ONE-TIME SETUP (Bitbucket):
+#   1. Repository settings -> Pipelines -> Enable Pipelines.
+#   2. Repository settings -> Repository variables -> add:
+#        VERCEL_TOKEN   (Secured)  -> create at https://vercel.com/account/tokens
+#      (VERCEL_ORG_ID / VERCEL_PROJECT_ID below are IDs, not secrets — safe to commit.)
+#   3. Push to main (or "Run pipeline" on main) -> builds + deploys to production.
+#
+# `vercel pull` fetches the project's production env vars (NEXT_PUBLIC_WEBSITE_URL,
+# DATABASE_URL, NEXT_WEBSITE_EMAIL_PASS, ...) so the CI build matches production.
+
+image: node:24
+
+pipelines:
+  branches:
+    main:
+      - step:
+          name: Deploy to Vercel (production)
+          deployment: production
+          caches:
+            - node
+          script:
+            - corepack enable
+            - npm install --global vercel@latest
+            - export VERCEL_ORG_ID="team_LltNDTNYT3VMNdzDR3nsHz0C"
+            - export VERCEL_PROJECT_ID="prj_0fp5j72FXpfDYLgrepeSUvbXaEKU"
+            - vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+            - vercel build --prod --token="$VERCEL_TOKEN"
+            - vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
