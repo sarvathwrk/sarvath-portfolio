@@ -1,6 +1,9 @@
 module.exports = {
   siteUrl: 'https://sarvath-portfolio.vercel.app/',
   generateRobotsTxt: true,
+  // Small site: emit one flat sitemap.xml with all URLs, not an index +
+  // sitemap-0.xml (the index was rendering empty and confusing Search Console).
+  generateIndexSitemap: false,
   robotsTxtOptions: {
     policies: [{ userAgent: '*', allow: '/' }],
   },
